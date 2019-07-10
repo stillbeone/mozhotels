@@ -1,0 +1,49 @@
+{
+    "mozhotelsbookingApp": {
+        "instanceTur" : {
+            "home": {
+                "title": "Instance Turs",
+                "createLabel": "Criar um(a) novo(a) Instance Tur",
+                "createOrEditLabel": "Criar ou editar um(a) Instance Tur",
+                "search": "Search for Instance Tur"
+            },
+            "created": "A new Instance Tur is created with identifier {{ param }}",
+            "updated": "A Instance Tur is updated with identifier {{ param }}",
+            "deleted": "A Instance Tur is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Tem a certeza que pretende eliminar o(a) Instance Tur {{ id }}?"
+            },
+            "detail": {
+                "title": "Instance Tur"
+            },
+            "instanceTurName": "Instance Tur Name",
+            "rating": "Rating",
+            "description": "Description",
+            "latitude": "Latitude",
+            "longitude": "Longitude",
+            "rooms": "Rooms",
+            "beds": "Beds",
+            "floors": "Floors",
+            "currency": "Currency",
+            "photoPrincipal": "Photo Principal",
+            "agreementNumber": "Agreement Number",
+            "createDate": "Create Date",
+            "editDate": "Edit Date",
+            "active": "Active",
+            "approval": "Approval",
+            "picture": "Picture",
+            "instanceFacilityType": "Instance Facility Type",
+            "instanceActivityType": "Instance Activity Type",
+            "instanceFacility": "Instance Facility",
+            "instanceActivity": "Instance Activity",
+            "instanceRoomType": "Instance Room Type",
+            "instanceInfo": "Instance Info",
+            "instanceReview": "Instance Review",
+            "booking": "Booking",
+            "favorite": "Favorite",
+            "localTur": "Local Tur",
+            "instanceTurType": "Instance Tur Type",
+            "instanceContact": "Instance Contact"
+        }
+    }
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class mozhotels.web.rest.PictureResourceIntTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class mozhotels.web.rest.PictureResourceIntTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/mozhotels.web.rest.html">mozhotels.web.rest</a> &gt; PictureResourceIntTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">8</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.403s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">checkPictureNameIsRequired</td>
+<td>0.053s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">createPicture</td>
+<td>0.074s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">deletePicture</td>
+<td>0.053s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getAllPictures</td>
+<td>0.014s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getNonExistingPicture</td>
+<td>0.037s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getPicture</td>
+<td>0.016s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">searchPicture</td>
+<td>0.037s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">updatePicture</td>
+<td>0.119s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>Hibernate: insert into picture (id, description, instance_activity_id, instance_room_type_id, instance_tur_id, local_tur_id, picture, picture_content_type, picture_name, province_id, type) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: select picture0_.id as id1_27_, picture0_.description as descript2_27_, picture0_.instance_activity_id as instance7_27_, picture0_.instance_room_type_id as instance8_27_, picture0_.instance_tur_id as instance9_27_, picture0_.local_tur_id as local_t10_27_, picture0_.picture as picture3_27_, picture0_.picture_content_type as picture_4_27_, picture0_.picture_name as picture_5_27_, picture0_.province_id as provinc11_27_, picture0_.type as type6_27_ from picture picture0_
+2016-07-06 19:22:17.547 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.PictureResource       : REST request to update Picture : Picture{id=1, pictureName='BBBBB', description='BBBBB', picture='[B@16df805b', pictureContentType='image/png', type='LOCALTUR'}
+Hibernate: update picture set description=?, instance_activity_id=?, instance_room_type_id=?, instance_tur_id=?, local_tur_id=?, picture=?, picture_content_type=?, picture_name=?, province_id=?, type=? where id=?
+Hibernate: select picture0_.id as id1_27_, picture0_.description as descript2_27_, picture0_.instance_activity_id as instance7_27_, picture0_.instance_room_type_id as instance8_27_, picture0_.instance_tur_id as instance9_27_, picture0_.local_tur_id as local_t10_27_, picture0_.picture as picture3_27_, picture0_.picture_content_type as picture_4_27_, picture0_.picture_name as picture_5_27_, picture0_.province_id as provinc11_27_, picture0_.type as type6_27_ from picture picture0_
+Hibernate: insert into picture (id, description, instance_activity_id, instance_room_type_id, instance_tur_id, local_tur_id, picture, picture_content_type, picture_name, province_id, type) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2016-07-06 19:22:17.618 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.PictureResource       : REST request to get all Pictures
+Hibernate: select picture0_.id as id1_27_, picture0_.description as descript2_27_, picture0_.instance_activity_id as instance7_27_, picture0_.instance_room_type_id as instance8_27_, picture0_.instance_tur_id as instance9_27_, picture0_.local_tur_id as local_t10_27_, picture0_.picture as picture3_27_, picture0_.picture_content_type as picture_4_27_, picture0_.picture_name as picture_5_27_, picture0_.province_id as provinc11_27_, picture0_.type as type6_27_ from picture picture0_
+Hibernate: insert into picture (id, description, instance_activity_id, instance_room_type_id, instance_tur_id, local_tur_id, picture, picture_content_type, picture_name, province_id, type) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: select picture0_.id as id1_27_, picture0_.description as descript2_27_, picture0_.instance_activity_id as instance7_27_, picture0_.instance_room_type_id as instance8_27_, picture0_.instance_tur_id as instance9_27_, picture0_.local_tur_id as local_t10_27_, picture0_.picture as picture3_27_, picture0_.picture_content_type as picture_4_27_, picture0_.picture_name as picture_5_27_, picture0_.province_id as provinc11_27_, picture0_.type as type6_27_ from picture picture0_
+2016-07-06 19:22:17.687 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.PictureResource       : REST request to delete Picture : 3
+Hibernate: delete from picture where id=?
+Hibernate: select picture0_.id as id1_27_, picture0_.description as descript2_27_, picture0_.instance_activity_id as instance7_27_, picture0_.instance_room_type_id as instance8_27_, picture0_.instance_tur_id as instance9_27_, picture0_.local_tur_id as local_t10_27_, picture0_.picture as picture3_27_, picture0_.picture_content_type as picture_4_27_, picture0_.picture_name as picture_5_27_, picture0_.province_id as provinc11_27_, picture0_.type as type6_27_ from picture picture0_
+Hibernate: insert into picture (id, description, instance_activity_id, instance_room_type_id, instance_tur_id, local_tur_id, picture, picture_content_type, picture_name, province_id, type) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2016-07-06 19:22:17.823 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.PictureResource       : REST request to get Picture : 4
+Hibernate: insert into picture (id, description, instance_activity_id, instance_room_type_id, instance_tur_id, local_tur_id, picture, picture_content_type, picture_name, province_id, type) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2016-07-06 19:22:17.876 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.PictureResource       : REST request to search Pictures for query id:5
+2016-07-06 19:22:17.915 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.PictureResource       : REST request to get Picture : 9223372036854775807
+Hibernate: select picture0_.id as id1_27_0_, picture0_.description as descript2_27_0_, picture0_.instance_activity_id as instance7_27_0_, picture0_.instance_room_type_id as instance8_27_0_, picture0_.instance_tur_id as instance9_27_0_, picture0_.local_tur_id as local_t10_27_0_, picture0_.picture as picture3_27_0_, picture0_.picture_content_type as picture_4_27_0_, picture0_.picture_name as picture_5_27_0_, picture0_.province_id as provinc11_27_0_, picture0_.type as type6_27_0_, instanceac1_.id as id1_7_1_, instanceac1_.area as area2_7_1_, instanceac1_.description as descript3_7_1_, instanceac1_.instance_activity_name as instance4_7_1_, instanceac1_.instance_activity_type_id as instance7_7_1_, instanceac1_.instance_tur_id as instance8_7_1_, instanceac1_.photo_principal as photo_pr5_7_1_, instanceac1_.photo_principal_content_type as photo_pr6_7_1_, instanceac2_.id as id1_8_2_, instanceac2_.description as descript2_8_2_, instanceac2_.instance_activity_type_name as instance3_8_2_, instancetu3_.id as id1_17_3_, instancetu3_.address as address2_17_3_, instancetu3_.beds as beds3_17_3_, instancetu3_.contact_number_principal as contact_4_17_3_, instancetu3_.currency as currency5_17_3_, instancetu3_.description as descript6_17_3_, instancetu3_.email as email7_17_3_, instancetu3_.floors as floors8_17_3_, instancetu3_.instance_tur_name as instance9_17_3_, instancetu3_.instance_tur_type_id as instanc18_17_3_, instancetu3_.latitude as latitud10_17_3_, instancetu3_.local_tur_id as local_t19_17_3_, instancetu3_.longitude as longitu11_17_3_, instancetu3_.photo_principal as photo_p12_17_3_, instancetu3_.photo_principal_content_type as photo_p13_17_3_, instancetu3_.rating as rating14_17_3_, instancetu3_.rooms as rooms15_17_3_, instancetu3_.website as website16_17_3_, instancetu3_.zip_code as zip_cod17_17_3_, instancetu4_.id as id1_18_4_, instancetu4_.description as descript2_18_4_, instancetu4_.instance_tur_type_name as instance3_18_4_, localtur5_.id as id1_26_5_, localtur5_.description as descript2_26_5_, localtur5_.local_tur_name as local_tu3_26_5_, localtur5_.photo_principal as photo_pr4_26_5_, localtur5_.photo_principal_content_type as photo_pr5_26_5_, localtur5_.province_id as province6_26_5_, province6_.id as id1_28_6_, province6_.description as descript2_28_6_, province6_.photo_principal as photo_pr3_28_6_, province6_.photo_principal_content_type as photo_pr4_28_6_, province6_.province_name as province5_28_6_, province6_.region_id as region_i6_28_6_, region7_.id as id1_29_7_, region7_.country_id as country_4_29_7_, region7_.description as descript2_29_7_, region7_.region_name as region_n3_29_7_, country8_.id as id1_4_8_, country8_.country_name as country_2_4_8_, country8_.description as descript3_4_8_, instancero9_.id as id1_15_9_, instancero9_.branch_price as branch_p2_15_9_, instancero9_.capacity_adults as capacity3_15_9_, instancero9_.capacity_children as capacity4_15_9_, instancero9_.description as descript5_15_9_, instancero9_.instance_room_type_name as instance6_15_9_, instancero9_.instance_tur_id as instanc13_15_9_, instancero9_.online_price as online_p7_15_9_, instancero9_.photo_principal as photo_pr8_15_9_, instancero9_.photo_principal_content_type as photo_pr9_15_9_, instancero9_.quantity as quantit10_15_9_, instancero9_.tax as tax11_15_9_, instancero9_.tax_include as tax_inc12_15_9_, instancetu10_.id as id1_17_10_, instancetu10_.address as address2_17_10_, instancetu10_.beds as beds3_17_10_, instancetu10_.contact_number_principal as contact_4_17_10_, instancetu10_.currency as currency5_17_10_, instancetu10_.description as descript6_17_10_, instancetu10_.email as email7_17_10_, instancetu10_.floors as floors8_17_10_, instancetu10_.instance_tur_name as instance9_17_10_, instancetu10_.instance_tur_type_id as instanc18_17_10_, instancetu10_.latitude as latitud10_17_10_, instancetu10_.local_tur_id as local_t19_17_10_, instancetu10_.longitude as longitu11_17_10_, instancetu10_.photo_principal as photo_p12_17_10_, instancetu10_.photo_principal_content_type as photo_p13_17_10_, instancetu10_.rating as rating14_17_10_, instancetu10_.rooms as rooms15_17_10_, instancetu10_.website as website16_17_10_, instancetu10_.zip_code as zip_cod17_17_10_, instancetu11_.id as id1_17_11_, instancetu11_.address as address2_17_11_, instancetu11_.beds as beds3_17_11_, instancetu11_.contact_number_principal as contact_4_17_11_, instancetu11_.currency as currency5_17_11_, instancetu11_.description as descript6_17_11_, instancetu11_.email as email7_17_11_, instancetu11_.floors as floors8_17_11_, instancetu11_.instance_tur_name as instance9_17_11_, instancetu11_.instance_tur_type_id as instanc18_17_11_, instancetu11_.latitude as latitud10_17_11_, instancetu11_.local_tur_id as local_t19_17_11_, instancetu11_.longitude as longitu11_17_11_, instancetu11_.photo_principal as photo_p12_17_11_, instancetu11_.photo_principal_content_type as photo_p13_17_11_, instancetu11_.rating as rating14_17_11_, instancetu11_.rooms as rooms15_17_11_, instancetu11_.website as website16_17_11_, instancetu11_.zip_code as zip_cod17_17_11_, localtur12_.id as id1_26_12_, localtur12_.description as descript2_26_12_, localtur12_.local_tur_name as local_tu3_26_12_, localtur12_.photo_principal as photo_pr4_26_12_, localtur12_.photo_principal_content_type as photo_pr5_26_12_, localtur12_.province_id as province6_26_12_, province13_.id as id1_28_13_, province13_.description as descript2_28_13_, province13_.photo_principal as photo_pr3_28_13_, province13_.photo_principal_content_type as photo_pr4_28_13_, province13_.province_name as province5_28_13_, province13_.region_id as region_i6_28_13_ from picture picture0_ left outer join instance_activity instanceac1_ on picture0_.instance_activity_id=instanceac1_.id left outer join instance_activity_type instanceac2_ on instanceac1_.instance_activity_type_id=instanceac2_.id left outer join instance_tur instancetu3_ on instanceac1_.instance_tur_id=instancetu3_.id left outer join instance_tur_type instancetu4_ on instancetu3_.instance_tur_type_id=instancetu4_.id left outer join local_tur localtur5_ on instancetu3_.local_tur_id=localtur5_.id left outer join province province6_ on localtur5_.province_id=province6_.id left outer join region region7_ on province6_.region_id=region7_.id left outer join country country8_ on region7_.country_id=country8_.id left outer join instance_room_type instancero9_ on picture0_.instance_room_type_id=instancero9_.id left outer join instance_tur instancetu10_ on instancero9_.instance_tur_id=instancetu10_.id left outer join instance_tur instancetu11_ on picture0_.instance_tur_id=instancetu11_.id left outer join local_tur localtur12_ on picture0_.local_tur_id=localtur12_.id left outer join province province13_ on picture0_.province_id=province13_.id where picture0_.id=?
+Hibernate: select picture0_.id as id1_27_, picture0_.description as descript2_27_, picture0_.instance_activity_id as instance7_27_, picture0_.instance_room_type_id as instance8_27_, picture0_.instance_tur_id as instance9_27_, picture0_.local_tur_id as local_t10_27_, picture0_.picture as picture3_27_, picture0_.picture_content_type as picture_4_27_, picture0_.picture_name as picture_5_27_, picture0_.province_id as provinc11_27_, picture0_.type as type6_27_ from picture picture0_
+2016-07-06 19:22:17.978 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.PictureResource       : REST request to save Picture : Picture{id=null, pictureName='AAAAA', description='AAAAA', picture='[B@4b5bcb4a', pictureContentType='image/jpg', type='PROVINCE'}
+Hibernate: insert into picture (id, description, instance_activity_id, instance_room_type_id, instance_tur_id, local_tur_id, picture, picture_content_type, picture_name, province_id, type) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: select picture0_.id as id1_27_, picture0_.description as descript2_27_, picture0_.instance_activity_id as instance7_27_, picture0_.instance_room_type_id as instance8_27_, picture0_.instance_tur_id as instance9_27_, picture0_.local_tur_id as local_t10_27_, picture0_.picture as picture3_27_, picture0_.picture_content_type as picture_4_27_, picture0_.picture_name as picture_5_27_, picture0_.province_id as provinc11_27_, picture0_.type as type6_27_ from picture picture0_
+Hibernate: select picture0_.id as id1_27_, picture0_.description as descript2_27_, picture0_.instance_activity_id as instance7_27_, picture0_.instance_room_type_id as instance8_27_, picture0_.instance_tur_id as instance9_27_, picture0_.local_tur_id as local_t10_27_, picture0_.picture as picture3_27_, picture0_.picture_content_type as picture_4_27_, picture0_.picture_name as picture_5_27_, picture0_.province_id as provinc11_27_, picture0_.type as type6_27_ from picture picture0_
+Hibernate: select picture0_.id as id1_27_, picture0_.description as descript2_27_, picture0_.instance_activity_id as instance7_27_, picture0_.instance_room_type_id as instance8_27_, picture0_.instance_tur_id as instance9_27_, picture0_.local_tur_id as local_t10_27_, picture0_.picture as picture3_27_, picture0_.picture_content_type as picture_4_27_, picture0_.picture_name as picture_5_27_, picture0_.province_id as provinc11_27_, picture0_.type as type6_27_ from picture picture0_
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 2.14</a> at 6/jul/2016 19:23:27</p>
+</div>
+</div>
+</body>
+</html>

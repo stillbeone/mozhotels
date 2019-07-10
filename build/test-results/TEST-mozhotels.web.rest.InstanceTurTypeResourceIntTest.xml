@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mozhotels.web.rest.InstanceTurTypeResourceIntTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2016-07-06T17:22:15" hostname="Edmilsons-MacBook-Pro.local" time="0.605">
+  <properties/>
+  <testcase name="searchInstanceTurType" classname="mozhotels.web.rest.InstanceTurTypeResourceIntTest" time="0.146"/>
+  <testcase name="checkInstanceTurTypeNameIsRequired" classname="mozhotels.web.rest.InstanceTurTypeResourceIntTest" time="0.056"/>
+  <testcase name="getAllInstanceTurTypes" classname="mozhotels.web.rest.InstanceTurTypeResourceIntTest" time="0.01"/>
+  <testcase name="updateInstanceTurType" classname="mozhotels.web.rest.InstanceTurTypeResourceIntTest" time="0.132"/>
+  <testcase name="getInstanceTurType" classname="mozhotels.web.rest.InstanceTurTypeResourceIntTest" time="0.022"/>
+  <testcase name="deleteInstanceTurType" classname="mozhotels.web.rest.InstanceTurTypeResourceIntTest" time="0.045"/>
+  <testcase name="createInstanceTurType" classname="mozhotels.web.rest.InstanceTurTypeResourceIntTest" time="0.058"/>
+  <testcase name="getNonExistingInstanceTurType" classname="mozhotels.web.rest.InstanceTurTypeResourceIntTest" time="0.009"/>
+  <system-out><![CDATA[Hibernate: insert into instance_tur_type (id, description, instance_tur_type_name) values (null, ?, ?)
+2016-07-06 19:22:15.646 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceTurTypeResource       : REST request to search InstanceTurTypes for query id:1
+Hibernate: select instancetu0_.id as id1_18_, instancetu0_.description as descript2_18_, instancetu0_.instance_tur_type_name as instance3_18_ from instance_tur_type instancetu0_
+Hibernate: select instancetu0_.id as id1_18_, instancetu0_.description as descript2_18_, instancetu0_.instance_tur_type_name as instance3_18_ from instance_tur_type instancetu0_
+Hibernate: insert into instance_tur_type (id, description, instance_tur_type_name) values (null, ?, ?)
+2016-07-06 19:22:15.774 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceTurTypeResource       : REST request to get all InstanceTurTypes
+Hibernate: select instancetu0_.id as id1_18_, instancetu0_.description as descript2_18_, instancetu0_.instance_tur_type_name as instance3_18_ from instance_tur_type instancetu0_
+Hibernate: insert into instance_tur_type (id, description, instance_tur_type_name) values (null, ?, ?)
+Hibernate: select instancetu0_.id as id1_18_, instancetu0_.description as descript2_18_, instancetu0_.instance_tur_type_name as instance3_18_ from instance_tur_type instancetu0_
+2016-07-06 19:22:15.846 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceTurTypeResource       : REST request to update InstanceTurType : InstanceTurType{id=3, instanceTurTypeName='BBBBB', description='BBBBB'}
+Hibernate: update instance_tur_type set description=?, instance_tur_type_name=? where id=?
+Hibernate: select instancetu0_.id as id1_18_, instancetu0_.description as descript2_18_, instancetu0_.instance_tur_type_name as instance3_18_ from instance_tur_type instancetu0_
+Hibernate: insert into instance_tur_type (id, description, instance_tur_type_name) values (null, ?, ?)
+2016-07-06 19:22:15.971 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceTurTypeResource       : REST request to get InstanceTurType : 4
+Hibernate: insert into instance_tur_type (id, description, instance_tur_type_name) values (null, ?, ?)
+Hibernate: select instancetu0_.id as id1_18_, instancetu0_.description as descript2_18_, instancetu0_.instance_tur_type_name as instance3_18_ from instance_tur_type instancetu0_
+2016-07-06 19:22:16.020 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceTurTypeResource       : REST request to delete InstanceTurType : 5
+Hibernate: delete from instance_tur_type where id=?
+Hibernate: select instancetu0_.id as id1_18_, instancetu0_.description as descript2_18_, instancetu0_.instance_tur_type_name as instance3_18_ from instance_tur_type instancetu0_
+Hibernate: select instancetu0_.id as id1_18_, instancetu0_.description as descript2_18_, instancetu0_.instance_tur_type_name as instance3_18_ from instance_tur_type instancetu0_
+2016-07-06 19:22:16.073 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceTurTypeResource       : REST request to save InstanceTurType : InstanceTurType{id=null, instanceTurTypeName='AAAAA', description='AAAAA'}
+Hibernate: insert into instance_tur_type (id, description, instance_tur_type_name) values (null, ?, ?)
+Hibernate: select instancetu0_.id as id1_18_, instancetu0_.description as descript2_18_, instancetu0_.instance_tur_type_name as instance3_18_ from instance_tur_type instancetu0_
+2016-07-06 19:22:16.134 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceTurTypeResource       : REST request to get InstanceTurType : 9223372036854775807
+Hibernate: select instancetu0_.id as id1_18_0_, instancetu0_.description as descript2_18_0_, instancetu0_.instance_tur_type_name as instance3_18_0_ from instance_tur_type instancetu0_ where instancetu0_.id=?
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

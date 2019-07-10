@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class mozhotels.web.rest.CountryResourceIntTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class mozhotels.web.rest.CountryResourceIntTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/mozhotels.web.rest.html">mozhotels.web.rest</a> &gt; CountryResourceIntTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">8</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.409s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">checkCountryNameIsRequired</td>
+<td>0.040s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">createCountry</td>
+<td>0.071s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">deleteCountry</td>
+<td>0.050s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getAllCountries</td>
+<td>0.019s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getCountry</td>
+<td>0.028s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getNonExistingCountry</td>
+<td>0.022s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">searchCountry</td>
+<td>0.097s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">updateCountry</td>
+<td>0.082s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>Hibernate: insert into country (id, country_name, description) values (null, ?, ?)
+2016-07-06 19:22:05.673 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.CountryResource       : REST request to search Countries for query id:1
+2016-07-06 19:22:05.729 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.CountryResource       : REST request to get Country : 9223372036854775807
+Hibernate: select country0_.id as id1_4_0_, country0_.country_name as country_2_4_0_, country0_.description as descript3_4_0_ from country country0_ where country0_.id=?
+Hibernate: select country0_.id as id1_4_, country0_.country_name as country_2_4_, country0_.description as descript3_4_ from country country0_
+2016-07-06 19:22:05.792 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.CountryResource       : REST request to save Country : Country{id=null, countryName='AAAAA', description='AAAAA'}
+Hibernate: insert into country (id, country_name, description) values (null, ?, ?)
+Hibernate: select country0_.id as id1_4_, country0_.country_name as country_2_4_, country0_.description as descript3_4_ from country country0_
+Hibernate: select country0_.id as id1_4_, country0_.country_name as country_2_4_, country0_.description as descript3_4_ from country country0_
+Hibernate: select country0_.id as id1_4_, country0_.country_name as country_2_4_, country0_.description as descript3_4_ from country country0_
+Hibernate: insert into country (id, country_name, description) values (null, ?, ?)
+Hibernate: select country0_.id as id1_4_, country0_.country_name as country_2_4_, country0_.description as descript3_4_ from country country0_
+2016-07-06 19:22:05.963 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.CountryResource       : REST request to update Country : Country{id=3, countryName='BBBBB', description='BBBBB'}
+Hibernate: update country set country_name=?, description=? where id=?
+Hibernate: select country0_.id as id1_4_, country0_.country_name as country_2_4_, country0_.description as descript3_4_ from country country0_
+Hibernate: insert into country (id, country_name, description) values (null, ?, ?)
+2016-07-06 19:22:06.030 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.CountryResource       : REST request to get all Countries
+Hibernate: select country0_.id as id1_4_, country0_.country_name as country_2_4_, country0_.description as descript3_4_ from country country0_
+Hibernate: insert into country (id, country_name, description) values (null, ?, ?)
+Hibernate: select country0_.id as id1_4_, country0_.country_name as country_2_4_, country0_.description as descript3_4_ from country country0_
+2016-07-06 19:22:06.086 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.CountryResource       : REST request to delete Country : 5
+Hibernate: delete from country where id=?
+Hibernate: select country0_.id as id1_4_, country0_.country_name as country_2_4_, country0_.description as descript3_4_ from country country0_
+Hibernate: insert into country (id, country_name, description) values (null, ?, ?)
+2016-07-06 19:22:06.154 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.CountryResource       : REST request to get Country : 6
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 2.14</a> at 6/jul/2016 19:23:27</p>
+</div>
+</div>
+</body>
+</html>

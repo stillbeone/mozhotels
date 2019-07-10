@@ -1,0 +1,74 @@
+
+<div>
+    <h2><span translate="mozhotelsbookingApp.instanceReview.detail.title">Instance Review</span> {{vm.instanceReview.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="mozhotelsbookingApp.instanceReview.cleanliness">Cleanliness</span></dt>
+        <dd>
+            <span>{{vm.instanceReview.cleanliness}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceReview.roomConfort">Room Confort</span></dt>
+        <dd>
+            <span>{{vm.instanceReview.roomConfort}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceReview.location">Location</span></dt>
+        <dd>
+            <span>{{vm.instanceReview.location}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceReview.serviceStaff">Service Staff</span></dt>
+        <dd>
+            <span>{{vm.instanceReview.serviceStaff}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceReview.sleepQuality">Sleep Quality</span></dt>
+        <dd>
+            <span>{{vm.instanceReview.sleepQuality}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceReview.valuePrice">Value Price</span></dt>
+        <dd>
+            <span>{{vm.instanceReview.valuePrice}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceReview.evaluation">Evaluation</span></dt>
+        <dd>
+            <span translate="{{'mozhotelsbookingApp.Evaluation.' + vm.instanceReview.evaluation}}">{{vm.instanceReview.evaluation}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceReview.title">Title</span></dt>
+        <dd>
+            <span>{{vm.instanceReview.title}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceReview.comment">Comment</span></dt>
+        <dd>
+            <span>{{vm.instanceReview.comment}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceReview.createDate">Create Date</span></dt>
+        <dd>
+            <span>{{vm.instanceReview.createDate | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceReview.editDate">Edit Date</span></dt>
+        <dd>
+            <span>{{vm.instanceReview.editDate | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceReview.active">Active</span></dt>
+        <dd>
+            <span>{{vm.instanceReview.active}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceReview.approval">Approval</span></dt>
+        <dd>
+            <span>{{vm.instanceReview.approval}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceReview.instanceTur">Instance Tur</span></dt>
+        <dd>
+            <a ui-sref="instance-tur-detail({id:vm.instanceReview.instanceTur.id})">{{vm.instanceReview.instanceTur.instanceTurName}}</a>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceReview.tourist">Tourist</span></dt>
+        <dd>
+            <a ui-sref="tourist-detail({id:vm.instanceReview.tourist.id})">{{vm.instanceReview.tourist.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

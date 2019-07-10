@@ -1,0 +1,106 @@
+<div>
+    <h2 translate="mozhotelsbookingApp.tourist.home.title">Tourists</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="tourist.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  translate="mozhotelsbookingApp.tourist.home.createLabel">
+                        Create new Tourist
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'mozhotelsbookingApp.tourist.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="mozhotelsbookingApp.tourist.firstName">First Name</span></th>
+                    <th><span translate="mozhotelsbookingApp.tourist.lastName">Last Name</span></th>
+                    <th><span translate="mozhotelsbookingApp.tourist.email">Email</span></th>
+                    <th><span translate="mozhotelsbookingApp.tourist.phoneNumber">Phone Number</span></th>
+                    <th><span translate="mozhotelsbookingApp.tourist.countryResidence">Country Residence</span></th>
+                    <th><span translate="mozhotelsbookingApp.tourist.countryBooking">Country Booking</span></th>
+                    <th><span translate="mozhotelsbookingApp.tourist.language">Language</span></th>
+                    <th><span translate="mozhotelsbookingApp.tourist.currency">Currency</span></th>
+                    <th><span translate="mozhotelsbookingApp.tourist.photoPrincipal">Photo Principal</span></th>
+                    <th><span translate="mozhotelsbookingApp.tourist.createDate">Create Date</span></th>
+                    <th><span translate="mozhotelsbookingApp.tourist.editDate">Edit Date</span></th>
+                    <th><span translate="mozhotelsbookingApp.tourist.active">Active</span></th>
+                    <th><span translate="mozhotelsbookingApp.tourist.approval">Approval</span></th>
+                    <th><span translate="mozhotelsbookingApp.tourist.user">User</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="tourist in vm.tourists track by tourist.id">
+                    <td><a ui-sref="tourist-detail({id:tourist.id})">{{tourist.id}}</a></td>
+                    <td>{{tourist.firstName}}</td>
+                    <td>{{tourist.lastName}}</td>
+                    <td>{{tourist.email}}</td>
+                    <td>{{tourist.phoneNumber}}</td>
+                    <td>{{tourist.countryResidence}}</td>
+                    <td>{{tourist.countryBooking}}</td>
+                    <td translate="{{'mozhotelsbookingApp.Language.' + tourist.language}}">{{tourist.language}}</td>
+                    <td translate="{{'mozhotelsbookingApp.Currency.' + tourist.currency}}">{{tourist.currency}}</td>
+                    <td>
+                        <a ng-if="tourist.photoPrincipal" ng-click="vm.openFile(tourist.photoPrincipalContentType, tourist.photoPrincipal)">
+                            <img data-ng-src="{{'data:' + tourist.photoPrincipalContentType + ';base64,' + tourist.photoPrincipal}}" style="max-height: 30px;"/>
+                        </a>
+                        <span ng-if="tourist.photoPrincipal">{{tourist.photoPrincipalContentType}}, {{vm.byteSize(tourist.photoPrincipal)}}</span>
+                    </td>
+                    <td>{{tourist.createDate | date:'medium'}}</td>
+                    <td>{{tourist.editDate | date:'medium'}}</td>
+                    <td>{{tourist.active}}</td>
+                    <td>{{tourist.approval}}</td>
+                    <td>
+                        {{tourist.user.id}}
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="tourist-detail({id:tourist.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="tourist.edit({id:tourist.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="tourist.delete({id:tourist.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

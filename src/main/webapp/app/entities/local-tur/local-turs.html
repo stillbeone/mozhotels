@@ -1,0 +1,86 @@
+<div>
+    <h2 translate="mozhotelsbookingApp.localTur.home.title">Local Turs</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="local-tur.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  translate="mozhotelsbookingApp.localTur.home.createLabel">
+                        Create new Local Tur
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'mozhotelsbookingApp.localTur.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="mozhotelsbookingApp.localTur.localTurName">Local Tur Name</span></th>
+                    <th><span translate="mozhotelsbookingApp.localTur.description">Description</span></th>
+                    <th><span translate="mozhotelsbookingApp.localTur.photoPrincipal">Photo Principal</span></th>
+                    <th><span translate="mozhotelsbookingApp.localTur.province">Province</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="localTur in vm.localTurs track by localTur.id">
+                    <td><a ui-sref="local-tur-detail({id:localTur.id})">{{localTur.id}}</a></td>
+                    <td>{{localTur.localTurName}}</td>
+                    <td>{{localTur.description}}</td>
+                    <td>
+                        <a ng-if="localTur.photoPrincipal" ng-click="vm.openFile(localTur.photoPrincipalContentType, localTur.photoPrincipal)">
+                            <img data-ng-src="{{'data:' + localTur.photoPrincipalContentType + ';base64,' + localTur.photoPrincipal}}" style="max-height: 30px;"/>
+                        </a>
+                        <span ng-if="localTur.photoPrincipal">{{localTur.photoPrincipalContentType}}, {{vm.byteSize(localTur.photoPrincipal)}}</span>
+                    </td>
+                    <td>
+                        <a ui-sref="province-detail({id:localTur.province.id})">{{localTur.province.provinceName}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="local-tur-detail({id:localTur.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="local-tur.edit({id:localTur.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="local-tur.delete({id:localTur.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

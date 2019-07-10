@@ -1,0 +1,25 @@
+{
+    "mozhotelsbookingApp": {
+        "region" : {
+            "home": {
+                "title": "Regions",
+                "createLabel": "Criar um(a) novo(a) Region",
+                "createOrEditLabel": "Criar ou editar um(a) Region",
+                "search": "Search for Region"
+            },
+            "created": "A new Region is created with identifier {{ param }}",
+            "updated": "A Region is updated with identifier {{ param }}",
+            "deleted": "A Region is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Tem a certeza que pretende eliminar o(a) Region {{ id }}?"
+            },
+            "detail": {
+                "title": "Region"
+            },
+            "regionName": "Region Name",
+            "description": "Description",
+            "province": "Province",
+            "country": "Country"
+        }
+    }
+}

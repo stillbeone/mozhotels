@@ -1,0 +1,104 @@
+<div>
+    <h2 translate="mozhotelsbookingApp.picture.home.title">Pictures</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="picture.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  translate="mozhotelsbookingApp.picture.home.createLabel">
+                        Create new Picture
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'mozhotelsbookingApp.picture.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="mozhotelsbookingApp.picture.pictureName">Picture Name</span></th>
+                    <th><span translate="mozhotelsbookingApp.picture.type">Type</span></th>
+                    <th><span translate="mozhotelsbookingApp.picture.picture">Picture</span></th>
+                    <th><span translate="mozhotelsbookingApp.picture.description">Description</span></th>
+                    <th><span translate="mozhotelsbookingApp.picture.province">Province</span></th>
+                    <th><span translate="mozhotelsbookingApp.picture.localTur">Local Tur</span></th>
+                    <th><span translate="mozhotelsbookingApp.picture.instanceTur">Instance Tur</span></th>
+                    <th><span translate="mozhotelsbookingApp.picture.instanceRoomType">Instance Room Type</span></th>
+                    <th><span translate="mozhotelsbookingApp.picture.instanceActivity">Instance Activity</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="picture in vm.pictures track by picture.id">
+                    <td><a ui-sref="picture-detail({id:picture.id})">{{picture.id}}</a></td>
+                    <td>{{picture.pictureName}}</td>
+                    <td translate="{{'mozhotelsbookingApp.PictureType.' + picture.type}}">{{picture.type}}</td>
+                    <td>
+                        <a ng-if="picture.picture" ng-click="vm.openFile(picture.pictureContentType, picture.picture)">
+                            <img data-ng-src="{{'data:' + picture.pictureContentType + ';base64,' + picture.picture}}" style="max-height: 30px;"/>
+                        </a>
+                        <span ng-if="picture.picture">{{picture.pictureContentType}}, {{vm.byteSize(picture.picture)}}</span>
+                    </td>
+                    <td>{{picture.description}}</td>
+                    <td>
+                        <a ui-sref="province-detail({id:picture.province.id})">{{picture.province.provinceName}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="local-tur-detail({id:picture.localTur.id})">{{picture.localTur.localTurName}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="instance-tur-detail({id:picture.instanceTur.id})">{{picture.instanceTur.instanceTurName}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="instance-room-type-detail({id:picture.instanceRoomType.id})">{{picture.instanceRoomType.instanceRoomTypeName}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="instance-activity-detail({id:picture.instanceActivity.id})">{{picture.instanceActivity.instanceActivityName}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="picture-detail({id:picture.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="picture.edit({id:picture.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="picture.delete({id:picture.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

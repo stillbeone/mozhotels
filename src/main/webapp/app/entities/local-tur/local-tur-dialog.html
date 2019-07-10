@@ -1,0 +1,72 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myLocalTurLabel" translate="mozhotelsbookingApp.localTur.home.createOrEditLabel">Create or edit a Local Tur</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.localTur.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.localTur.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.localTur.localTurName" for="field_localTurName">Local Tur Name</label>
+            <input type="text" class="form-control" name="localTurName" id="field_localTurName"
+                    ng-model="vm.localTur.localTurName"
+                    required />
+            <div ng-show="editForm.localTurName.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.localTurName.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.localTur.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="vm.localTur.description"
+                     />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setPhotoPrincipal($file, vm.localTur)" ngf-pattern="'image/*'">
+            <label class="control-label" translate="mozhotelsbookingApp.localTur.photoPrincipal" for="field_photoPrincipal">Photo Principal</label>
+            <div>
+                <img data-ng-src="{{'data:' + vm.localTur.photoPrincipalContentType + ';base64,' + vm.localTur.photoPrincipal}}" style="max-height: 100px;" ng-if="vm.localTur.photoPrincipal"/>
+                <div ng-if="vm.localTur.photoPrincipal" class="help-block clearfix">
+                    <span class="pull-left">{{vm.localTur.photoPrincipalContentType}}, {{vm.byteSize(vm.localTur.photoPrincipal)}}</span>
+                    <button ng-click="vm.localTur.photoPrincipal=null;vm.localTur.photoPrincipalContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="file" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setPhotoPrincipal($file, vm.localTur)" accept="image/*" translate="entity.action.addimage">
+                    Add image
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="photoPrincipal" id="field_photoPrincipal"
+                    ng-model="vm.localTur.photoPrincipal"
+                     />
+            <input type="hidden" class="form-control" name="photoPrincipalContentType" id="field_photoPrincipalContentType"
+                    ng-model="vm.localTur.photoPrincipalContentType" />
+        </div>
+
+        <div class="form-group">
+            <label translate="mozhotelsbookingApp.localTur.province" for="field_province">Province</label>
+            <select class="form-control" id="field_province" name="province" ng-model="vm.localTur.province" ng-options="province as province.provinceName for province in vm.provinces track by province.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

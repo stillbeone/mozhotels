@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mozhotels.web.rest.LocalTurResourceIntTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2016-07-06T17:22:16" hostname="Edmilsons-MacBook-Pro.local" time="1.089">
+  <properties/>
+  <testcase name="updateLocalTur" classname="mozhotels.web.rest.LocalTurResourceIntTest" time="0.309"/>
+  <testcase name="createLocalTur" classname="mozhotels.web.rest.LocalTurResourceIntTest" time="0.268"/>
+  <testcase name="getLocalTur" classname="mozhotels.web.rest.LocalTurResourceIntTest" time="0.042"/>
+  <testcase name="searchLocalTur" classname="mozhotels.web.rest.LocalTurResourceIntTest" time="0.12"/>
+  <testcase name="getNonExistingLocalTur" classname="mozhotels.web.rest.LocalTurResourceIntTest" time="0.027"/>
+  <testcase name="deleteLocalTur" classname="mozhotels.web.rest.LocalTurResourceIntTest" time="0.134"/>
+  <testcase name="checkLocalTurNameIsRequired" classname="mozhotels.web.rest.LocalTurResourceIntTest" time="0.019"/>
+  <testcase name="getAllLocalTurs" classname="mozhotels.web.rest.LocalTurResourceIntTest" time="0.015"/>
+  <system-out><![CDATA[Hibernate: insert into local_tur (id, description, local_tur_name, photo_principal, photo_principal_content_type, province_id) values (null, ?, ?, ?, ?, ?)
+Hibernate: select localtur0_.id as id1_26_, localtur0_.description as descript2_26_, localtur0_.local_tur_name as local_tu3_26_, localtur0_.photo_principal as photo_pr4_26_, localtur0_.photo_principal_content_type as photo_pr5_26_, localtur0_.province_id as province6_26_ from local_tur localtur0_
+2016-07-06 19:22:16.380 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.LocalTurResource      : REST request to update LocalTur : LocalTur{id=1, localTurName='BBBBB', description='BBBBB', photoPrincipal='[B@16547818', photoPrincipalContentType='image/png'}
+Hibernate: update local_tur set description=?, local_tur_name=?, photo_principal=?, photo_principal_content_type=?, province_id=? where id=?
+Hibernate: select localtur0_.id as id1_26_, localtur0_.description as descript2_26_, localtur0_.local_tur_name as local_tu3_26_, localtur0_.photo_principal as photo_pr4_26_, localtur0_.photo_principal_content_type as photo_pr5_26_, localtur0_.province_id as province6_26_ from local_tur localtur0_
+Hibernate: select localtur0_.id as id1_26_, localtur0_.description as descript2_26_, localtur0_.local_tur_name as local_tu3_26_, localtur0_.photo_principal as photo_pr4_26_, localtur0_.photo_principal_content_type as photo_pr5_26_, localtur0_.province_id as province6_26_ from local_tur localtur0_
+2016-07-06 19:22:16.587 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.LocalTurResource      : REST request to save LocalTur : LocalTur{id=null, localTurName='AAAAA', description='AAAAA', photoPrincipal='[B@3c7bd89f', photoPrincipalContentType='image/jpg'}
+Hibernate: insert into local_tur (id, description, local_tur_name, photo_principal, photo_principal_content_type, province_id) values (null, ?, ?, ?, ?, ?)
+Hibernate: select localtur0_.id as id1_26_, localtur0_.description as descript2_26_, localtur0_.local_tur_name as local_tu3_26_, localtur0_.photo_principal as photo_pr4_26_, localtur0_.photo_principal_content_type as photo_pr5_26_, localtur0_.province_id as province6_26_ from local_tur localtur0_
+Hibernate: insert into local_tur (id, description, local_tur_name, photo_principal, photo_principal_content_type, province_id) values (null, ?, ?, ?, ?, ?)
+2016-07-06 19:22:16.876 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.LocalTurResource      : REST request to get LocalTur : 3
+Hibernate: insert into local_tur (id, description, local_tur_name, photo_principal, photo_principal_content_type, province_id) values (null, ?, ?, ?, ?, ?)
+2016-07-06 19:22:17.014 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.LocalTurResource      : REST request to search LocalTurs for query id:4
+2016-07-06 19:22:17.061 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.LocalTurResource      : REST request to get LocalTur : 9223372036854775807
+Hibernate: select localtur0_.id as id1_26_0_, localtur0_.description as descript2_26_0_, localtur0_.local_tur_name as local_tu3_26_0_, localtur0_.photo_principal as photo_pr4_26_0_, localtur0_.photo_principal_content_type as photo_pr5_26_0_, localtur0_.province_id as province6_26_0_, province1_.id as id1_28_1_, province1_.description as descript2_28_1_, province1_.photo_principal as photo_pr3_28_1_, province1_.photo_principal_content_type as photo_pr4_28_1_, province1_.province_name as province5_28_1_, province1_.region_id as region_i6_28_1_, region2_.id as id1_29_2_, region2_.country_id as country_4_29_2_, region2_.description as descript2_29_2_, region2_.region_name as region_n3_29_2_, country3_.id as id1_4_3_, country3_.country_name as country_2_4_3_, country3_.description as descript3_4_3_ from local_tur localtur0_ left outer join province province1_ on localtur0_.province_id=province1_.id left outer join region region2_ on province1_.region_id=region2_.id left outer join country country3_ on region2_.country_id=country3_.id where localtur0_.id=?
+Hibernate: insert into local_tur (id, description, local_tur_name, photo_principal, photo_principal_content_type, province_id) values (null, ?, ?, ?, ?, ?)
+Hibernate: select localtur0_.id as id1_26_, localtur0_.description as descript2_26_, localtur0_.local_tur_name as local_tu3_26_, localtur0_.photo_principal as photo_pr4_26_, localtur0_.photo_principal_content_type as photo_pr5_26_, localtur0_.province_id as province6_26_ from local_tur localtur0_
+2016-07-06 19:22:17.231 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.LocalTurResource      : REST request to delete LocalTur : 5
+Hibernate: delete from local_tur where id=?
+Hibernate: select localtur0_.id as id1_26_, localtur0_.description as descript2_26_, localtur0_.local_tur_name as local_tu3_26_, localtur0_.photo_principal as photo_pr4_26_, localtur0_.photo_principal_content_type as photo_pr5_26_, localtur0_.province_id as province6_26_ from local_tur localtur0_
+Hibernate: select localtur0_.id as id1_26_, localtur0_.description as descript2_26_, localtur0_.local_tur_name as local_tu3_26_, localtur0_.photo_principal as photo_pr4_26_, localtur0_.photo_principal_content_type as photo_pr5_26_, localtur0_.province_id as province6_26_ from local_tur localtur0_
+Hibernate: select localtur0_.id as id1_26_, localtur0_.description as descript2_26_, localtur0_.local_tur_name as local_tu3_26_, localtur0_.photo_principal as photo_pr4_26_, localtur0_.photo_principal_content_type as photo_pr5_26_, localtur0_.province_id as province6_26_ from local_tur localtur0_
+Hibernate: insert into local_tur (id, description, local_tur_name, photo_principal, photo_principal_content_type, province_id) values (null, ?, ?, ?, ?, ?)
+2016-07-06 19:22:17.312 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.LocalTurResource      : REST request to get all LocalTurs
+Hibernate: select localtur0_.id as id1_26_, localtur0_.description as descript2_26_, localtur0_.local_tur_name as local_tu3_26_, localtur0_.photo_principal as photo_pr4_26_, localtur0_.photo_principal_content_type as photo_pr5_26_, localtur0_.province_id as province6_26_ from local_tur localtur0_
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

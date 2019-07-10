@@ -1,0 +1,26 @@
+
+<div>
+    <h2><span translate="mozhotelsbookingApp.info.detail.title">Info</span> {{vm.info.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="mozhotelsbookingApp.info.infoName">Info Name</span></dt>
+        <dd>
+            <span>{{vm.info.infoName}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.info.description">Description</span></dt>
+        <dd>
+            <span>{{vm.info.description}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.info.value">Value</span></dt>
+        <dd>
+            <span>{{vm.info.value}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

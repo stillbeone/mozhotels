@@ -1,0 +1,34 @@
+
+<div>
+    <h2><span translate="mozhotelsbookingApp.guestTourist.detail.title">Guest Tourist</span> {{vm.guestTourist.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="mozhotelsbookingApp.guestTourist.firstName">First Name</span></dt>
+        <dd>
+            <span>{{vm.guestTourist.firstName}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.guestTourist.lastName">Last Name</span></dt>
+        <dd>
+            <span>{{vm.guestTourist.lastName}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.guestTourist.email">Email</span></dt>
+        <dd>
+            <span>{{vm.guestTourist.email}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.guestTourist.countryResidence">Country Residence</span></dt>
+        <dd>
+            <span>{{vm.guestTourist.countryResidence}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.guestTourist.tourist">Tourist</span></dt>
+        <dd>
+            <a ui-sref="tourist-detail({id:vm.guestTourist.tourist.id})">{{vm.guestTourist.tourist.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

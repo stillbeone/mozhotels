@@ -1,0 +1,36 @@
+{
+    "mozhotelsbookingApp": {
+        "instanceReview" : {
+            "home": {
+                "title": "Instance Reviews",
+                "createLabel": "Create a new Instance Review",
+                "createOrEditLabel": "Create or edit a Instance Review",
+                "search": "Search for Instance Review"
+            },
+            "created": "A new Instance Review is created with identifier {{ param }}",
+            "updated": "A Instance Review is updated with identifier {{ param }}",
+            "deleted": "A Instance Review is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Instance Review {{ id }}?"
+            },
+            "detail": {
+                "title": "Instance Review"
+            },
+            "cleanliness": "Cleanliness",
+            "roomConfort": "Room Confort",
+            "location": "Location",
+            "serviceStaff": "Service Staff",
+            "sleepQuality": "Sleep Quality",
+            "valuePrice": "Value Price",
+            "evaluation": "Evaluation",
+            "title": "Title",
+            "comment": "Comment",
+            "active": "Active",
+            "approval": "Approval",
+            "createDate": "Create Date",
+            "editDate": "Edit Date",
+            "instanceTur": "Instance Tur",
+            "tourist": "Tourist"
+        }
+    }
+}

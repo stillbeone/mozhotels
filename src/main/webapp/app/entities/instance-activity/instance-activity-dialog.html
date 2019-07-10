@@ -1,0 +1,87 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myInstanceActivityLabel" translate="mozhotelsbookingApp.instanceActivity.home.createOrEditLabel">Create or edit a Instance Activity</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.instanceActivity.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.instanceActivity.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceActivity.instanceActivityName" for="field_instanceActivityName">Instance Activity Name</label>
+            <input type="text" class="form-control" name="instanceActivityName" id="field_instanceActivityName"
+                    ng-model="vm.instanceActivity.instanceActivityName"
+                    required />
+            <div ng-show="editForm.instanceActivityName.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.instanceActivityName.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceActivity.area" for="field_area">Area</label>
+            <select class="form-control" name="area" ng-model="vm.instanceActivity.area" id="field_area">
+                <option value="INSIDE" translate="mozhotelsbookingApp.ActivityArea.INSIDE">INSIDE</option>
+                <option value="OUTSIDE" translate="mozhotelsbookingApp.ActivityArea.OUTSIDE">OUTSIDE</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceActivity.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="vm.instanceActivity.description"
+                     />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setPhotoPrincipal($file, vm.instanceActivity)" ngf-pattern="'image/*'">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceActivity.photoPrincipal" for="field_photoPrincipal">Photo Principal</label>
+            <div>
+                <img data-ng-src="{{'data:' + vm.instanceActivity.photoPrincipalContentType + ';base64,' + vm.instanceActivity.photoPrincipal}}" style="max-height: 100px;" ng-if="vm.instanceActivity.photoPrincipal"/>
+                <div ng-if="vm.instanceActivity.photoPrincipal" class="help-block clearfix">
+                    <span class="pull-left">{{vm.instanceActivity.photoPrincipalContentType}}, {{vm.byteSize(vm.instanceActivity.photoPrincipal)}}</span>
+                    <button ng-click="vm.instanceActivity.photoPrincipal=null;vm.instanceActivity.photoPrincipalContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="file" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setPhotoPrincipal($file, vm.instanceActivity)" accept="image/*" translate="entity.action.addimage">
+                    Add image
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="photoPrincipal" id="field_photoPrincipal"
+                    ng-model="vm.instanceActivity.photoPrincipal"
+                     />
+            <input type="hidden" class="form-control" name="photoPrincipalContentType" id="field_photoPrincipalContentType"
+                    ng-model="vm.instanceActivity.photoPrincipalContentType" />
+        </div>
+
+        <div class="form-group">
+            <label translate="mozhotelsbookingApp.instanceActivity.instanceTur" for="field_instanceTur">Instance Tur</label>
+            <select class="form-control" id="field_instanceTur" name="instanceTur" ng-change="vm.activities();" ng-model="vm.instanceActivity.instanceTur" ng-options="instanceTur as instanceTur.instanceTurName for instanceTur in vm.instanceturs track by instanceTur.id">
+                <option value=""></option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label translate="mozhotelsbookingApp.instanceActivity.instanceActivityType" for="field_instanceActivityType">Instance Activity Type</label>
+            <select class="form-control" id="field_instanceActivityType" name="instanceActivityType" ng-disable="!vm.instancefacilitytypes" ng-model="vm.instanceActivity.instanceActivityType" ng-options="instanceActivityType as instanceActivityType.instanceActivityTypeName for instanceActivityType in vm.instanceactivitytypes track by instanceActivityType.id">
+                <option value=""></option>
+            </select>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

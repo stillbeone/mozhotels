@@ -1,0 +1,92 @@
+<div>
+    <h2 translate="mozhotelsbookingApp.instanceActivity.home.title">Instance Activities</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="instance-activity.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  translate="mozhotelsbookingApp.instanceActivity.home.createLabel">
+                        Create new Instance Activity
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'mozhotelsbookingApp.instanceActivity.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceActivity.instanceActivityName">Instance Activity Name</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceActivity.area">Area</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceActivity.description">Description</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceActivity.photoPrincipal">Photo Principal</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceActivity.instanceActivityType">Instance Activity Type</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceActivity.instanceTur">Instance Tur</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="instanceActivity in vm.instanceActivities track by instanceActivity.id">
+                    <td><a ui-sref="instance-activity-detail({id:instanceActivity.id})">{{instanceActivity.id}}</a></td>
+                    <td>{{instanceActivity.instanceActivityName}}</td>
+                    <td translate="{{'mozhotelsbookingApp.ActivityArea.' + instanceActivity.area}}">{{instanceActivity.area}}</td>
+                    <td>{{instanceActivity.description}}</td>
+                    <td>
+                        <a ng-if="instanceActivity.photoPrincipal" ng-click="vm.openFile(instanceActivity.photoPrincipalContentType, instanceActivity.photoPrincipal)">
+                            <img data-ng-src="{{'data:' + instanceActivity.photoPrincipalContentType + ';base64,' + instanceActivity.photoPrincipal}}" style="max-height: 30px;"/>
+                        </a>
+                        <span ng-if="instanceActivity.photoPrincipal">{{instanceActivity.photoPrincipalContentType}}, {{vm.byteSize(instanceActivity.photoPrincipal)}}</span>
+                    </td>
+                    <td>
+                        <a ui-sref="instance-activity-type-detail({id:instanceActivity.instanceActivityType.id})">{{instanceActivity.instanceActivityType.instanceActivityTypeName}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="instance-tur-detail({id:instanceActivity.instanceTur.id})">{{instanceActivity.instanceTur.instanceTurName}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="instance-activity-detail({id:instanceActivity.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="instance-activity.edit({id:instanceActivity.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="instance-activity.delete({id:instanceActivity.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

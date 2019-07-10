@@ -1,0 +1,114 @@
+<div>
+    <h2 translate="mozhotelsbookingApp.instanceRoomType.home.title">Instance Room Types</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="instance-room-type.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  translate="mozhotelsbookingApp.instanceRoomType.home.createLabel">
+                        Create new Instance Room Type
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'mozhotelsbookingApp.instanceRoomType.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceRoomType.instanceRoomTypeName">Instance Room Type Name</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceRoomType.description">Description</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceRoomType.roomQuantity">Room Quantity</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceRoomType.capacityAdults">Capacity Adults</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceRoomType.capacityChildren">Capacity Children</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceRoomType.onlinePrice">Online Price</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceRoomType.branchPrice">Branch Price</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceRoomType.taxInclude">Tax Include</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceRoomType.tax">Tax</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceRoomType.photoPrincipal">Photo Principal</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceRoomType.createDate">Create Date</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceRoomType.editDate">Edit Date</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceRoomType.active">Active</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceRoomType.approval">Approval</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceRoomType.instanceRoomFacility">Instance Room Facility</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceRoomType.instanceTur">Instance Tur</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="instanceRoomType in vm.instanceRoomTypes track by instanceRoomType.id">
+                    <td><a ui-sref="instance-room-type-detail({id:instanceRoomType.id})">{{instanceRoomType.id}}</a></td>
+                    <td>{{instanceRoomType.instanceRoomTypeName}}</td>
+                    <td>{{instanceRoomType.description}}</td>
+                    <td>{{instanceRoomType.roomQuantity}}</td>
+                    <td>{{instanceRoomType.capacityAdults}}</td>
+                    <td>{{instanceRoomType.capacityChildren}}</td>
+                    <td>{{instanceRoomType.onlinePrice}}</td>
+                    <td>{{instanceRoomType.branchPrice}}</td>
+                    <td>{{instanceRoomType.taxInclude}}</td>
+                    <td>{{instanceRoomType.tax}}</td>
+                    <td>
+                        <a ng-if="instanceRoomType.photoPrincipal" ng-click="vm.openFile(instanceRoomType.photoPrincipalContentType, instanceRoomType.photoPrincipal)">
+                            <img data-ng-src="{{'data:' + instanceRoomType.photoPrincipalContentType + ';base64,' + instanceRoomType.photoPrincipal}}" style="max-height: 30px;"/>
+                        </a>
+                        <span ng-if="instanceRoomType.photoPrincipal">{{instanceRoomType.photoPrincipalContentType}}, {{vm.byteSize(instanceRoomType.photoPrincipal)}}</span>
+                    </td>
+                    <td>{{instanceRoomType.createDate | date:'medium'}}</td>
+                    <td>{{instanceRoomType.editDate | date:'medium'}}</td>
+                    <td>{{instanceRoomType.active}}</td>
+                    <td>{{instanceRoomType.approval}}</td>
+                    <td>
+                        <span ng-repeat="instanceRoomFacility in instanceRoomType.instanceRoomFacilities">
+                            <a class="form-control-static" ui-sref="instance-facility-detail({id: {{instanceRoomFacility.id}}})">{{instanceRoomFacility.instanceFacilityName}}</a>{{$last ? '' : ', '}}
+                        </span>
+                    </td>
+                    <td>
+                        <a ui-sref="instance-tur-detail({id:instanceRoomType.instanceTur.id})">{{instanceRoomType.instanceTur.instanceTurName}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="instance-room-type-detail({id:instanceRoomType.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="instance-room-type.edit({id:instanceRoomType.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="instance-room-type.delete({id:instanceRoomType.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

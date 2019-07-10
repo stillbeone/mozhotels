@@ -1,0 +1,23 @@
+{
+    "mozhotelsbookingApp": {
+        "instanceContact" : {
+            "home": {
+                "title": "Instance Contacts",
+                "createLabel": "Crear nuevo Instance Contact",
+                "createOrEditLabel": "Crear o editar Instance Contact",
+                "search": "Search for Instance Contact"
+            },
+            "created": "Un nuevo Instance Contact ha sido creado con el identificador {{ param }}",
+            "updated": "Un Instance Contact ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Instance Contact ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Instance Contact {{ id }}?"
+            },
+            "detail": {
+                "title": "Instance Contact"
+            },
+            "contactNumber": "Contact Number",
+            "instanceTur": "Instance Tur"
+        }
+    }
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mozhotels.web.rest.CountryResourceIntTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2016-07-06T17:22:05" hostname="Edmilsons-MacBook-Pro.local" time="0.568">
+  <properties/>
+  <testcase name="searchCountry" classname="mozhotels.web.rest.CountryResourceIntTest" time="0.097"/>
+  <testcase name="getNonExistingCountry" classname="mozhotels.web.rest.CountryResourceIntTest" time="0.022"/>
+  <testcase name="createCountry" classname="mozhotels.web.rest.CountryResourceIntTest" time="0.071"/>
+  <testcase name="checkCountryNameIsRequired" classname="mozhotels.web.rest.CountryResourceIntTest" time="0.04"/>
+  <testcase name="updateCountry" classname="mozhotels.web.rest.CountryResourceIntTest" time="0.082"/>
+  <testcase name="getAllCountries" classname="mozhotels.web.rest.CountryResourceIntTest" time="0.019"/>
+  <testcase name="deleteCountry" classname="mozhotels.web.rest.CountryResourceIntTest" time="0.05"/>
+  <testcase name="getCountry" classname="mozhotels.web.rest.CountryResourceIntTest" time="0.028"/>
+  <system-out><![CDATA[Hibernate: insert into country (id, country_name, description) values (null, ?, ?)
+2016-07-06 19:22:05.673 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.CountryResource       : REST request to search Countries for query id:1
+2016-07-06 19:22:05.729 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.CountryResource       : REST request to get Country : 9223372036854775807
+Hibernate: select country0_.id as id1_4_0_, country0_.country_name as country_2_4_0_, country0_.description as descript3_4_0_ from country country0_ where country0_.id=?
+Hibernate: select country0_.id as id1_4_, country0_.country_name as country_2_4_, country0_.description as descript3_4_ from country country0_
+2016-07-06 19:22:05.792 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.CountryResource       : REST request to save Country : Country{id=null, countryName='AAAAA', description='AAAAA'}
+Hibernate: insert into country (id, country_name, description) values (null, ?, ?)
+Hibernate: select country0_.id as id1_4_, country0_.country_name as country_2_4_, country0_.description as descript3_4_ from country country0_
+Hibernate: select country0_.id as id1_4_, country0_.country_name as country_2_4_, country0_.description as descript3_4_ from country country0_
+Hibernate: select country0_.id as id1_4_, country0_.country_name as country_2_4_, country0_.description as descript3_4_ from country country0_
+Hibernate: insert into country (id, country_name, description) values (null, ?, ?)
+Hibernate: select country0_.id as id1_4_, country0_.country_name as country_2_4_, country0_.description as descript3_4_ from country country0_
+2016-07-06 19:22:05.963 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.CountryResource       : REST request to update Country : Country{id=3, countryName='BBBBB', description='BBBBB'}
+Hibernate: update country set country_name=?, description=? where id=?
+Hibernate: select country0_.id as id1_4_, country0_.country_name as country_2_4_, country0_.description as descript3_4_ from country country0_
+Hibernate: insert into country (id, country_name, description) values (null, ?, ?)
+2016-07-06 19:22:06.030 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.CountryResource       : REST request to get all Countries
+Hibernate: select country0_.id as id1_4_, country0_.country_name as country_2_4_, country0_.description as descript3_4_ from country country0_
+Hibernate: insert into country (id, country_name, description) values (null, ?, ?)
+Hibernate: select country0_.id as id1_4_, country0_.country_name as country_2_4_, country0_.description as descript3_4_ from country country0_
+2016-07-06 19:22:06.086 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.CountryResource       : REST request to delete Country : 5
+Hibernate: delete from country where id=?
+Hibernate: select country0_.id as id1_4_, country0_.country_name as country_2_4_, country0_.description as descript3_4_ from country country0_
+Hibernate: insert into country (id, country_name, description) values (null, ?, ?)
+2016-07-06 19:22:06.154 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.CountryResource       : REST request to get Country : 6
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,38 @@
+
+<div>
+    <h2><span translate="mozhotelsbookingApp.instanceFacilityType.detail.title">Instance Facility Type</span> {{vm.instanceFacilityType.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="mozhotelsbookingApp.instanceFacilityType.instanceFacilityTypeName">Instance Facility Type Name</span></dt>
+        <dd>
+            <span>{{vm.instanceFacilityType.instanceFacilityTypeName}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceFacilityType.facilityType">Facility Type</span></dt>
+        <dd>
+            <span translate="{{'mozhotelsbookingApp.FacilityType.' + vm.instanceFacilityType.facilityType}}">{{vm.instanceFacilityType.facilityType}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceFacilityType.description">Description</span></dt>
+        <dd>
+            <span>{{vm.instanceFacilityType.description}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceFacilityType.instanceFacility">Instance Facility</span></dt>
+        <dd>
+            <span>{{vm.instanceFacilityType.instanceFacility}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceFacilityType.instanceRoomFacility">Instance Room Facility</span></dt>
+        <dd>
+            <span>{{vm.instanceFacilityType.instanceRoomFacility}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceFacilityType.instanceBookingFacility">Instance Booking Facility</span></dt>
+        <dd>
+            <span>{{vm.instanceFacilityType.instanceBookingFacility}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

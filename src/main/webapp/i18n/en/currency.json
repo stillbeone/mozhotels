@@ -1,0 +1,11 @@
+{
+    "mozhotelsbookingApp": {
+        "Currency" : {
+            "null": "",
+            "MZN": "MZN",
+            "USD": "USD",
+            "EUR": "EUR",
+            "ZAR": "ZAR"
+        }
+    }
+}

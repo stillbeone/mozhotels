@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mozhotels.security.SecurityUtilsUnitTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2016-07-06T17:21:53" hostname="Edmilsons-MacBook-Pro.local" time="0.063">
+  <properties/>
+  <testcase name="testIsAuthenticated" classname="mozhotels.security.SecurityUtilsUnitTest" time="0.053"/>
+  <testcase name="testgetCurrentUserLogin" classname="mozhotels.security.SecurityUtilsUnitTest" time="0.008"/>
+  <testcase name="testAnonymousIsNotAuthenticated" classname="mozhotels.security.SecurityUtilsUnitTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

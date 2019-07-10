@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class mozhotels.web.rest.InstanceTurTypeResourceIntTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class mozhotels.web.rest.InstanceTurTypeResourceIntTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/mozhotels.web.rest.html">mozhotels.web.rest</a> &gt; InstanceTurTypeResourceIntTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">8</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.478s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">checkInstanceTurTypeNameIsRequired</td>
+<td>0.056s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">createInstanceTurType</td>
+<td>0.058s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">deleteInstanceTurType</td>
+<td>0.045s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getAllInstanceTurTypes</td>
+<td>0.010s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getInstanceTurType</td>
+<td>0.022s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getNonExistingInstanceTurType</td>
+<td>0.009s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">searchInstanceTurType</td>
+<td>0.146s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">updateInstanceTurType</td>
+<td>0.132s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>Hibernate: insert into instance_tur_type (id, description, instance_tur_type_name) values (null, ?, ?)
+2016-07-06 19:22:15.646 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceTurTypeResource       : REST request to search InstanceTurTypes for query id:1
+Hibernate: select instancetu0_.id as id1_18_, instancetu0_.description as descript2_18_, instancetu0_.instance_tur_type_name as instance3_18_ from instance_tur_type instancetu0_
+Hibernate: select instancetu0_.id as id1_18_, instancetu0_.description as descript2_18_, instancetu0_.instance_tur_type_name as instance3_18_ from instance_tur_type instancetu0_
+Hibernate: insert into instance_tur_type (id, description, instance_tur_type_name) values (null, ?, ?)
+2016-07-06 19:22:15.774 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceTurTypeResource       : REST request to get all InstanceTurTypes
+Hibernate: select instancetu0_.id as id1_18_, instancetu0_.description as descript2_18_, instancetu0_.instance_tur_type_name as instance3_18_ from instance_tur_type instancetu0_
+Hibernate: insert into instance_tur_type (id, description, instance_tur_type_name) values (null, ?, ?)
+Hibernate: select instancetu0_.id as id1_18_, instancetu0_.description as descript2_18_, instancetu0_.instance_tur_type_name as instance3_18_ from instance_tur_type instancetu0_
+2016-07-06 19:22:15.846 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceTurTypeResource       : REST request to update InstanceTurType : InstanceTurType{id=3, instanceTurTypeName='BBBBB', description='BBBBB'}
+Hibernate: update instance_tur_type set description=?, instance_tur_type_name=? where id=?
+Hibernate: select instancetu0_.id as id1_18_, instancetu0_.description as descript2_18_, instancetu0_.instance_tur_type_name as instance3_18_ from instance_tur_type instancetu0_
+Hibernate: insert into instance_tur_type (id, description, instance_tur_type_name) values (null, ?, ?)
+2016-07-06 19:22:15.971 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceTurTypeResource       : REST request to get InstanceTurType : 4
+Hibernate: insert into instance_tur_type (id, description, instance_tur_type_name) values (null, ?, ?)
+Hibernate: select instancetu0_.id as id1_18_, instancetu0_.description as descript2_18_, instancetu0_.instance_tur_type_name as instance3_18_ from instance_tur_type instancetu0_
+2016-07-06 19:22:16.020 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceTurTypeResource       : REST request to delete InstanceTurType : 5
+Hibernate: delete from instance_tur_type where id=?
+Hibernate: select instancetu0_.id as id1_18_, instancetu0_.description as descript2_18_, instancetu0_.instance_tur_type_name as instance3_18_ from instance_tur_type instancetu0_
+Hibernate: select instancetu0_.id as id1_18_, instancetu0_.description as descript2_18_, instancetu0_.instance_tur_type_name as instance3_18_ from instance_tur_type instancetu0_
+2016-07-06 19:22:16.073 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceTurTypeResource       : REST request to save InstanceTurType : InstanceTurType{id=null, instanceTurTypeName='AAAAA', description='AAAAA'}
+Hibernate: insert into instance_tur_type (id, description, instance_tur_type_name) values (null, ?, ?)
+Hibernate: select instancetu0_.id as id1_18_, instancetu0_.description as descript2_18_, instancetu0_.instance_tur_type_name as instance3_18_ from instance_tur_type instancetu0_
+2016-07-06 19:22:16.134 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceTurTypeResource       : REST request to get InstanceTurType : 9223372036854775807
+Hibernate: select instancetu0_.id as id1_18_0_, instancetu0_.description as descript2_18_0_, instancetu0_.instance_tur_type_name as instance3_18_0_ from instance_tur_type instancetu0_ where instancetu0_.id=?
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 2.14</a> at 6/jul/2016 19:23:27</p>
+</div>
+</div>
+</body>
+</html>

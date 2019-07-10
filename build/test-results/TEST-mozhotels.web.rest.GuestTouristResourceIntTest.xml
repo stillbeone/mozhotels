@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mozhotels.web.rest.GuestTouristResourceIntTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2016-07-06T17:22:06" hostname="Edmilsons-MacBook-Pro.local" time="0.687">
+  <properties/>
+  <testcase name="getNonExistingGuestTourist" classname="mozhotels.web.rest.GuestTouristResourceIntTest" time="0.057"/>
+  <testcase name="checkFirstNameIsRequired" classname="mozhotels.web.rest.GuestTouristResourceIntTest" time="0.045"/>
+  <testcase name="getGuestTourist" classname="mozhotels.web.rest.GuestTouristResourceIntTest" time="0.025"/>
+  <testcase name="createGuestTourist" classname="mozhotels.web.rest.GuestTouristResourceIntTest" time="0.052"/>
+  <testcase name="deleteGuestTourist" classname="mozhotels.web.rest.GuestTouristResourceIntTest" time="0.06"/>
+  <testcase name="checkEmailIsRequired" classname="mozhotels.web.rest.GuestTouristResourceIntTest" time="0.031"/>
+  <testcase name="updateGuestTourist" classname="mozhotels.web.rest.GuestTouristResourceIntTest" time="0.105"/>
+  <testcase name="searchGuestTourist" classname="mozhotels.web.rest.GuestTouristResourceIntTest" time="0.048"/>
+  <testcase name="checkLastNameIsRequired" classname="mozhotels.web.rest.GuestTouristResourceIntTest" time="0.023"/>
+  <testcase name="getAllGuestTourists" classname="mozhotels.web.rest.GuestTouristResourceIntTest" time="0.021"/>
+  <system-out><![CDATA[2016-07-06 19:22:06.272 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.GuestTouristResource  : REST request to get GuestTourist : 9223372036854775807
+Hibernate: select guesttouri0_.id as id1_5_0_, guesttouri0_.country_residence as country_2_5_0_, guesttouri0_.email as email3_5_0_, guesttouri0_.first_name as first_na4_5_0_, guesttouri0_.last_name as last_nam5_5_0_, guesttouri0_.tourist_id as tourist_6_5_0_, tourist1_.id as id1_30_1_, tourist1_.country_booking as country_2_30_1_, tourist1_.country_residence as country_3_30_1_, tourist1_.create_date as create_d4_30_1_, tourist1_.currency as currency5_30_1_, tourist1_.edit_date as edit_dat6_30_1_, tourist1_.email as email7_30_1_, tourist1_.first_name as first_na8_30_1_, tourist1_.language as language9_30_1_, tourist1_.last_name as last_na10_30_1_, tourist1_.phone_number as phone_n11_30_1_, tourist1_.photo_principal as photo_p12_30_1_, tourist1_.photo_principal_content_type as photo_p13_30_1_, tourist1_.user_id as user_id14_30_1_, user2_.id as id1_24_2_, user2_.created_by as created_2_24_2_, user2_.created_date as created_3_24_2_, user2_.last_modified_by as last_mod4_24_2_, user2_.last_modified_date as last_mod5_24_2_, user2_.activated as activate6_24_2_, user2_.activation_key as activati7_24_2_, user2_.email as email8_24_2_, user2_.first_name as first_na9_24_2_, user2_.lang_key as lang_ke10_24_2_, user2_.last_name as last_na11_24_2_, user2_.login as login12_24_2_, user2_.password_hash as passwor13_24_2_, user2_.reset_date as reset_d14_24_2_, user2_.reset_key as reset_k15_24_2_ from guest_tourist guesttouri0_ left outer join tourist tourist1_ on guesttouri0_.tourist_id=tourist1_.id left outer join jhi_user user2_ on tourist1_.user_id=user2_.id where guesttouri0_.id=?
+Hibernate: select guesttouri0_.id as id1_5_, guesttouri0_.country_residence as country_2_5_, guesttouri0_.email as email3_5_, guesttouri0_.first_name as first_na4_5_, guesttouri0_.last_name as last_nam5_5_, guesttouri0_.tourist_id as tourist_6_5_ from guest_tourist guesttouri0_
+Hibernate: select guesttouri0_.id as id1_5_, guesttouri0_.country_residence as country_2_5_, guesttouri0_.email as email3_5_, guesttouri0_.first_name as first_na4_5_, guesttouri0_.last_name as last_nam5_5_, guesttouri0_.tourist_id as tourist_6_5_ from guest_tourist guesttouri0_
+Hibernate: insert into guest_tourist (id, country_residence, email, first_name, last_name, tourist_id) values (null, ?, ?, ?, ?, ?)
+2016-07-06 19:22:06.405 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.GuestTouristResource  : REST request to get GuestTourist : 1
+Hibernate: select guesttouri0_.id as id1_5_, guesttouri0_.country_residence as country_2_5_, guesttouri0_.email as email3_5_, guesttouri0_.first_name as first_na4_5_, guesttouri0_.last_name as last_nam5_5_, guesttouri0_.tourist_id as tourist_6_5_ from guest_tourist guesttouri0_
+2016-07-06 19:22:06.444 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.GuestTouristResource  : REST request to save GuestTourist : GuestTourist{id=null, firstName='AAAAA', lastName='AAAAA', email='AAAAA', countryResidence='AAAAA'}
+Hibernate: insert into guest_tourist (id, country_residence, email, first_name, last_name, tourist_id) values (null, ?, ?, ?, ?, ?)
+Hibernate: select guesttouri0_.id as id1_5_, guesttouri0_.country_residence as country_2_5_, guesttouri0_.email as email3_5_, guesttouri0_.first_name as first_na4_5_, guesttouri0_.last_name as last_nam5_5_, guesttouri0_.tourist_id as tourist_6_5_ from guest_tourist guesttouri0_
+Hibernate: insert into guest_tourist (id, country_residence, email, first_name, last_name, tourist_id) values (null, ?, ?, ?, ?, ?)
+Hibernate: select guesttouri0_.id as id1_5_, guesttouri0_.country_residence as country_2_5_, guesttouri0_.email as email3_5_, guesttouri0_.first_name as first_na4_5_, guesttouri0_.last_name as last_nam5_5_, guesttouri0_.tourist_id as tourist_6_5_ from guest_tourist guesttouri0_
+2016-07-06 19:22:06.551 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.GuestTouristResource  : REST request to delete GuestTourist : 3
+Hibernate: delete from guest_tourist where id=?
+Hibernate: select guesttouri0_.id as id1_5_, guesttouri0_.country_residence as country_2_5_, guesttouri0_.email as email3_5_, guesttouri0_.first_name as first_na4_5_, guesttouri0_.last_name as last_nam5_5_, guesttouri0_.tourist_id as tourist_6_5_ from guest_tourist guesttouri0_
+Hibernate: select guesttouri0_.id as id1_5_, guesttouri0_.country_residence as country_2_5_, guesttouri0_.email as email3_5_, guesttouri0_.first_name as first_na4_5_, guesttouri0_.last_name as last_nam5_5_, guesttouri0_.tourist_id as tourist_6_5_ from guest_tourist guesttouri0_
+Hibernate: select guesttouri0_.id as id1_5_, guesttouri0_.country_residence as country_2_5_, guesttouri0_.email as email3_5_, guesttouri0_.first_name as first_na4_5_, guesttouri0_.last_name as last_nam5_5_, guesttouri0_.tourist_id as tourist_6_5_ from guest_tourist guesttouri0_
+Hibernate: insert into guest_tourist (id, country_residence, email, first_name, last_name, tourist_id) values (null, ?, ?, ?, ?, ?)
+Hibernate: select guesttouri0_.id as id1_5_, guesttouri0_.country_residence as country_2_5_, guesttouri0_.email as email3_5_, guesttouri0_.first_name as first_na4_5_, guesttouri0_.last_name as last_nam5_5_, guesttouri0_.tourist_id as tourist_6_5_ from guest_tourist guesttouri0_
+2016-07-06 19:22:06.722 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.GuestTouristResource  : REST request to update GuestTourist : GuestTourist{id=4, firstName='BBBBB', lastName='BBBBB', email='BBBBB', countryResidence='BBBBB'}
+Hibernate: update guest_tourist set country_residence=?, email=?, first_name=?, last_name=?, tourist_id=? where id=?
+Hibernate: select guesttouri0_.id as id1_5_, guesttouri0_.country_residence as country_2_5_, guesttouri0_.email as email3_5_, guesttouri0_.first_name as first_na4_5_, guesttouri0_.last_name as last_nam5_5_, guesttouri0_.tourist_id as tourist_6_5_ from guest_tourist guesttouri0_
+Hibernate: insert into guest_tourist (id, country_residence, email, first_name, last_name, tourist_id) values (null, ?, ?, ?, ?, ?)
+2016-07-06 19:22:06.808 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.GuestTouristResource  : REST request to search GuestTourists for query id:5
+Hibernate: select guesttouri0_.id as id1_5_, guesttouri0_.country_residence as country_2_5_, guesttouri0_.email as email3_5_, guesttouri0_.first_name as first_na4_5_, guesttouri0_.last_name as last_nam5_5_, guesttouri0_.tourist_id as tourist_6_5_ from guest_tourist guesttouri0_
+Hibernate: select guesttouri0_.id as id1_5_, guesttouri0_.country_residence as country_2_5_, guesttouri0_.email as email3_5_, guesttouri0_.first_name as first_na4_5_, guesttouri0_.last_name as last_nam5_5_, guesttouri0_.tourist_id as tourist_6_5_ from guest_tourist guesttouri0_
+Hibernate: insert into guest_tourist (id, country_residence, email, first_name, last_name, tourist_id) values (null, ?, ?, ?, ?, ?)
+2016-07-06 19:22:06.910 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.GuestTouristResource  : REST request to get all GuestTourists
+Hibernate: select guesttouri0_.id as id1_5_, guesttouri0_.country_residence as country_2_5_, guesttouri0_.email as email3_5_, guesttouri0_.first_name as first_na4_5_, guesttouri0_.last_name as last_nam5_5_, guesttouri0_.tourist_id as tourist_6_5_ from guest_tourist guesttouri0_
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

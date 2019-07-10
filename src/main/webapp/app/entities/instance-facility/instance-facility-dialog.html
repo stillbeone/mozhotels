@@ -1,0 +1,83 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myInstanceFacilityLabel" translate="mozhotelsbookingApp.instanceFacility.home.createOrEditLabel">Create or edit a Instance Facility</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.instanceFacility.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.instanceFacility.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceFacility.instanceFacilityName" for="field_instanceFacilityName">Instance Facility Name</label>
+            <input type="text" class="form-control" name="instanceFacilityName" id="field_instanceFacilityName"
+                    ng-model="vm.instanceFacility.instanceFacilityName"
+                    required />
+            <div ng-show="editForm.instanceFacilityName.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.instanceFacilityName.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceFacility.area" for="field_area">Area</label>
+            <select class="form-control" name="area" ng-model="vm.instanceFacility.area" id="field_area">
+                <option value="INDOOR" translate="mozhotelsbookingApp.InstanceArea.INDOOR">INDOOR</option>
+                <option value="OUTDOOR" translate="mozhotelsbookingApp.InstanceArea.OUTDOOR">OUTDOOR</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceFacility.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="vm.instanceFacility.description"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceFacility.quantity" for="field_quantity">Quantity</label>
+            <input type="number" class="form-control" name="quantity" id="field_quantity"
+                    ng-model="vm.instanceFacility.quantity"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceFacility.price" for="field_price">Price</label>
+            <input type="number" class="form-control" name="price" id="field_price"
+                    ng-model="vm.instanceFacility.price"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceFacility.bookingInclude" for="field_bookingInclude">Booking Include</label>
+            <input type="checkbox" class="form-control" name="bookingInclude" id="field_bookingInclude"
+                    ng-model="vm.instanceFacility.bookingInclude"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="mozhotelsbookingApp.instanceFacility.instanceTur" for="field_instanceTur">Instance Tur</label>
+            <select class="form-control" id="field_instanceTur" ng-change="vm.facilities();" name="instanceTur" ng-model="vm.instanceFacility.instanceTur" ng-options="instanceTur as instanceTur.instanceTurName for instanceTur in vm.instanceturs track by instanceTur.id">
+                <option value=""></option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label translate="mozhotelsbookingApp.instanceFacility.instanceFacilityType"  for="field_instanceFacilityType">Instance Facility Type</label>
+            <select class="form-control" id="field_instanceFacilityType" name="instanceFacilityType" ng-disable="!vm.instancefacilitytypes" ng-model="vm.instanceFacility.instanceFacilityType" ng-options="instanceFacilityType as instanceFacilityType.instanceFacilityTypeName for instanceFacilityType in vm.instancefacilitytypes track by instanceFacilityType.id">
+                <option value=""></option>
+            </select>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,106 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myPictureLabel" translate="mozhotelsbookingApp.picture.home.createOrEditLabel">Create or edit a Picture</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.picture.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.picture.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.picture.pictureName" for="field_pictureName">Picture Name</label>
+            <input type="text" class="form-control" name="pictureName" id="field_pictureName"
+                    ng-model="vm.picture.pictureName"
+                    required />
+            <div ng-show="editForm.pictureName.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.pictureName.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.picture.type" for="field_type">Type</label>
+            <select class="form-control" name="type" ng-model="vm.picture.type" id="field_type">
+                <option value="LOCALTUR" translate="mozhotelsbookingApp.PictureType.LOCALTUR">LOCALTUR</option>
+                <option value="INSTANCETUR" translate="mozhotelsbookingApp.PictureType.INSTANCETUR">INSTANCETUR</option>
+                <option value="INSTANCEACTIVITY" translate="mozhotelsbookingApp.PictureType.INSTANCEACTIVITY">INSTANCEACTIVITY</option>
+                <option value="ROOMTYPE" translate="mozhotelsbookingApp.PictureType.ROOMTYPE">ROOMTYPE</option>
+                <option value="TOURIST" translate="mozhotelsbookingApp.PictureType.TOURIST">TOURIST</option>
+            </select>
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setPicture($file, vm.picture)" ngf-pattern="'image/*'">
+            <label class="control-label" translate="mozhotelsbookingApp.picture.picture" for="field_picture">Picture</label>
+            <div>
+                <img data-ng-src="{{'data:' + vm.picture.pictureContentType + ';base64,' + vm.picture.picture}}" style="max-height: 100px;" ng-if="vm.picture.picture"/>
+                <div ng-if="vm.picture.picture" class="help-block clearfix">
+                    <span class="pull-left">{{vm.picture.pictureContentType}}, {{vm.byteSize(vm.picture.picture)}}</span>
+                    <button ng-click="vm.picture.picture=null;vm.picture.pictureContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="file" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setPicture($file, vm.picture)" accept="image/*" translate="entity.action.addimage">
+                    Add image
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="picture" id="field_picture"
+                    ng-model="vm.picture.picture"
+                     />
+            <input type="hidden" class="form-control" name="pictureContentType" id="field_pictureContentType"
+                    ng-model="vm.picture.pictureContentType" />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.picture.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="vm.picture.description"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="mozhotelsbookingApp.picture.province" for="field_province">Province</label>
+            <select class="form-control" id="field_province" name="province" ng-model="vm.picture.province" ng-options="province as province.provinceName for province in vm.provinces track by province.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="mozhotelsbookingApp.picture.localTur" for="field_localTur">Local Tur</label>
+            <select class="form-control" id="field_localTur" name="localTur" ng-model="vm.picture.localTur" ng-options="localTur as localTur.localTurName for localTur in vm.localturs track by localTur.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="mozhotelsbookingApp.picture.instanceTur" for="field_instanceTur">Instance Tur</label>
+            <select class="form-control" id="field_instanceTur" name="instanceTur" ng-model="vm.picture.instanceTur" ng-options="instanceTur as instanceTur.instanceTurName for instanceTur in vm.instanceturs track by instanceTur.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="mozhotelsbookingApp.picture.instanceRoomType" for="field_instanceRoomType">Instance Room Type</label>
+            <select class="form-control" id="field_instanceRoomType" name="instanceRoomType" ng-model="vm.picture.instanceRoomType" ng-options="instanceRoomType as instanceRoomType.instanceRoomTypeName for instanceRoomType in vm.instanceroomtypes track by instanceRoomType.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="mozhotelsbookingApp.picture.instanceActivity" for="field_instanceActivity">Instance Activity</label>
+            <select class="form-control" id="field_instanceActivity" name="instanceActivity" ng-model="vm.picture.instanceActivity" ng-options="instanceActivity as instanceActivity.instanceActivityName for instanceActivity in vm.instanceactivities track by instanceActivity.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

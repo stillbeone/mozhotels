@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class mozhotels.web.rest.GuestTouristResourceIntTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class mozhotels.web.rest.GuestTouristResourceIntTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/mozhotels.web.rest.html">mozhotels.web.rest</a> &gt; GuestTouristResourceIntTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">10</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.467s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">checkEmailIsRequired</td>
+<td>0.031s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">checkFirstNameIsRequired</td>
+<td>0.045s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">checkLastNameIsRequired</td>
+<td>0.023s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">createGuestTourist</td>
+<td>0.052s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">deleteGuestTourist</td>
+<td>0.060s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getAllGuestTourists</td>
+<td>0.021s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getGuestTourist</td>
+<td>0.025s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getNonExistingGuestTourist</td>
+<td>0.057s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">searchGuestTourist</td>
+<td>0.048s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">updateGuestTourist</td>
+<td>0.105s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2016-07-06 19:22:06.272 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.GuestTouristResource  : REST request to get GuestTourist : 9223372036854775807
+Hibernate: select guesttouri0_.id as id1_5_0_, guesttouri0_.country_residence as country_2_5_0_, guesttouri0_.email as email3_5_0_, guesttouri0_.first_name as first_na4_5_0_, guesttouri0_.last_name as last_nam5_5_0_, guesttouri0_.tourist_id as tourist_6_5_0_, tourist1_.id as id1_30_1_, tourist1_.country_booking as country_2_30_1_, tourist1_.country_residence as country_3_30_1_, tourist1_.create_date as create_d4_30_1_, tourist1_.currency as currency5_30_1_, tourist1_.edit_date as edit_dat6_30_1_, tourist1_.email as email7_30_1_, tourist1_.first_name as first_na8_30_1_, tourist1_.language as language9_30_1_, tourist1_.last_name as last_na10_30_1_, tourist1_.phone_number as phone_n11_30_1_, tourist1_.photo_principal as photo_p12_30_1_, tourist1_.photo_principal_content_type as photo_p13_30_1_, tourist1_.user_id as user_id14_30_1_, user2_.id as id1_24_2_, user2_.created_by as created_2_24_2_, user2_.created_date as created_3_24_2_, user2_.last_modified_by as last_mod4_24_2_, user2_.last_modified_date as last_mod5_24_2_, user2_.activated as activate6_24_2_, user2_.activation_key as activati7_24_2_, user2_.email as email8_24_2_, user2_.first_name as first_na9_24_2_, user2_.lang_key as lang_ke10_24_2_, user2_.last_name as last_na11_24_2_, user2_.login as login12_24_2_, user2_.password_hash as passwor13_24_2_, user2_.reset_date as reset_d14_24_2_, user2_.reset_key as reset_k15_24_2_ from guest_tourist guesttouri0_ left outer join tourist tourist1_ on guesttouri0_.tourist_id=tourist1_.id left outer join jhi_user user2_ on tourist1_.user_id=user2_.id where guesttouri0_.id=?
+Hibernate: select guesttouri0_.id as id1_5_, guesttouri0_.country_residence as country_2_5_, guesttouri0_.email as email3_5_, guesttouri0_.first_name as first_na4_5_, guesttouri0_.last_name as last_nam5_5_, guesttouri0_.tourist_id as tourist_6_5_ from guest_tourist guesttouri0_
+Hibernate: select guesttouri0_.id as id1_5_, guesttouri0_.country_residence as country_2_5_, guesttouri0_.email as email3_5_, guesttouri0_.first_name as first_na4_5_, guesttouri0_.last_name as last_nam5_5_, guesttouri0_.tourist_id as tourist_6_5_ from guest_tourist guesttouri0_
+Hibernate: insert into guest_tourist (id, country_residence, email, first_name, last_name, tourist_id) values (null, ?, ?, ?, ?, ?)
+2016-07-06 19:22:06.405 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.GuestTouristResource  : REST request to get GuestTourist : 1
+Hibernate: select guesttouri0_.id as id1_5_, guesttouri0_.country_residence as country_2_5_, guesttouri0_.email as email3_5_, guesttouri0_.first_name as first_na4_5_, guesttouri0_.last_name as last_nam5_5_, guesttouri0_.tourist_id as tourist_6_5_ from guest_tourist guesttouri0_
+2016-07-06 19:22:06.444 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.GuestTouristResource  : REST request to save GuestTourist : GuestTourist{id=null, firstName='AAAAA', lastName='AAAAA', email='AAAAA', countryResidence='AAAAA'}
+Hibernate: insert into guest_tourist (id, country_residence, email, first_name, last_name, tourist_id) values (null, ?, ?, ?, ?, ?)
+Hibernate: select guesttouri0_.id as id1_5_, guesttouri0_.country_residence as country_2_5_, guesttouri0_.email as email3_5_, guesttouri0_.first_name as first_na4_5_, guesttouri0_.last_name as last_nam5_5_, guesttouri0_.tourist_id as tourist_6_5_ from guest_tourist guesttouri0_
+Hibernate: insert into guest_tourist (id, country_residence, email, first_name, last_name, tourist_id) values (null, ?, ?, ?, ?, ?)
+Hibernate: select guesttouri0_.id as id1_5_, guesttouri0_.country_residence as country_2_5_, guesttouri0_.email as email3_5_, guesttouri0_.first_name as first_na4_5_, guesttouri0_.last_name as last_nam5_5_, guesttouri0_.tourist_id as tourist_6_5_ from guest_tourist guesttouri0_
+2016-07-06 19:22:06.551 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.GuestTouristResource  : REST request to delete GuestTourist : 3
+Hibernate: delete from guest_tourist where id=?
+Hibernate: select guesttouri0_.id as id1_5_, guesttouri0_.country_residence as country_2_5_, guesttouri0_.email as email3_5_, guesttouri0_.first_name as first_na4_5_, guesttouri0_.last_name as last_nam5_5_, guesttouri0_.tourist_id as tourist_6_5_ from guest_tourist guesttouri0_
+Hibernate: select guesttouri0_.id as id1_5_, guesttouri0_.country_residence as country_2_5_, guesttouri0_.email as email3_5_, guesttouri0_.first_name as first_na4_5_, guesttouri0_.last_name as last_nam5_5_, guesttouri0_.tourist_id as tourist_6_5_ from guest_tourist guesttouri0_
+Hibernate: select guesttouri0_.id as id1_5_, guesttouri0_.country_residence as country_2_5_, guesttouri0_.email as email3_5_, guesttouri0_.first_name as first_na4_5_, guesttouri0_.last_name as last_nam5_5_, guesttouri0_.tourist_id as tourist_6_5_ from guest_tourist guesttouri0_
+Hibernate: insert into guest_tourist (id, country_residence, email, first_name, last_name, tourist_id) values (null, ?, ?, ?, ?, ?)
+Hibernate: select guesttouri0_.id as id1_5_, guesttouri0_.country_residence as country_2_5_, guesttouri0_.email as email3_5_, guesttouri0_.first_name as first_na4_5_, guesttouri0_.last_name as last_nam5_5_, guesttouri0_.tourist_id as tourist_6_5_ from guest_tourist guesttouri0_
+2016-07-06 19:22:06.722 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.GuestTouristResource  : REST request to update GuestTourist : GuestTourist{id=4, firstName='BBBBB', lastName='BBBBB', email='BBBBB', countryResidence='BBBBB'}
+Hibernate: update guest_tourist set country_residence=?, email=?, first_name=?, last_name=?, tourist_id=? where id=?
+Hibernate: select guesttouri0_.id as id1_5_, guesttouri0_.country_residence as country_2_5_, guesttouri0_.email as email3_5_, guesttouri0_.first_name as first_na4_5_, guesttouri0_.last_name as last_nam5_5_, guesttouri0_.tourist_id as tourist_6_5_ from guest_tourist guesttouri0_
+Hibernate: insert into guest_tourist (id, country_residence, email, first_name, last_name, tourist_id) values (null, ?, ?, ?, ?, ?)
+2016-07-06 19:22:06.808 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.GuestTouristResource  : REST request to search GuestTourists for query id:5
+Hibernate: select guesttouri0_.id as id1_5_, guesttouri0_.country_residence as country_2_5_, guesttouri0_.email as email3_5_, guesttouri0_.first_name as first_na4_5_, guesttouri0_.last_name as last_nam5_5_, guesttouri0_.tourist_id as tourist_6_5_ from guest_tourist guesttouri0_
+Hibernate: select guesttouri0_.id as id1_5_, guesttouri0_.country_residence as country_2_5_, guesttouri0_.email as email3_5_, guesttouri0_.first_name as first_na4_5_, guesttouri0_.last_name as last_nam5_5_, guesttouri0_.tourist_id as tourist_6_5_ from guest_tourist guesttouri0_
+Hibernate: insert into guest_tourist (id, country_residence, email, first_name, last_name, tourist_id) values (null, ?, ?, ?, ?, ?)
+2016-07-06 19:22:06.910 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.GuestTouristResource  : REST request to get all GuestTourists
+Hibernate: select guesttouri0_.id as id1_5_, guesttouri0_.country_residence as country_2_5_, guesttouri0_.email as email3_5_, guesttouri0_.first_name as first_na4_5_, guesttouri0_.last_name as last_nam5_5_, guesttouri0_.tourist_id as tourist_6_5_ from guest_tourist guesttouri0_
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 2.14</a> at 6/jul/2016 19:23:27</p>
+</div>
+</div>
+</body>
+</html>

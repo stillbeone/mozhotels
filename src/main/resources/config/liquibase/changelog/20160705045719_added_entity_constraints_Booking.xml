@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Booking.
+    -->
+    <changeSet id="20160705045719-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="bookings_id"
+                                 baseTableName="booking_instance_facility"
+                                 constraintName="fk_booking_instance_facility_instancefacility_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="booking"/>
+        <addForeignKeyConstraint baseColumnNames="instance_facilities_id"
+                                 baseTableName="booking_instance_facility"
+                                 constraintName="fk_booking_instance_facility_booking_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="instance_facility"/>
+        
+        <addForeignKeyConstraint baseColumnNames="tourist_id"
+                                 baseTableName="booking"
+                                 constraintName="fk_booking_tourist_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tourist"/>
+
+        <addForeignKeyConstraint baseColumnNames="guest_tourist_id"
+                                 baseTableName="booking"
+                                 constraintName="fk_booking_guesttourist_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="guest_tourist"/>
+
+        <addForeignKeyConstraint baseColumnNames="instance_tur_id"
+                                 baseTableName="booking"
+                                 constraintName="fk_booking_instancetur_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="instance_tur"/>
+
+        <addForeignKeyConstraint baseColumnNames="instance_room_type_id"
+                                 baseTableName="booking"
+                                 constraintName="fk_booking_instanceroomtype_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="instance_room_type"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class mozhotels.web.rest.InstanceInfoResourceIntTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class mozhotels.web.rest.InstanceInfoResourceIntTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/mozhotels.web.rest.html">mozhotels.web.rest</a> &gt; InstanceInfoResourceIntTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">9</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.950s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">checkInstanceInfoIsRequired</td>
+<td>0.016s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">checkInstanceInfoNameIsRequired</td>
+<td>0.048s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">createInstanceInfo</td>
+<td>0.113s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">deleteInstanceInfo</td>
+<td>0.070s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getAllInstanceInfos</td>
+<td>0.024s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getInstanceInfo</td>
+<td>0.029s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getNonExistingInstanceInfo</td>
+<td>0.016s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">searchInstanceInfo</td>
+<td>0.474s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">updateInstanceInfo</td>
+<td>0.160s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>Hibernate: insert into instance_info (id, description, instance_info, instance_info_name, instance_info_type_id, instance_tur_id) values (null, ?, ?, ?, ?, ?)
+Hibernate: select instancein0_.id as id1_12_, instancein0_.description as descript2_12_, instancein0_.instance_info as instance3_12_, instancein0_.instance_info_name as instance4_12_, instancein0_.instance_info_type_id as instance5_12_, instancein0_.instance_tur_id as instance6_12_ from instance_info instancein0_
+2016-07-06 19:22:11.119 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.InstanceInfoResource  : REST request to delete InstanceInfo : 1
+Hibernate: delete from instance_info where id=?
+Hibernate: select instancein0_.id as id1_12_, instancein0_.description as descript2_12_, instancein0_.instance_info as instance3_12_, instancein0_.instance_info_name as instance4_12_, instancein0_.instance_info_type_id as instance5_12_, instancein0_.instance_tur_id as instance6_12_ from instance_info instancein0_
+Hibernate: insert into instance_info (id, description, instance_info, instance_info_name, instance_info_type_id, instance_tur_id) values (null, ?, ?, ?, ?, ?)
+Hibernate: select instancein0_.id as id1_12_, instancein0_.description as descript2_12_, instancein0_.instance_info as instance3_12_, instancein0_.instance_info_name as instance4_12_, instancein0_.instance_info_type_id as instance5_12_, instancein0_.instance_tur_id as instance6_12_ from instance_info instancein0_
+2016-07-06 19:22:11.245 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.InstanceInfoResource  : REST request to update InstanceInfo : InstanceInfo{id=2, instanceInfo='USEFUL', instanceInfoName='BBBBB', description='BBBBB'}
+Hibernate: update instance_info set description=?, instance_info=?, instance_info_name=?, instance_info_type_id=?, instance_tur_id=? where id=?
+Hibernate: select instancein0_.id as id1_12_, instancein0_.description as descript2_12_, instancein0_.instance_info as instance3_12_, instancein0_.instance_info_name as instance4_12_, instancein0_.instance_info_type_id as instance5_12_, instancein0_.instance_tur_id as instance6_12_ from instance_info instancein0_
+Hibernate: insert into instance_info (id, description, instance_info, instance_info_name, instance_info_type_id, instance_tur_id) values (null, ?, ?, ?, ?, ?)
+2016-07-06 19:22:11.796 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.InstanceInfoResource  : REST request to search InstanceInfos for query id:3
+Hibernate: select instancein0_.id as id1_12_, instancein0_.description as descript2_12_, instancein0_.instance_info as instance3_12_, instancein0_.instance_info_name as instance4_12_, instancein0_.instance_info_type_id as instance5_12_, instancein0_.instance_tur_id as instance6_12_ from instance_info instancein0_
+Hibernate: select instancein0_.id as id1_12_, instancein0_.description as descript2_12_, instancein0_.instance_info as instance3_12_, instancein0_.instance_info_name as instance4_12_, instancein0_.instance_info_type_id as instance5_12_, instancein0_.instance_tur_id as instance6_12_ from instance_info instancein0_
+2016-07-06 19:22:11.910 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.InstanceInfoResource  : REST request to get InstanceInfo : 9223372036854775807
+Hibernate: select instancein0_.id as id1_12_0_, instancein0_.description as descript2_12_0_, instancein0_.instance_info as instance3_12_0_, instancein0_.instance_info_name as instance4_12_0_, instancein0_.instance_info_type_id as instance5_12_0_, instancein0_.instance_tur_id as instance6_12_0_, instancein1_.id as id1_13_1_, instancein1_.description as descript2_13_1_, instancein1_.instance_info_type as instance3_13_1_, instancein1_.instance_info_type_name as instance4_13_1_, instancetu2_.id as id1_17_2_, instancetu2_.address as address2_17_2_, instancetu2_.beds as beds3_17_2_, instancetu2_.contact_number_principal as contact_4_17_2_, instancetu2_.currency as currency5_17_2_, instancetu2_.description as descript6_17_2_, instancetu2_.email as email7_17_2_, instancetu2_.floors as floors8_17_2_, instancetu2_.instance_tur_name as instance9_17_2_, instancetu2_.instance_tur_type_id as instanc18_17_2_, instancetu2_.latitude as latitud10_17_2_, instancetu2_.local_tur_id as local_t19_17_2_, instancetu2_.longitude as longitu11_17_2_, instancetu2_.photo_principal as photo_p12_17_2_, instancetu2_.photo_principal_content_type as photo_p13_17_2_, instancetu2_.rating as rating14_17_2_, instancetu2_.rooms as rooms15_17_2_, instancetu2_.website as website16_17_2_, instancetu2_.zip_code as zip_cod17_17_2_, instancetu3_.id as id1_18_3_, instancetu3_.description as descript2_18_3_, instancetu3_.instance_tur_type_name as instance3_18_3_, localtur4_.id as id1_26_4_, localtur4_.description as descript2_26_4_, localtur4_.local_tur_name as local_tu3_26_4_, localtur4_.photo_principal as photo_pr4_26_4_, localtur4_.photo_principal_content_type as photo_pr5_26_4_, localtur4_.province_id as province6_26_4_, province5_.id as id1_28_5_, province5_.description as descript2_28_5_, province5_.photo_principal as photo_pr3_28_5_, province5_.photo_principal_content_type as photo_pr4_28_5_, province5_.province_name as province5_28_5_, province5_.region_id as region_i6_28_5_, region6_.id as id1_29_6_, region6_.country_id as country_4_29_6_, region6_.description as descript2_29_6_, region6_.region_name as region_n3_29_6_, country7_.id as id1_4_7_, country7_.country_name as country_2_4_7_, country7_.description as descript3_4_7_ from instance_info instancein0_ left outer join instance_info_type instancein1_ on instancein0_.instance_info_type_id=instancein1_.id left outer join instance_tur instancetu2_ on instancein0_.instance_tur_id=instancetu2_.id left outer join instance_tur_type instancetu3_ on instancetu2_.instance_tur_type_id=instancetu3_.id left outer join local_tur localtur4_ on instancetu2_.local_tur_id=localtur4_.id left outer join province province5_ on localtur4_.province_id=province5_.id left outer join region region6_ on province5_.region_id=region6_.id left outer join country country7_ on region6_.country_id=country7_.id where instancein0_.id=?
+Hibernate: select instancein0_.id as id1_12_, instancein0_.description as descript2_12_, instancein0_.instance_info as instance3_12_, instancein0_.instance_info_name as instance4_12_, instancein0_.instance_info_type_id as instance5_12_, instancein0_.instance_tur_id as instance6_12_ from instance_info instancein0_
+Hibernate: select instancein0_.id as id1_12_, instancein0_.description as descript2_12_, instancein0_.instance_info as instance3_12_, instancein0_.instance_info_name as instance4_12_, instancein0_.instance_info_type_id as instance5_12_, instancein0_.instance_tur_id as instance6_12_ from instance_info instancein0_
+Hibernate: insert into instance_info (id, description, instance_info, instance_info_name, instance_info_type_id, instance_tur_id) values (null, ?, ?, ?, ?, ?)
+2016-07-06 19:22:11.991 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.InstanceInfoResource  : REST request to get all InstanceInfos
+Hibernate: select instancein0_.id as id1_12_, instancein0_.description as descript2_12_, instancein0_.instance_info as instance3_12_, instancein0_.instance_info_name as instance4_12_, instancein0_.instance_info_type_id as instance5_12_, instancein0_.instance_tur_id as instance6_12_ from instance_info instancein0_
+Hibernate: insert into instance_info (id, description, instance_info, instance_info_name, instance_info_type_id, instance_tur_id) values (null, ?, ?, ?, ?, ?)
+2016-07-06 19:22:12.050 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.InstanceInfoResource  : REST request to get InstanceInfo : 5
+Hibernate: select instancein0_.id as id1_12_, instancein0_.description as descript2_12_, instancein0_.instance_info as instance3_12_, instancein0_.instance_info_name as instance4_12_, instancein0_.instance_info_type_id as instance5_12_, instancein0_.instance_tur_id as instance6_12_ from instance_info instancein0_
+2016-07-06 19:22:12.101 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.InstanceInfoResource  : REST request to save InstanceInfo : InstanceInfo{id=null, instanceInfo='POLICY', instanceInfoName='AAAAA', description='AAAAA'}
+Hibernate: insert into instance_info (id, description, instance_info, instance_info_name, instance_info_type_id, instance_tur_id) values (null, ?, ?, ?, ?, ?)
+Hibernate: select instancein0_.id as id1_12_, instancein0_.description as descript2_12_, instancein0_.instance_info as instance3_12_, instancein0_.instance_info_name as instance4_12_, instancein0_.instance_info_type_id as instance5_12_, instancein0_.instance_tur_id as instance6_12_ from instance_info instancein0_
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 2.14</a> at 6/jul/2016 19:23:27</p>
+</div>
+</div>
+</body>
+</html>

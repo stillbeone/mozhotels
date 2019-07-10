@@ -1,0 +1,49 @@
+{
+    "mozhotelsbookingApp": {
+        "instanceTur" : {
+            "home": {
+                "title": "Instance Turs",
+                "createLabel": "Crear nuevo Instance Tur",
+                "createOrEditLabel": "Crear o editar Instance Tur",
+                "search": "Search for Instance Tur"
+            },
+            "created": "Un nuevo Instance Tur ha sido creado con el identificador {{ param }}",
+            "updated": "Un Instance Tur ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Instance Tur ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Instance Tur {{ id }}?"
+            },
+            "detail": {
+                "title": "Instance Tur"
+            },
+            "instanceTurName": "Instance Tur Name",
+            "rating": "Rating",
+            "description": "Description",
+            "latitude": "Latitude",
+            "longitude": "Longitude",
+            "rooms": "Rooms",
+            "beds": "Beds",
+            "floors": "Floors",
+            "currency": "Currency",
+            "photoPrincipal": "Photo Principal",
+            "agreementNumber": "Agreement Number",
+            "createDate": "Create Date",
+            "editDate": "Edit Date",
+            "active": "Active",
+            "approval": "Approval",
+            "picture": "Picture",
+            "instanceFacilityType": "Instance Facility Type",
+            "instanceActivityType": "Instance Activity Type",
+            "instanceFacility": "Instance Facility",
+            "instanceActivity": "Instance Activity",
+            "instanceRoomType": "Instance Room Type",
+            "instanceInfo": "Instance Info",
+            "instanceReview": "Instance Review",
+            "booking": "Booking",
+            "favorite": "Favorite",
+            "localTur": "Local Tur",
+            "instanceTurType": "Instance Tur Type",
+            "instanceContact": "Instance Contact"
+        }
+    }
+}

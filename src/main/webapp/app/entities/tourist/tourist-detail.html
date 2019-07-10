@@ -1,0 +1,75 @@
+
+<div>
+    <h2><span translate="mozhotelsbookingApp.tourist.detail.title">Tourist</span> {{vm.tourist.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="mozhotelsbookingApp.tourist.firstName">First Name</span></dt>
+        <dd>
+            <span>{{vm.tourist.firstName}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.tourist.lastName">Last Name</span></dt>
+        <dd>
+            <span>{{vm.tourist.lastName}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.tourist.email">Email</span></dt>
+        <dd>
+            <span>{{vm.tourist.email}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.tourist.phoneNumber">Phone Number</span></dt>
+        <dd>
+            <span>{{vm.tourist.phoneNumber}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.tourist.countryResidence">Country Residence</span></dt>
+        <dd>
+            <span>{{vm.tourist.countryResidence}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.tourist.countryBooking">Country Booking</span></dt>
+        <dd>
+            <span>{{vm.tourist.countryBooking}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.tourist.language">Language</span></dt>
+        <dd>
+            <span translate="{{'mozhotelsbookingApp.Language.' + vm.tourist.language}}">{{vm.tourist.language}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.tourist.currency">Currency</span></dt>
+        <dd>
+            <span translate="{{'mozhotelsbookingApp.Currency.' + vm.tourist.currency}}">{{vm.tourist.currency}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.tourist.photoPrincipal">Photo Principal</span></dt>
+        <dd>
+            <div ng-if="vm.tourist.photoPrincipal">
+                <a ng-click="vm.openFile(vm.tourist.photoPrincipalContentType, vm.tourist.photoPrincipal)">
+                    <img data-ng-src="{{'data:' + vm.tourist.photoPrincipalContentType + ';base64,' + vm.tourist.photoPrincipal}}" style="max-width: 100%;"/>
+                </a>
+                {{vm.tourist.photoPrincipalContentType}}, {{vm.byteSize(vm.tourist.photoPrincipal)}}
+            </div>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.tourist.createDate">Create Date</span></dt>
+        <dd>
+            <span>{{vm.tourist.createDate | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.tourist.editDate">Edit Date</span></dt>
+        <dd>
+            <span>{{vm.tourist.editDate | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.tourist.active">Active</span></dt>
+        <dd>
+            <span>{{vm.tourist.active}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.tourist.approval">Approval</span></dt>
+        <dd>
+            <span>{{vm.tourist.approval}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.tourist.user">User</span></dt>
+        <dd>
+            {{vm.tourist.user.id}}
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

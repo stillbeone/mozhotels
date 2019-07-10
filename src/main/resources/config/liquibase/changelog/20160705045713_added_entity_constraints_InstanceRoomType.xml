@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity InstanceRoomType.
+    -->
+    <changeSet id="20160705045713-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="instance_room_types_id"
+                                 baseTableName="instance_room_type_instance_room_facility"
+                                 constraintName="fk_instance_room_type_instance_room_facility_instancefacility_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="instance_room_type"/>
+        <addForeignKeyConstraint baseColumnNames="instance_room_facilities_id"
+                                 baseTableName="instance_room_type_instance_room_facility"
+                                 constraintName="fk_instance_room_type_instance_room_facility_instanceroomtype_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="instance_facility"/>
+        
+        <addForeignKeyConstraint baseColumnNames="instance_tur_id"
+                                 baseTableName="instance_room_type"
+                                 constraintName="fk_instanceroomtype_instancetur_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="instance_tur"/>
+
+    </changeSet>
+</databaseChangeLog>

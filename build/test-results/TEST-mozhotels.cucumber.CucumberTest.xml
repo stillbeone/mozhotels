@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mozhotels.cucumber.CucumberTest" tests="0" skipped="0" failures="0" errors="0" timestamp="1970-01-01T00:00:00" hostname="Edmilsons-MacBook-Pro.local" time="0.0">
+  <properties/>
+  <system-out><![CDATA[Feature: User management
+
+  Scenario: Retrieve administrator user  ?[90m# user/user.feature:3?[0m
+    ?[32mWhen ?[0m?[32mI search user '?[0m?[32m?[1madmin?[0m?[32m'?[0m           ?[90m# UserStepDefs.i_search_user_admin(String)?[0m
+    ?[32mThen ?[0m?[32mthe user is found?[0m               ?[90m# UserStepDefs.the_user_is_found()?[0m
+    ?[32mAnd ?[0m?[32mhis last name is '?[0m?[32m?[1mAdministrator?[0m?[32m'?[0m ?[90m# UserStepDefs.his_last_name_is(String)?[0m
+
+1 Scenarios (?[32m1 passed?[0m)
+3 Steps (?[32m3 passed?[0m)
+0m2.092s
+
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

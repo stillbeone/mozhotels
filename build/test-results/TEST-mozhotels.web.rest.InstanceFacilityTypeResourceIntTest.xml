@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mozhotels.web.rest.InstanceFacilityTypeResourceIntTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2016-07-06T17:22:10" hostname="Edmilsons-MacBook-Pro.local" time="0.662">
+  <properties/>
+  <testcase name="getAllInstanceFacilityTypes" classname="mozhotels.web.rest.InstanceFacilityTypeResourceIntTest" time="0.024"/>
+  <testcase name="getInstanceFacilityType" classname="mozhotels.web.rest.InstanceFacilityTypeResourceIntTest" time="0.033"/>
+  <testcase name="searchInstanceFacilityType" classname="mozhotels.web.rest.InstanceFacilityTypeResourceIntTest" time="0.187"/>
+  <testcase name="checkInstanceFacilityTypeNameIsRequired" classname="mozhotels.web.rest.InstanceFacilityTypeResourceIntTest" time="0.044"/>
+  <testcase name="getNonExistingInstanceFacilityType" classname="mozhotels.web.rest.InstanceFacilityTypeResourceIntTest" time="0.015"/>
+  <testcase name="checkFacilityTypeIsRequired" classname="mozhotels.web.rest.InstanceFacilityTypeResourceIntTest" time="0.018"/>
+  <testcase name="createInstanceFacilityType" classname="mozhotels.web.rest.InstanceFacilityTypeResourceIntTest" time="0.046"/>
+  <testcase name="updateInstanceFacilityType" classname="mozhotels.web.rest.InstanceFacilityTypeResourceIntTest" time="0.079"/>
+  <testcase name="deleteInstanceFacilityType" classname="mozhotels.web.rest.InstanceFacilityTypeResourceIntTest" time="0.046"/>
+  <system-out><![CDATA[Hibernate: insert into instance_facility_type (id, description, facility_type, instance_facility, instance_facility_type_name, instance_room_facility) values (null, ?, ?, ?, ?, ?)
+2016-07-06 19:22:10.336 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceFacilityTypeResource  : REST request to get all InstanceFacilityTypes
+Hibernate: select instancefa0_.id as id1_11_, instancefa0_.description as descript2_11_, instancefa0_.facility_type as facility3_11_, instancefa0_.instance_facility as instance4_11_, instancefa0_.instance_facility_type_name as instance5_11_, instancefa0_.instance_room_facility as instance6_11_ from instance_facility_type instancefa0_
+Hibernate: insert into instance_facility_type (id, description, facility_type, instance_facility, instance_facility_type_name, instance_room_facility) values (null, ?, ?, ?, ?, ?)
+2016-07-06 19:22:10.396 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceFacilityTypeResource  : REST request to get InstanceFacilityType : 2
+Hibernate: insert into instance_facility_type (id, description, facility_type, instance_facility, instance_facility_type_name, instance_room_facility) values (null, ?, ?, ?, ?, ?)
+2016-07-06 19:22:10.596 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceFacilityTypeResource  : REST request to search InstanceFacilityTypes for query id:3
+Hibernate: select instancefa0_.id as id1_11_, instancefa0_.description as descript2_11_, instancefa0_.facility_type as facility3_11_, instancefa0_.instance_facility as instance4_11_, instancefa0_.instance_facility_type_name as instance5_11_, instancefa0_.instance_room_facility as instance6_11_ from instance_facility_type instancefa0_
+Hibernate: select instancefa0_.id as id1_11_, instancefa0_.description as descript2_11_, instancefa0_.facility_type as facility3_11_, instancefa0_.instance_facility as instance4_11_, instancefa0_.instance_facility_type_name as instance5_11_, instancefa0_.instance_room_facility as instance6_11_ from instance_facility_type instancefa0_
+2016-07-06 19:22:10.707 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceFacilityTypeResource  : REST request to get InstanceFacilityType : 9223372036854775807
+Hibernate: select instancefa0_.id as id1_11_0_, instancefa0_.description as descript2_11_0_, instancefa0_.facility_type as facility3_11_0_, instancefa0_.instance_facility as instance4_11_0_, instancefa0_.instance_facility_type_name as instance5_11_0_, instancefa0_.instance_room_facility as instance6_11_0_ from instance_facility_type instancefa0_ where instancefa0_.id=?
+Hibernate: select instancefa0_.id as id1_11_, instancefa0_.description as descript2_11_, instancefa0_.facility_type as facility3_11_, instancefa0_.instance_facility as instance4_11_, instancefa0_.instance_facility_type_name as instance5_11_, instancefa0_.instance_room_facility as instance6_11_ from instance_facility_type instancefa0_
+Hibernate: select instancefa0_.id as id1_11_, instancefa0_.description as descript2_11_, instancefa0_.facility_type as facility3_11_, instancefa0_.instance_facility as instance4_11_, instancefa0_.instance_facility_type_name as instance5_11_, instancefa0_.instance_room_facility as instance6_11_ from instance_facility_type instancefa0_
+Hibernate: select instancefa0_.id as id1_11_, instancefa0_.description as descript2_11_, instancefa0_.facility_type as facility3_11_, instancefa0_.instance_facility as instance4_11_, instancefa0_.instance_facility_type_name as instance5_11_, instancefa0_.instance_room_facility as instance6_11_ from instance_facility_type instancefa0_
+2016-07-06 19:22:10.789 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceFacilityTypeResource  : REST request to save InstanceFacilityType : InstanceFacilityType{id=null, facilityType='SERVICE', instanceFacilityTypeName='AAAAA', description='AAAAA', instanceFacility='false', instanceRoomFacility='false'}
+Hibernate: insert into instance_facility_type (id, description, facility_type, instance_facility, instance_facility_type_name, instance_room_facility) values (null, ?, ?, ?, ?, ?)
+Hibernate: select instancefa0_.id as id1_11_, instancefa0_.description as descript2_11_, instancefa0_.facility_type as facility3_11_, instancefa0_.instance_facility as instance4_11_, instancefa0_.instance_facility_type_name as instance5_11_, instancefa0_.instance_room_facility as instance6_11_ from instance_facility_type instancefa0_
+Hibernate: insert into instance_facility_type (id, description, facility_type, instance_facility, instance_facility_type_name, instance_room_facility) values (null, ?, ?, ?, ?, ?)
+Hibernate: select instancefa0_.id as id1_11_, instancefa0_.description as descript2_11_, instancefa0_.facility_type as facility3_11_, instancefa0_.instance_facility as instance4_11_, instancefa0_.instance_facility_type_name as instance5_11_, instancefa0_.instance_room_facility as instance6_11_ from instance_facility_type instancefa0_
+2016-07-06 19:22:10.888 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceFacilityTypeResource  : REST request to update InstanceFacilityType : InstanceFacilityType{id=5, facilityType='RESOURCE', instanceFacilityTypeName='BBBBB', description='BBBBB', instanceFacility='true', instanceRoomFacility='true'}
+Hibernate: update instance_facility_type set description=?, facility_type=?, instance_facility=?, instance_facility_type_name=?, instance_room_facility=? where id=?
+Hibernate: select instancefa0_.id as id1_11_, instancefa0_.description as descript2_11_, instancefa0_.facility_type as facility3_11_, instancefa0_.instance_facility as instance4_11_, instancefa0_.instance_facility_type_name as instance5_11_, instancefa0_.instance_room_facility as instance6_11_ from instance_facility_type instancefa0_
+Hibernate: insert into instance_facility_type (id, description, facility_type, instance_facility, instance_facility_type_name, instance_room_facility) values (null, ?, ?, ?, ?, ?)
+Hibernate: select instancefa0_.id as id1_11_, instancefa0_.description as descript2_11_, instancefa0_.facility_type as facility3_11_, instancefa0_.instance_facility as instance4_11_, instancefa0_.instance_facility_type_name as instance5_11_, instancefa0_.instance_room_facility as instance6_11_ from instance_facility_type instancefa0_
+2016-07-06 19:22:10.969 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceFacilityTypeResource  : REST request to delete InstanceFacilityType : 6
+Hibernate: delete from instance_facility_type where id=?
+Hibernate: select instancefa0_.id as id1_11_, instancefa0_.description as descript2_11_, instancefa0_.facility_type as facility3_11_, instancefa0_.instance_facility as instance4_11_, instancefa0_.instance_facility_type_name as instance5_11_, instancefa0_.instance_room_facility as instance6_11_ from instance_facility_type instancefa0_
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

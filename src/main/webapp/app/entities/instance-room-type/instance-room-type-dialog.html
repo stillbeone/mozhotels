@@ -1,0 +1,160 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myInstanceRoomTypeLabel" translate="mozhotelsbookingApp.instanceRoomType.home.createOrEditLabel">Create or edit a Instance Room Type</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.instanceRoomType.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.instanceRoomType.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceRoomType.instanceRoomTypeName" for="field_instanceRoomTypeName">Instance Room Type Name</label>
+            <input type="text" class="form-control" name="instanceRoomTypeName" id="field_instanceRoomTypeName"
+                    ng-model="vm.instanceRoomType.instanceRoomTypeName"
+                    required />
+            <div ng-show="editForm.instanceRoomTypeName.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.instanceRoomTypeName.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceRoomType.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="vm.instanceRoomType.description"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceRoomType.roomQuantity" for="field_roomQuantity">Room Quantity</label>
+            <input type="number" class="form-control" name="roomQuantity" id="field_roomQuantity"
+                    ng-model="vm.instanceRoomType.roomQuantity"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceRoomType.capacityAdults" for="field_capacityAdults">Capacity Adults</label>
+            <input type="number" class="form-control" name="capacityAdults" id="field_capacityAdults"
+                    ng-model="vm.instanceRoomType.capacityAdults"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceRoomType.capacityChildren" for="field_capacityChildren">Capacity Children</label>
+            <input type="number" class="form-control" name="capacityChildren" id="field_capacityChildren"
+                    ng-model="vm.instanceRoomType.capacityChildren"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceRoomType.onlinePrice" for="field_onlinePrice">Online Price</label>
+            <input type="number" class="form-control" name="onlinePrice" id="field_onlinePrice"
+                    ng-model="vm.instanceRoomType.onlinePrice"
+                    required />
+            <div ng-show="editForm.onlinePrice.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.onlinePrice.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.onlinePrice.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceRoomType.branchPrice" for="field_branchPrice">Branch Price</label>
+            <input type="number" class="form-control" name="branchPrice" id="field_branchPrice"
+                    ng-model="vm.instanceRoomType.branchPrice"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceRoomType.taxInclude" for="field_taxInclude">Tax Include</label>
+            <input type="checkbox" class="form-control" name="taxInclude" id="field_taxInclude"
+                    ng-model="vm.instanceRoomType.taxInclude"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceRoomType.tax" for="field_tax">Tax</label>
+            <input type="number" class="form-control" name="tax" id="field_tax"
+                    ng-model="vm.instanceRoomType.tax"
+                     />
+        </div>
+        <div class="form-group" ngf-drop ngf-change="vm.setPhotoPrincipal($file, vm.instanceRoomType)" ngf-pattern="'image/*'">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceRoomType.photoPrincipal" for="field_photoPrincipal">Photo Principal</label>
+            <div>
+                <img data-ng-src="{{'data:' + vm.instanceRoomType.photoPrincipalContentType + ';base64,' + vm.instanceRoomType.photoPrincipal}}" style="max-height: 100px;" ng-if="vm.instanceRoomType.photoPrincipal"/>
+                <div ng-if="vm.instanceRoomType.photoPrincipal" class="help-block clearfix">
+                    <span class="pull-left">{{vm.instanceRoomType.photoPrincipalContentType}}, {{vm.byteSize(vm.instanceRoomType.photoPrincipal)}}</span>
+                    <button ng-click="vm.instanceRoomType.photoPrincipal=null;vm.instanceRoomType.photoPrincipalContentType=null;"
+                            class="btn btn-default btn-xs pull-right">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                </div>
+                <button type="file" ngf-select class="btn btn-default btn-block"
+                        ngf-change="vm.setPhotoPrincipal($file, vm.instanceRoomType)" accept="image/*" translate="entity.action.addimage">
+                    Add image
+                </button>
+            </div>
+            <input type="hidden" class="form-control" name="photoPrincipal" id="field_photoPrincipal"
+                    ng-model="vm.instanceRoomType.photoPrincipal"
+                     />
+            <input type="hidden" class="form-control" name="photoPrincipalContentType" id="field_photoPrincipalContentType"
+                    ng-model="vm.instanceRoomType.photoPrincipalContentType" />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceRoomType.createDate" for="field_createDate">Create Date</label>
+                <div class="input-group">
+                    <input id="field_createDate" type="text" class="form-control" name="createDate" datetime-picker="{{dateformat}}" ng-model="vm.instanceRoomType.createDate" is-open="vm.datePickerOpenStatus.createDate"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('createDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceRoomType.editDate" for="field_editDate">Edit Date</label>
+                <div class="input-group">
+                    <input id="field_editDate" type="text" class="form-control" name="editDate" datetime-picker="{{dateformat}}" ng-model="vm.instanceRoomType.editDate" is-open="vm.datePickerOpenStatus.editDate"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('editDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceRoomType.active" for="field_active">Active</label>
+            <input type="checkbox" class="form-control" name="active" id="field_active"
+                    ng-model="vm.instanceRoomType.active"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceRoomType.approval" for="field_approval">Approval</label>
+            <input type="checkbox" class="form-control" name="approval" id="field_approval"
+                    ng-model="vm.instanceRoomType.approval"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="mozhotelsbookingApp.instanceRoomType.instanceRoomFacility" for="field_instanceRoomFacility">Instance Room Facility</label>
+            <select class="form-control" id="field_instanceRoomFacility" multiple name="instanceRoomFacility" ng-model="vm.instanceRoomType.instanceRoomFacilities" ng-options="instanceFacility as instanceFacility.instanceFacilityName for instanceFacility in vm.instancefacilities track by instanceFacility.id"></select>
+        </div>
+        <div class="form-group">
+            <label translate="mozhotelsbookingApp.instanceRoomType.instanceTur" for="field_instanceTur">Instance Tur</label>
+            <select class="form-control" id="field_instanceTur" name="instanceTur" ng-model="vm.instanceRoomType.instanceTur" ng-options="instanceTur as instanceTur.instanceTurName for instanceTur in vm.instanceturs track by instanceTur.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

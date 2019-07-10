@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class mozhotels.web.rest.InstanceTurResourceIntTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class mozhotels.web.rest.InstanceTurResourceIntTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/mozhotels.web.rest.html">mozhotels.web.rest</a> &gt; InstanceTurResourceIntTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">11</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.016s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">checkAddressIsRequired</td>
+<td>0.031s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">checkCurrencyIsRequired</td>
+<td>0.038s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">checkDescriptionIsRequired</td>
+<td>0.045s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">checkInstanceTurNameIsRequired</td>
+<td>0.035s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">createInstanceTur</td>
+<td>0.147s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">deleteInstanceTur</td>
+<td>0.075s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getAllInstanceTurs</td>
+<td>0.052s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getInstanceTur</td>
+<td>0.023s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getNonExistingInstanceTur</td>
+<td>0.023s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">searchInstanceTur</td>
+<td>0.470s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">updateInstanceTur</td>
+<td>0.077s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>Hibernate: insert into instance_tur (id, address, beds, contact_number_principal, currency, description, email, floors, instance_tur_name, instance_tur_type_id, latitude, local_tur_id, longitude, photo_principal, photo_principal_content_type, rating, rooms, website, zip_code) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: select instancetu0_.id as id1_17_, instancetu0_.address as address2_17_, instancetu0_.beds as beds3_17_, instancetu0_.contact_number_principal as contact_4_17_, instancetu0_.currency as currency5_17_, instancetu0_.description as descript6_17_, instancetu0_.email as email7_17_, instancetu0_.floors as floors8_17_, instancetu0_.instance_tur_name as instance9_17_, instancetu0_.instance_tur_type_id as instanc18_17_, instancetu0_.latitude as latitud10_17_, instancetu0_.local_tur_id as local_t19_17_, instancetu0_.longitude as longitu11_17_, instancetu0_.photo_principal as photo_p12_17_, instancetu0_.photo_principal_content_type as photo_p13_17_, instancetu0_.rating as rating14_17_, instancetu0_.rooms as rooms15_17_, instancetu0_.website as website16_17_, instancetu0_.zip_code as zip_cod17_17_ from instance_tur instancetu0_
+2016-07-06 19:22:14.264 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.InstanceTurResource   : REST request to delete InstanceTur : 1
+Hibernate: delete from instance_tur where id=?
+Hibernate: select instancetu0_.id as id1_17_, instancetu0_.address as address2_17_, instancetu0_.beds as beds3_17_, instancetu0_.contact_number_principal as contact_4_17_, instancetu0_.currency as currency5_17_, instancetu0_.description as descript6_17_, instancetu0_.email as email7_17_, instancetu0_.floors as floors8_17_, instancetu0_.instance_tur_name as instance9_17_, instancetu0_.instance_tur_type_id as instanc18_17_, instancetu0_.latitude as latitud10_17_, instancetu0_.local_tur_id as local_t19_17_, instancetu0_.longitude as longitu11_17_, instancetu0_.photo_principal as photo_p12_17_, instancetu0_.photo_principal_content_type as photo_p13_17_, instancetu0_.rating as rating14_17_, instancetu0_.rooms as rooms15_17_, instancetu0_.website as website16_17_, instancetu0_.zip_code as zip_cod17_17_ from instance_tur instancetu0_
+Hibernate: select instancetu0_.id as id1_17_, instancetu0_.address as address2_17_, instancetu0_.beds as beds3_17_, instancetu0_.contact_number_principal as contact_4_17_, instancetu0_.currency as currency5_17_, instancetu0_.description as descript6_17_, instancetu0_.email as email7_17_, instancetu0_.floors as floors8_17_, instancetu0_.instance_tur_name as instance9_17_, instancetu0_.instance_tur_type_id as instanc18_17_, instancetu0_.latitude as latitud10_17_, instancetu0_.local_tur_id as local_t19_17_, instancetu0_.longitude as longitu11_17_, instancetu0_.photo_principal as photo_p12_17_, instancetu0_.photo_principal_content_type as photo_p13_17_, instancetu0_.rating as rating14_17_, instancetu0_.rooms as rooms15_17_, instancetu0_.website as website16_17_, instancetu0_.zip_code as zip_cod17_17_ from instance_tur instancetu0_
+Hibernate: select instancetu0_.id as id1_17_, instancetu0_.address as address2_17_, instancetu0_.beds as beds3_17_, instancetu0_.contact_number_principal as contact_4_17_, instancetu0_.currency as currency5_17_, instancetu0_.description as descript6_17_, instancetu0_.email as email7_17_, instancetu0_.floors as floors8_17_, instancetu0_.instance_tur_name as instance9_17_, instancetu0_.instance_tur_type_id as instanc18_17_, instancetu0_.latitude as latitud10_17_, instancetu0_.local_tur_id as local_t19_17_, instancetu0_.longitude as longitu11_17_, instancetu0_.photo_principal as photo_p12_17_, instancetu0_.photo_principal_content_type as photo_p13_17_, instancetu0_.rating as rating14_17_, instancetu0_.rooms as rooms15_17_, instancetu0_.website as website16_17_, instancetu0_.zip_code as zip_cod17_17_ from instance_tur instancetu0_
+Hibernate: select instancetu0_.id as id1_17_, instancetu0_.address as address2_17_, instancetu0_.beds as beds3_17_, instancetu0_.contact_number_principal as contact_4_17_, instancetu0_.currency as currency5_17_, instancetu0_.description as descript6_17_, instancetu0_.email as email7_17_, instancetu0_.floors as floors8_17_, instancetu0_.instance_tur_name as instance9_17_, instancetu0_.instance_tur_type_id as instanc18_17_, instancetu0_.latitude as latitud10_17_, instancetu0_.local_tur_id as local_t19_17_, instancetu0_.longitude as longitu11_17_, instancetu0_.photo_principal as photo_p12_17_, instancetu0_.photo_principal_content_type as photo_p13_17_, instancetu0_.rating as rating14_17_, instancetu0_.rooms as rooms15_17_, instancetu0_.website as website16_17_, instancetu0_.zip_code as zip_cod17_17_ from instance_tur instancetu0_
+2016-07-06 19:22:14.427 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.InstanceTurResource   : REST request to save InstanceTur : InstanceTur{id=null, instanceTurName='AAAAA', description='AAAAA', address='AAAAA', website='AAAAA', email='AAAAA', latitude='1.0', longitude='1.0', rooms='1', beds='1', floors='1', rating='NA', currency='AAAAA', contactNumberPrincipal='1', zipCode='AAAAA', photoPrincipal='[B@5c957fde', photoPrincipalContentType='image/jpg'}
+Hibernate: insert into instance_tur (id, address, beds, contact_number_principal, currency, description, email, floors, instance_tur_name, instance_tur_type_id, latitude, local_tur_id, longitude, photo_principal, photo_principal_content_type, rating, rooms, website, zip_code) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: select instancetu0_.id as id1_17_, instancetu0_.address as address2_17_, instancetu0_.beds as beds3_17_, instancetu0_.contact_number_principal as contact_4_17_, instancetu0_.currency as currency5_17_, instancetu0_.description as descript6_17_, instancetu0_.email as email7_17_, instancetu0_.floors as floors8_17_, instancetu0_.instance_tur_name as instance9_17_, instancetu0_.instance_tur_type_id as instanc18_17_, instancetu0_.latitude as latitud10_17_, instancetu0_.local_tur_id as local_t19_17_, instancetu0_.longitude as longitu11_17_, instancetu0_.photo_principal as photo_p12_17_, instancetu0_.photo_principal_content_type as photo_p13_17_, instancetu0_.rating as rating14_17_, instancetu0_.rooms as rooms15_17_, instancetu0_.website as website16_17_, instancetu0_.zip_code as zip_cod17_17_ from instance_tur instancetu0_
+Hibernate: insert into instance_tur (id, address, beds, contact_number_principal, currency, description, email, floors, instance_tur_name, instance_tur_type_id, latitude, local_tur_id, longitude, photo_principal, photo_principal_content_type, rating, rooms, website, zip_code) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2016-07-06 19:22:14.576 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.InstanceTurResource   : REST request to get all InstanceTurs
+Hibernate: select instancetu0_.id as id1_17_, instancetu0_.address as address2_17_, instancetu0_.beds as beds3_17_, instancetu0_.contact_number_principal as contact_4_17_, instancetu0_.currency as currency5_17_, instancetu0_.description as descript6_17_, instancetu0_.email as email7_17_, instancetu0_.floors as floors8_17_, instancetu0_.instance_tur_name as instance9_17_, instancetu0_.instance_tur_type_id as instanc18_17_, instancetu0_.latitude as latitud10_17_, instancetu0_.local_tur_id as local_t19_17_, instancetu0_.longitude as longitu11_17_, instancetu0_.photo_principal as photo_p12_17_, instancetu0_.photo_principal_content_type as photo_p13_17_, instancetu0_.rating as rating14_17_, instancetu0_.rooms as rooms15_17_, instancetu0_.website as website16_17_, instancetu0_.zip_code as zip_cod17_17_ from instance_tur instancetu0_
+Hibernate: select instancetu0_.id as id1_17_, instancetu0_.address as address2_17_, instancetu0_.beds as beds3_17_, instancetu0_.contact_number_principal as contact_4_17_, instancetu0_.currency as currency5_17_, instancetu0_.description as descript6_17_, instancetu0_.email as email7_17_, instancetu0_.floors as floors8_17_, instancetu0_.instance_tur_name as instance9_17_, instancetu0_.instance_tur_type_id as instanc18_17_, instancetu0_.latitude as latitud10_17_, instancetu0_.local_tur_id as local_t19_17_, instancetu0_.longitude as longitu11_17_, instancetu0_.photo_principal as photo_p12_17_, instancetu0_.photo_principal_content_type as photo_p13_17_, instancetu0_.rating as rating14_17_, instancetu0_.rooms as rooms15_17_, instancetu0_.website as website16_17_, instancetu0_.zip_code as zip_cod17_17_ from instance_tur instancetu0_
+Hibernate: select instancetu0_.id as id1_17_, instancetu0_.address as address2_17_, instancetu0_.beds as beds3_17_, instancetu0_.contact_number_principal as contact_4_17_, instancetu0_.currency as currency5_17_, instancetu0_.description as descript6_17_, instancetu0_.email as email7_17_, instancetu0_.floors as floors8_17_, instancetu0_.instance_tur_name as instance9_17_, instancetu0_.instance_tur_type_id as instanc18_17_, instancetu0_.latitude as latitud10_17_, instancetu0_.local_tur_id as local_t19_17_, instancetu0_.longitude as longitu11_17_, instancetu0_.photo_principal as photo_p12_17_, instancetu0_.photo_principal_content_type as photo_p13_17_, instancetu0_.rating as rating14_17_, instancetu0_.rooms as rooms15_17_, instancetu0_.website as website16_17_, instancetu0_.zip_code as zip_cod17_17_ from instance_tur instancetu0_
+2016-07-06 19:22:14.695 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.InstanceTurResource   : REST request to get InstanceTur : 9223372036854775807
+Hibernate: select instancetu0_.id as id1_17_0_, instancetu0_.address as address2_17_0_, instancetu0_.beds as beds3_17_0_, instancetu0_.contact_number_principal as contact_4_17_0_, instancetu0_.currency as currency5_17_0_, instancetu0_.description as descript6_17_0_, instancetu0_.email as email7_17_0_, instancetu0_.floors as floors8_17_0_, instancetu0_.instance_tur_name as instance9_17_0_, instancetu0_.instance_tur_type_id as instanc18_17_0_, instancetu0_.latitude as latitud10_17_0_, instancetu0_.local_tur_id as local_t19_17_0_, instancetu0_.longitude as longitu11_17_0_, instancetu0_.photo_principal as photo_p12_17_0_, instancetu0_.photo_principal_content_type as photo_p13_17_0_, instancetu0_.rating as rating14_17_0_, instancetu0_.rooms as rooms15_17_0_, instancetu0_.website as website16_17_0_, instancetu0_.zip_code as zip_cod17_17_0_, instancetu1_.id as id1_18_1_, instancetu1_.description as descript2_18_1_, instancetu1_.instance_tur_type_name as instance3_18_1_, localtur2_.id as id1_26_2_, localtur2_.description as descript2_26_2_, localtur2_.local_tur_name as local_tu3_26_2_, localtur2_.photo_principal as photo_pr4_26_2_, localtur2_.photo_principal_content_type as photo_pr5_26_2_, localtur2_.province_id as province6_26_2_, province3_.id as id1_28_3_, province3_.description as descript2_28_3_, province3_.photo_principal as photo_pr3_28_3_, province3_.photo_principal_content_type as photo_pr4_28_3_, province3_.province_name as province5_28_3_, province3_.region_id as region_i6_28_3_, region4_.id as id1_29_4_, region4_.country_id as country_4_29_4_, region4_.description as descript2_29_4_, region4_.region_name as region_n3_29_4_, country5_.id as id1_4_5_, country5_.country_name as country_2_4_5_, country5_.description as descript3_4_5_ from instance_tur instancetu0_ left outer join instance_tur_type instancetu1_ on instancetu0_.instance_tur_type_id=instancetu1_.id left outer join local_tur localtur2_ on instancetu0_.local_tur_id=localtur2_.id left outer join province province3_ on localtur2_.province_id=province3_.id left outer join region region4_ on province3_.region_id=region4_.id left outer join country country5_ on region4_.country_id=country5_.id where instancetu0_.id=?
+Hibernate: insert into instance_tur (id, address, beds, contact_number_principal, currency, description, email, floors, instance_tur_name, instance_tur_type_id, latitude, local_tur_id, longitude, photo_principal, photo_principal_content_type, rating, rooms, website, zip_code) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2016-07-06 19:22:15.188 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.InstanceTurResource   : REST request to search InstanceTurs for query id:4
+Hibernate: select instancetu0_.id as id1_17_, instancetu0_.address as address2_17_, instancetu0_.beds as beds3_17_, instancetu0_.contact_number_principal as contact_4_17_, instancetu0_.currency as currency5_17_, instancetu0_.description as descript6_17_, instancetu0_.email as email7_17_, instancetu0_.floors as floors8_17_, instancetu0_.instance_tur_name as instance9_17_, instancetu0_.instance_tur_type_id as instanc18_17_, instancetu0_.latitude as latitud10_17_, instancetu0_.local_tur_id as local_t19_17_, instancetu0_.longitude as longitu11_17_, instancetu0_.photo_principal as photo_p12_17_, instancetu0_.photo_principal_content_type as photo_p13_17_, instancetu0_.rating as rating14_17_, instancetu0_.rooms as rooms15_17_, instancetu0_.website as website16_17_, instancetu0_.zip_code as zip_cod17_17_ from instance_tur instancetu0_
+Hibernate: select instancetu0_.id as id1_17_, instancetu0_.address as address2_17_, instancetu0_.beds as beds3_17_, instancetu0_.contact_number_principal as contact_4_17_, instancetu0_.currency as currency5_17_, instancetu0_.description as descript6_17_, instancetu0_.email as email7_17_, instancetu0_.floors as floors8_17_, instancetu0_.instance_tur_name as instance9_17_, instancetu0_.instance_tur_type_id as instanc18_17_, instancetu0_.latitude as latitud10_17_, instancetu0_.local_tur_id as local_t19_17_, instancetu0_.longitude as longitu11_17_, instancetu0_.photo_principal as photo_p12_17_, instancetu0_.photo_principal_content_type as photo_p13_17_, instancetu0_.rating as rating14_17_, instancetu0_.rooms as rooms15_17_, instancetu0_.website as website16_17_, instancetu0_.zip_code as zip_cod17_17_ from instance_tur instancetu0_
+Hibernate: insert into instance_tur (id, address, beds, contact_number_principal, currency, description, email, floors, instance_tur_name, instance_tur_type_id, latitude, local_tur_id, longitude, photo_principal, photo_principal_content_type, rating, rooms, website, zip_code) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: select instancetu0_.id as id1_17_, instancetu0_.address as address2_17_, instancetu0_.beds as beds3_17_, instancetu0_.contact_number_principal as contact_4_17_, instancetu0_.currency as currency5_17_, instancetu0_.description as descript6_17_, instancetu0_.email as email7_17_, instancetu0_.floors as floors8_17_, instancetu0_.instance_tur_name as instance9_17_, instancetu0_.instance_tur_type_id as instanc18_17_, instancetu0_.latitude as latitud10_17_, instancetu0_.local_tur_id as local_t19_17_, instancetu0_.longitude as longitu11_17_, instancetu0_.photo_principal as photo_p12_17_, instancetu0_.photo_principal_content_type as photo_p13_17_, instancetu0_.rating as rating14_17_, instancetu0_.rooms as rooms15_17_, instancetu0_.website as website16_17_, instancetu0_.zip_code as zip_cod17_17_ from instance_tur instancetu0_
+2016-07-06 19:22:15.319 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.InstanceTurResource   : REST request to update InstanceTur : InstanceTur{id=5, instanceTurName='BBBBB', description='BBBBB', address='BBBBB', website='BBBBB', email='BBBBB', latitude='2.0', longitude='2.0', rooms='2', beds='2', floors='2', rating='ONE', currency='BBBBB', contactNumberPrincipal='2', zipCode='BBBBB', photoPrincipal='[B@6fe059a', photoPrincipalContentType='image/png'}
+Hibernate: update instance_tur set address=?, beds=?, contact_number_principal=?, currency=?, description=?, email=?, floors=?, instance_tur_name=?, instance_tur_type_id=?, latitude=?, local_tur_id=?, longitude=?, photo_principal=?, photo_principal_content_type=?, rating=?, rooms=?, website=?, zip_code=? where id=?
+Hibernate: select instancetu0_.id as id1_17_, instancetu0_.address as address2_17_, instancetu0_.beds as beds3_17_, instancetu0_.contact_number_principal as contact_4_17_, instancetu0_.currency as currency5_17_, instancetu0_.description as descript6_17_, instancetu0_.email as email7_17_, instancetu0_.floors as floors8_17_, instancetu0_.instance_tur_name as instance9_17_, instancetu0_.instance_tur_type_id as instanc18_17_, instancetu0_.latitude as latitud10_17_, instancetu0_.local_tur_id as local_t19_17_, instancetu0_.longitude as longitu11_17_, instancetu0_.photo_principal as photo_p12_17_, instancetu0_.photo_principal_content_type as photo_p13_17_, instancetu0_.rating as rating14_17_, instancetu0_.rooms as rooms15_17_, instancetu0_.website as website16_17_, instancetu0_.zip_code as zip_cod17_17_ from instance_tur instancetu0_
+Hibernate: select instancetu0_.id as id1_17_, instancetu0_.address as address2_17_, instancetu0_.beds as beds3_17_, instancetu0_.contact_number_principal as contact_4_17_, instancetu0_.currency as currency5_17_, instancetu0_.description as descript6_17_, instancetu0_.email as email7_17_, instancetu0_.floors as floors8_17_, instancetu0_.instance_tur_name as instance9_17_, instancetu0_.instance_tur_type_id as instanc18_17_, instancetu0_.latitude as latitud10_17_, instancetu0_.local_tur_id as local_t19_17_, instancetu0_.longitude as longitu11_17_, instancetu0_.photo_principal as photo_p12_17_, instancetu0_.photo_principal_content_type as photo_p13_17_, instancetu0_.rating as rating14_17_, instancetu0_.rooms as rooms15_17_, instancetu0_.website as website16_17_, instancetu0_.zip_code as zip_cod17_17_ from instance_tur instancetu0_
+Hibernate: select instancetu0_.id as id1_17_, instancetu0_.address as address2_17_, instancetu0_.beds as beds3_17_, instancetu0_.contact_number_principal as contact_4_17_, instancetu0_.currency as currency5_17_, instancetu0_.description as descript6_17_, instancetu0_.email as email7_17_, instancetu0_.floors as floors8_17_, instancetu0_.instance_tur_name as instance9_17_, instancetu0_.instance_tur_type_id as instanc18_17_, instancetu0_.latitude as latitud10_17_, instancetu0_.local_tur_id as local_t19_17_, instancetu0_.longitude as longitu11_17_, instancetu0_.photo_principal as photo_p12_17_, instancetu0_.photo_principal_content_type as photo_p13_17_, instancetu0_.rating as rating14_17_, instancetu0_.rooms as rooms15_17_, instancetu0_.website as website16_17_, instancetu0_.zip_code as zip_cod17_17_ from instance_tur instancetu0_
+Hibernate: insert into instance_tur (id, address, beds, contact_number_principal, currency, description, email, floors, instance_tur_name, instance_tur_type_id, latitude, local_tur_id, longitude, photo_principal, photo_principal_content_type, rating, rooms, website, zip_code) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2016-07-06 19:22:15.450 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.InstanceTurResource   : REST request to get InstanceTur : 6
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 2.14</a> at 6/jul/2016 19:23:27</p>
+</div>
+</div>
+</body>
+</html>

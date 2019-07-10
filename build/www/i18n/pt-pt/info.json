@@ -1,0 +1,24 @@
+{
+    "mozhotelsbookingApp": {
+        "info" : {
+            "home": {
+                "title": "Infos",
+                "createLabel": "Criar um(a) novo(a) Info",
+                "createOrEditLabel": "Criar ou editar um(a) Info",
+                "search": "Search for Info"
+            },
+            "created": "A new Info is created with identifier {{ param }}",
+            "updated": "A Info is updated with identifier {{ param }}",
+            "deleted": "A Info is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Tem a certeza que pretende eliminar o(a) Info {{ id }}?"
+            },
+            "detail": {
+                "title": "Info"
+            },
+            "infoName": "Info Name",
+            "description": "Description",
+            "value": "Value"
+        }
+    }
+}

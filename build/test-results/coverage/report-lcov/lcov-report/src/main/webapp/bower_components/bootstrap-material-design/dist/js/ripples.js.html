@@ -1,0 +1,1037 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/main/webapp/bower_components/bootstrap-material-design/dist/js/ripples.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../../../index.html">all files</a> / <a href="index.html">src/main/webapp/bower_components/bootstrap-material-design/dist/js/</a> ripples.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">18.6% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>16/86</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/37</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">4.76% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/21</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">18.82% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>16/85</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302
+303
+304
+305
+306
+307
+308
+309
+310
+311
+312
+313
+314
+315
+316
+317
+318
+319
+320
+321
+322
+323
+324
+325</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/* Copyright 2014+, Federico Zivolo, LICENSE at https://github.com/FezVrasta/bootstrap-material-design/blob/master/LICENSE.md */
+/* globals jQuery, navigator */
+&nbsp;
+(function($, window, document, undefined) {
+&nbsp;
+  "use strict";
+&nbsp;
+  /**
+   * Define the name of the plugin
+   */
+  var ripples = "ripples";
+&nbsp;
+&nbsp;
+  /**
+   * Get an instance of the plugin
+   */
+  var self = null;
+&nbsp;
+&nbsp;
+  /**
+   * Define the defaults of the plugin
+   */
+  var defaults = {};
+&nbsp;
+&nbsp;
+  /**
+   * Create the main plugin function
+   */
+<span class="fstat-no" title="function not covered" >  function Ripples(element, options) {</span>
+<span class="cstat-no" title="statement not covered" >    self = this;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.element = $(element);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.options = $.extend({}, defaults, options);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this._defaults = defaults;</span>
+<span class="cstat-no" title="statement not covered" >    this._name = ripples;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    this.init();</span>
+  }
+&nbsp;
+&nbsp;
+  /**
+   * Initialize the plugin
+   */
+  Ripples.prototype.init = <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >    var $element  = this.element;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $element.on("mousedown touchstart", <span class="fstat-no" title="function not covered" >function(event) {</span></span>
+      /**
+       * Verify if the user is just touching on a device and return if so
+       */
+<span class="cstat-no" title="statement not covered" >      if(self.isTouch() &amp;&amp; event.type === "mousedown") {</span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
+      }
+&nbsp;
+&nbsp;
+      /**
+       * Verify if the current element already has a ripple wrapper element and
+       * creates if it doesn't
+       */
+<span class="cstat-no" title="statement not covered" >      if(!($element.find(".ripple-container").length)) {</span>
+<span class="cstat-no" title="statement not covered" >        $element.append("&lt;div class=\"ripple-container\"&gt;&lt;/div&gt;");</span>
+      }
+&nbsp;
+&nbsp;
+      /**
+       * Find the ripple wrapper
+       */
+<span class="cstat-no" title="statement not covered" >      var $wrapper = $element.children(".ripple-container");</span>
+&nbsp;
+&nbsp;
+      /**
+       * Get relY and relX positions
+       */
+<span class="cstat-no" title="statement not covered" >      var relY = self.getRelY($wrapper, event);</span>
+<span class="cstat-no" title="statement not covered" >      var relX = self.getRelX($wrapper, event);</span>
+&nbsp;
+&nbsp;
+      /**
+       * If relY and/or relX are false, return the event
+       */
+<span class="cstat-no" title="statement not covered" >      if(!relY &amp;&amp; !relX) {</span>
+<span class="cstat-no" title="statement not covered" >        return;</span>
+      }
+&nbsp;
+&nbsp;
+      /**
+       * Get the ripple color
+       */
+<span class="cstat-no" title="statement not covered" >      var rippleColor = self.getRipplesColor($element);</span>
+&nbsp;
+&nbsp;
+      /**
+       * Create the ripple element
+       */
+<span class="cstat-no" title="statement not covered" >      var $ripple = $("&lt;div&gt;&lt;/div&gt;");</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      $ripple</span>
+      .addClass("ripple")
+      .css({
+        "left": relX,
+        "top": relY,
+        "background-color": rippleColor
+      });
+&nbsp;
+&nbsp;
+      /**
+       * Append the ripple to the wrapper
+       */
+<span class="cstat-no" title="statement not covered" >      $wrapper.append($ripple);</span>
+&nbsp;
+&nbsp;
+      /**
+       * Make sure the ripple has the styles applied (ugly hack but it works)
+       */
+<span class="cstat-no" title="statement not covered" >      (<span class="fstat-no" title="function not covered" >function() {</span> <span class="cstat-no" title="statement not covered" >return window.getComputedStyle($ripple[0]).opacity; </span>})();</span>
+&nbsp;
+&nbsp;
+      /**
+       * Turn on the ripple animation
+       */
+<span class="cstat-no" title="statement not covered" >      self.rippleOn($element, $ripple);</span>
+&nbsp;
+&nbsp;
+      /**
+       * Call the rippleEnd function when the transition "on" ends
+       */
+<span class="cstat-no" title="statement not covered" >      setTimeout(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        self.rippleEnd($ripple);</span>
+      }, 500);
+&nbsp;
+&nbsp;
+      /**
+       * Detect when the user leaves the element
+       */
+<span class="cstat-no" title="statement not covered" >      $element.on("mouseup mouseleave touchend", <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        $ripple.data("mousedown", "off");</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if($ripple.data("animating") === "off") {</span>
+<span class="cstat-no" title="statement not covered" >          self.rippleOut($ripple);</span>
+        }
+      });
+&nbsp;
+    });
+  };
+&nbsp;
+&nbsp;
+  /**
+   * Get the new size based on the element height/width and the ripple width
+   */
+  Ripples.prototype.getNewSize = <span class="fstat-no" title="function not covered" >function($element, $ripple) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return (Math.max($element.outerWidth(), $element.outerHeight()) / $ripple.outerWidth()) * 2.5;</span>
+  };
+&nbsp;
+&nbsp;
+  /**
+   * Get the relX
+   */
+  Ripples.prototype.getRelX = <span class="fstat-no" title="function not covered" >function($wrapper,  event) {</span>
+<span class="cstat-no" title="statement not covered" >    var wrapperOffset = $wrapper.offset();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if(!self.isTouch()) {</span>
+      /**
+       * Get the mouse position relative to the ripple wrapper
+       */
+<span class="cstat-no" title="statement not covered" >      return event.pageX - wrapperOffset.left;</span>
+    } else {
+      /**
+       * Make sure the user is using only one finger and then get the touch
+       * position relative to the ripple wrapper
+       */
+<span class="cstat-no" title="statement not covered" >      event = event.originalEvent;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if(event.touches.length === 1) {</span>
+<span class="cstat-no" title="statement not covered" >        return event.touches[0].pageX - wrapperOffset.left;</span>
+      }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      return false;</span>
+    }
+  };
+&nbsp;
+&nbsp;
+  /**
+   * Get the relY
+   */
+  Ripples.prototype.getRelY = <span class="fstat-no" title="function not covered" >function($wrapper, event) {</span>
+<span class="cstat-no" title="statement not covered" >    var wrapperOffset = $wrapper.offset();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if(!self.isTouch()) {</span>
+      /**
+       * Get the mouse position relative to the ripple wrapper
+       */
+<span class="cstat-no" title="statement not covered" >      return event.pageY - wrapperOffset.top;</span>
+    } else {
+      /**
+       * Make sure the user is using only one finger and then get the touch
+       * position relative to the ripple wrapper
+       */
+<span class="cstat-no" title="statement not covered" >      event = event.originalEvent;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if(event.touches.length === 1) {</span>
+<span class="cstat-no" title="statement not covered" >        return event.touches[0].pageY - wrapperOffset.top;</span>
+      }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      return false;</span>
+    }
+  };
+&nbsp;
+&nbsp;
+  /**
+   * Get the ripple color
+   */
+  Ripples.prototype.getRipplesColor = <span class="fstat-no" title="function not covered" >function($element) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var color = $element.data("ripple-color") ? $element.data("ripple-color") : window.getComputedStyle($element[0]).color;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return color;</span>
+  };
+&nbsp;
+&nbsp;
+  /**
+   * Verify if the client browser has transistion support
+   */
+  Ripples.prototype.hasTransitionSupport = <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >    var thisBody  = document.body || document.documentElement;</span>
+<span class="cstat-no" title="statement not covered" >    var thisStyle = thisBody.style;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var support = (</span>
+      thisStyle.transition !== undefined ||
+      thisStyle.WebkitTransition !== undefined ||
+      thisStyle.MozTransition !== undefined ||
+      thisStyle.MsTransition !== undefined ||
+      thisStyle.OTransition !== undefined
+    );
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return support;</span>
+  };
+&nbsp;
+&nbsp;
+  /**
+   * Verify if the client is using a mobile device
+   */
+  Ripples.prototype.isTouch = <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);</span>
+  };
+&nbsp;
+&nbsp;
+  /**
+   * End the animation of the ripple
+   */
+  Ripples.prototype.rippleEnd = <span class="fstat-no" title="function not covered" >function($ripple) {</span>
+<span class="cstat-no" title="statement not covered" >    $ripple.data("animating", "off");</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if($ripple.data("mousedown") === "off") {</span>
+<span class="cstat-no" title="statement not covered" >      self.rippleOut($ripple);</span>
+    }
+  };
+&nbsp;
+&nbsp;
+  /**
+   * Turn off the ripple effect
+   */
+  Ripples.prototype.rippleOut = <span class="fstat-no" title="function not covered" >function($ripple) {</span>
+<span class="cstat-no" title="statement not covered" >    $ripple.off();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if(self.hasTransitionSupport()) {</span>
+<span class="cstat-no" title="statement not covered" >      $ripple.addClass("ripple-out");</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      $ripple.animate({"opacity": 0}, 100, <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >        $ripple.trigger("transitionend");</span>
+      });
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $ripple.on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >      $ripple.remove();</span>
+    });
+  };
+&nbsp;
+&nbsp;
+  /**
+   * Turn on the ripple effect
+   */
+  Ripples.prototype.rippleOn = <span class="fstat-no" title="function not covered" >function($element, $ripple) {</span>
+<span class="cstat-no" title="statement not covered" >    var size = self.getNewSize($element, $ripple);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if(self.hasTransitionSupport()) {</span>
+<span class="cstat-no" title="statement not covered" >      $ripple</span>
+      .css({
+        "-ms-transform": "scale(" + size + ")",
+        "-moz-transform": "scale(" + size + ")",
+        "-webkit-transform": "scale(" + size + ")",
+        "transform": "scale(" + size + ")"
+      })
+      .addClass("ripple-on")
+      .data("animating", "on")
+      .data("mousedown", "on");
+    } else {
+<span class="cstat-no" title="statement not covered" >      $ripple.animate({</span>
+        "width": Math.max($element.outerWidth(), $element.outerHeight()) * 2,
+        "height": Math.max($element.outerWidth(), $element.outerHeight()) * 2,
+        "margin-left": Math.max($element.outerWidth(), $element.outerHeight()) * (-1),
+        "margin-top": Math.max($element.outerWidth(), $element.outerHeight()) * (-1),
+        "opacity": 0.2
+      }, 500, <span class="fstat-no" title="function not covered" >function() {</span>
+<span class="cstat-no" title="statement not covered" >        $ripple.trigger("transitionend");</span>
+      });
+    }
+  };
+&nbsp;
+&nbsp;
+  /**
+   * Create the jquery plugin function
+   */
+  $.fn.ripples = <span class="fstat-no" title="function not covered" >function(options) {</span>
+<span class="cstat-no" title="statement not covered" >    return this.each(<span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >      if(!$.data(this, "plugin_" + ripples)) {</span>
+<span class="cstat-no" title="statement not covered" >        $.data(this, "plugin_" + ripples, new Ripples(this, options));</span>
+      }
+    });
+  };
+&nbsp;
+})(jQuery, window, document);
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Jul 07 2016 06:51:57 GMT+0200 (CAT)
+</div>
+</div>
+<script src="../../../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+{
+    "mozhotelsbookingApp": {
+        "instanceTur" : {
+            "home": {
+                "title": "InstanceTurs",
+                "createLabel": "Créer un nouveau Instance Tur",
+                "createOrEditLabel": "Créer ou éditer un Instance Tur",
+                "search": "Recherche pour Instance Tur"
+            },
+            "created": "Un nouveau Instance Tur a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Instance Tur avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Instance Tur avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Instance Tur {{ id }} ?"
+            },
+            "detail": {
+                "title": "Instance Tur"
+            },
+            "instanceTurName": "Instance Tur Name",
+            "rating": "Rating",
+            "description": "Description",
+            "latitude": "Latitude",
+            "longitude": "Longitude",
+            "rooms": "Rooms",
+            "beds": "Beds",
+            "floors": "Floors",
+            "currency": "Currency",
+            "photoPrincipal": "Photo Principal",
+            "agreementNumber": "Agreement Number",
+            "createDate": "Create Date",
+            "editDate": "Edit Date",
+            "active": "Active",
+            "approval": "Approval",
+            "picture": "Picture",
+            "instanceFacilityType": "Instance Facility Type",
+            "instanceActivityType": "Instance Activity Type",
+            "instanceFacility": "Instance Facility",
+            "instanceActivity": "Instance Activity",
+            "instanceRoomType": "Instance Room Type",
+            "instanceInfo": "Instance Info",
+            "instanceReview": "Instance Review",
+            "booking": "Booking",
+            "favorite": "Favorite",
+            "localTur": "Local Tur",
+            "instanceTurType": "Instance Tur Type",
+            "instanceContact": "Instance Contact"
+        }
+    }
+}

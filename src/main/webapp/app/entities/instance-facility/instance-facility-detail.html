@@ -1,0 +1,46 @@
+
+<div>
+    <h2><span translate="mozhotelsbookingApp.instanceFacility.detail.title">Instance Facility</span> {{vm.instanceFacility.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="mozhotelsbookingApp.instanceFacility.instanceFacilityName">Instance Facility Name</span></dt>
+        <dd>
+            <span>{{vm.instanceFacility.instanceFacilityName}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceFacility.area">Area</span></dt>
+        <dd>
+            <span translate="{{'mozhotelsbookingApp.InstanceArea.' + vm.instanceFacility.area}}">{{vm.instanceFacility.area}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceFacility.description">Description</span></dt>
+        <dd>
+            <span>{{vm.instanceFacility.description}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceFacility.quantity">Quantity</span></dt>
+        <dd>
+            <span>{{vm.instanceFacility.quantity}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceFacility.price">Price</span></dt>
+        <dd>
+            <span>{{vm.instanceFacility.price}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceFacility.bookingInclude">Booking Include</span></dt>
+        <dd>
+            <span>{{vm.instanceFacility.bookingInclude}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceFacility.instanceFacilityType">Instance Facility Type</span></dt>
+        <dd>
+            <a ui-sref="instance-facility-type-detail({id:vm.instanceFacility.instanceFacilityType.id})">{{vm.instanceFacility.instanceFacilityType.instanceFacilityTypeName}}</a>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceFacility.instanceTur">Instance Tur</span></dt>
+        <dd>
+            <a ui-sref="instance-tur-detail({id:vm.instanceFacility.instanceTur.id})">{{vm.instanceFacility.instanceTur.instanceTurName}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

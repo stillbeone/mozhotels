@@ -1,0 +1,36 @@
+{
+    "mozhotelsbookingApp": {
+        "tourist" : {
+            "home": {
+                "title": "Tourists",
+                "createLabel": "Criar um(a) novo(a) Tourist",
+                "createOrEditLabel": "Criar ou editar um(a) Tourist",
+                "search": "Search for Tourist"
+            },
+            "created": "A new Tourist is created with identifier {{ param }}",
+            "updated": "A Tourist is updated with identifier {{ param }}",
+            "deleted": "A Tourist is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Tem a certeza que pretende eliminar o(a) Tourist {{ id }}?"
+            },
+            "detail": {
+                "title": "Tourist"
+            },
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "email": "Email",
+            "phoneNumber": "Phone Number",
+            "countryResidence": "Country Residence",
+            "countryBooking": "Country Booking",
+            "language": "Language",
+            "currency": "Currency",
+            "photoPrincipal": "Photo Principal",
+            "createDate": "Create Date",
+            "editDate": "Edit Date",
+            "booking": "Booking",
+            "instanceReview": "Instance Review",
+            "guestTourist": "Guest Tourist",
+            "user": "User"
+        }
+    }
+}

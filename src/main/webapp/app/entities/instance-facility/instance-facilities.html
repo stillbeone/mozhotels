@@ -1,0 +1,91 @@
+<div>
+    <h2 translate="mozhotelsbookingApp.instanceFacility.home.title">Instance Facilities</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="instance-facility.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  translate="mozhotelsbookingApp.instanceFacility.home.createLabel">
+                        Create new Instance Facility
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'mozhotelsbookingApp.instanceFacility.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceFacility.instanceFacilityName">Instance Facility Name</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceFacility.area">Area</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceFacility.description">Description</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceFacility.quantity">Quantity</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceFacility.price">Price</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceFacility.bookingInclude">Booking Include</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceFacility.instanceFacilityType">Instance Facility Type</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceFacility.instanceTur">Instance Tur</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="instanceFacility in vm.instanceFacilities track by instanceFacility.id">
+                    <td><a ui-sref="instance-facility-detail({id:instanceFacility.id})">{{instanceFacility.id}}</a></td>
+                    <td>{{instanceFacility.instanceFacilityName}}</td>
+                    <td translate="{{'mozhotelsbookingApp.InstanceArea.' + instanceFacility.area}}">{{instanceFacility.area}}</td>
+                    <td>{{instanceFacility.description}}</td>
+                    <td>{{instanceFacility.quantity}}</td>
+                    <td>{{instanceFacility.price}}</td>
+                    <td>{{instanceFacility.bookingInclude}}</td>
+                    <td>
+                        <a ui-sref="instance-facility-type-detail({id:instanceFacility.instanceFacilityType.id})">{{instanceFacility.instanceFacilityType.instanceFacilityTypeName}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="instance-tur-detail({id:instanceFacility.instanceTur.id})">{{instanceFacility.instanceTur.instanceTurName}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="instance-facility-detail({id:instanceFacility.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="instance-facility.edit({id:instanceFacility.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="instance-facility.delete({id:instanceFacility.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

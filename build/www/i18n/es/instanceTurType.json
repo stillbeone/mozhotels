@@ -1,0 +1,24 @@
+{
+    "mozhotelsbookingApp": {
+        "instanceTurType" : {
+            "home": {
+                "title": "Instance Tur Types",
+                "createLabel": "Crear nuevo Instance Tur Type",
+                "createOrEditLabel": "Crear o editar Instance Tur Type",
+                "search": "Search for Instance Tur Type"
+            },
+            "created": "Un nuevo Instance Tur Type ha sido creado con el identificador {{ param }}",
+            "updated": "Un Instance Tur Type ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Instance Tur Type ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Instance Tur Type {{ id }}?"
+            },
+            "detail": {
+                "title": "Instance Tur Type"
+            },
+            "instanceTurTypeName": "Instance Tur Type Name",
+            "description": "Description",
+            "instanceTur": "Instance Tur"
+        }
+    }
+}

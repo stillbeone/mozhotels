@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mozhotels.web.rest.InstanceInfoTypeResourceIntTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2016-07-06T17:22:12" hostname="Edmilsons-MacBook-Pro.local" time="0.622">
+  <properties/>
+  <testcase name="deleteInstanceInfoType" classname="mozhotels.web.rest.InstanceInfoTypeResourceIntTest" time="0.084"/>
+  <testcase name="updateInstanceInfoType" classname="mozhotels.web.rest.InstanceInfoTypeResourceIntTest" time="0.098"/>
+  <testcase name="checkInstanceInfoTypeIsRequired" classname="mozhotels.web.rest.InstanceInfoTypeResourceIntTest" time="0.027"/>
+  <testcase name="getNonExistingInstanceInfoType" classname="mozhotels.web.rest.InstanceInfoTypeResourceIntTest" time="0.018"/>
+  <testcase name="searchInstanceInfoType" classname="mozhotels.web.rest.InstanceInfoTypeResourceIntTest" time="0.058"/>
+  <testcase name="getAllInstanceInfoTypes" classname="mozhotels.web.rest.InstanceInfoTypeResourceIntTest" time="0.026"/>
+  <testcase name="createInstanceInfoType" classname="mozhotels.web.rest.InstanceInfoTypeResourceIntTest" time="0.037"/>
+  <testcase name="getInstanceInfoType" classname="mozhotels.web.rest.InstanceInfoTypeResourceIntTest" time="0.016"/>
+  <testcase name="checkInstanceInfoTypeNameIsRequired" classname="mozhotels.web.rest.InstanceInfoTypeResourceIntTest" time="0.019"/>
+  <system-out><![CDATA[Hibernate: insert into instance_info_type (id, description, instance_info_type, instance_info_type_name) values (null, ?, ?, ?)
+Hibernate: select instancein0_.id as id1_13_, instancein0_.description as descript2_13_, instancein0_.instance_info_type as instance3_13_, instancein0_.instance_info_type_name as instance4_13_ from instance_info_type instancein0_
+2016-07-06 19:22:12.352 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceInfoTypeResource      : REST request to delete InstanceInfoType : 1
+Hibernate: delete from instance_info_type where id=?
+Hibernate: select instancein0_.id as id1_13_, instancein0_.description as descript2_13_, instancein0_.instance_info_type as instance3_13_, instancein0_.instance_info_type_name as instance4_13_ from instance_info_type instancein0_
+Hibernate: insert into instance_info_type (id, description, instance_info_type, instance_info_type_name) values (null, ?, ?, ?)
+Hibernate: select instancein0_.id as id1_13_, instancein0_.description as descript2_13_, instancein0_.instance_info_type as instance3_13_, instancein0_.instance_info_type_name as instance4_13_ from instance_info_type instancein0_
+2016-07-06 19:22:12.458 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceInfoTypeResource      : REST request to update InstanceInfoType : InstanceInfoType{id=2, instanceInfoType='USEFUL', instanceInfoTypeName='BBBBB', description='BBBBB'}
+Hibernate: update instance_info_type set description=?, instance_info_type=?, instance_info_type_name=? where id=?
+Hibernate: select instancein0_.id as id1_13_, instancein0_.description as descript2_13_, instancein0_.instance_info_type as instance3_13_, instancein0_.instance_info_type_name as instance4_13_ from instance_info_type instancein0_
+Hibernate: select instancein0_.id as id1_13_, instancein0_.description as descript2_13_, instancein0_.instance_info_type as instance3_13_, instancein0_.instance_info_type_name as instance4_13_ from instance_info_type instancein0_
+Hibernate: select instancein0_.id as id1_13_, instancein0_.description as descript2_13_, instancein0_.instance_info_type as instance3_13_, instancein0_.instance_info_type_name as instance4_13_ from instance_info_type instancein0_
+2016-07-06 19:22:12.577 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceInfoTypeResource      : REST request to get InstanceInfoType : 9223372036854775807
+Hibernate: select instancein0_.id as id1_13_0_, instancein0_.description as descript2_13_0_, instancein0_.instance_info_type as instance3_13_0_, instancein0_.instance_info_type_name as instance4_13_0_ from instance_info_type instancein0_ where instancein0_.id=?
+Hibernate: insert into instance_info_type (id, description, instance_info_type, instance_info_type_name) values (null, ?, ?, ?)
+2016-07-06 19:22:12.644 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceInfoTypeResource      : REST request to search InstanceInfoTypes for query id:3
+Hibernate: insert into instance_info_type (id, description, instance_info_type, instance_info_type_name) values (null, ?, ?, ?)
+2016-07-06 19:22:12.698 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceInfoTypeResource      : REST request to get all InstanceInfoTypes
+Hibernate: select instancein0_.id as id1_13_, instancein0_.description as descript2_13_, instancein0_.instance_info_type as instance3_13_, instancein0_.instance_info_type_name as instance4_13_ from instance_info_type instancein0_
+Hibernate: select instancein0_.id as id1_13_, instancein0_.description as descript2_13_, instancein0_.instance_info_type as instance3_13_, instancein0_.instance_info_type_name as instance4_13_ from instance_info_type instancein0_
+2016-07-06 19:22:12.742 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceInfoTypeResource      : REST request to save InstanceInfoType : InstanceInfoType{id=null, instanceInfoType='POLICY', instanceInfoTypeName='AAAAA', description='AAAAA'}
+Hibernate: insert into instance_info_type (id, description, instance_info_type, instance_info_type_name) values (null, ?, ?, ?)
+Hibernate: select instancein0_.id as id1_13_, instancein0_.description as descript2_13_, instancein0_.instance_info_type as instance3_13_, instancein0_.instance_info_type_name as instance4_13_ from instance_info_type instancein0_
+Hibernate: insert into instance_info_type (id, description, instance_info_type, instance_info_type_name) values (null, ?, ?, ?)
+2016-07-06 19:22:12.858 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceInfoTypeResource      : REST request to get InstanceInfoType : 6
+Hibernate: select instancein0_.id as id1_13_, instancein0_.description as descript2_13_, instancein0_.instance_info_type as instance3_13_, instancein0_.instance_info_type_name as instance4_13_ from instance_info_type instancein0_
+Hibernate: select instancein0_.id as id1_13_, instancein0_.description as descript2_13_, instancein0_.instance_info_type as instance3_13_, instancein0_.instance_info_type_name as instance4_13_ from instance_info_type instancein0_
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

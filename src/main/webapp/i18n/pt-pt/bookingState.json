@@ -1,0 +1,15 @@
+{
+    "mozhotelsbookingApp": {
+        "BookingState" : {
+            "null": "",
+            "SUBMITED": "SUBMITED",
+            "IN_PROGRESS": "IN_PROGRESS",
+            "BOOKING": "BOOKING",
+            "CHECK_IN": "CHECK_IN",
+            "CHECK_OUT": "CHECK_OUT",
+            "OVERBOOKING": "OVERBOOKING",
+            "CANCELED": "CANCELED",
+            "FAILED": "FAILED"
+        }
+    }
+}

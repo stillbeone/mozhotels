@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class mozhotels.web.rest.UserResourceIntTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class mozhotels.web.rest.UserResourceIntTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/mozhotels.web.rest.html">mozhotels.web.rest</a> &gt; UserResourceIntTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">4</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.927s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testDeleteExistingUserWithAnEmailLogin</td>
+<td>0.472s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGetExistingUser</td>
+<td>0.032s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGetExistingUserWithAnEmailLogin</td>
+<td>0.335s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testGetUnknownUser</td>
+<td>0.088s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>Hibernate: select authority0_.name as name1_19_0_ from jhi_authority authority0_ where authority0_.name=?
+Hibernate: insert into jhi_user (id, created_by, created_date, last_modified_by, last_modified_date, activated, activation_key, email, first_name, lang_key, last_name, login, password_hash, reset_date, reset_key) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2016-07-06 19:22:21.433 DEBUG 60006 --- [    Test worker] mozhotels.service.UserService            : Created Information for User: User{login='john.doe@localhost.com', firstName='John', lastName='Doe', email='john.doe@localhost.com', activated='false', langKey='en-US', activationKey='55022327362396300918'}
+Hibernate: insert into jhi_user_authority (user_id, authority_name) values (?, ?)
+2016-07-06 19:22:21.466 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.UserResource          : REST request to delete User: john.doe@localhost.com
+Hibernate: select user0_.id as id1_24_, user0_.created_by as created_2_24_, user0_.created_date as created_3_24_, user0_.last_modified_by as last_mod4_24_, user0_.last_modified_date as last_mod5_24_, user0_.activated as activate6_24_, user0_.activation_key as activati7_24_, user0_.email as email8_24_, user0_.first_name as first_na9_24_, user0_.lang_key as lang_ke10_24_, user0_.last_name as last_na11_24_, user0_.login as login12_24_, user0_.password_hash as passwor13_24_, user0_.reset_date as reset_d14_24_, user0_.reset_key as reset_k15_24_ from jhi_user user0_ where user0_.login=?
+Hibernate: select socialuser0_.id as id1_23_, socialuser0_.access_token as access_t2_23_, socialuser0_.display_name as display_3_23_, socialuser0_.expire_time as expire_t4_23_, socialuser0_.image_url as image_ur5_23_, socialuser0_.profile_url as profile_6_23_, socialuser0_.provider_id as provider7_23_, socialuser0_.provider_user_id as provider8_23_, socialuser0_.rank as rank9_23_, socialuser0_.refresh_token as refresh10_23_, socialuser0_.secret as secret11_23_, socialuser0_.user_id as user_id12_23_ from jhi_social_user_connection socialuser0_ where socialuser0_.user_id=? order by socialuser0_.provider_id asc, socialuser0_.rank asc
+Hibernate: select persistent0_.user_id as user_id6_24_0_, persistent0_.series as series1_22_0_, persistent0_.series as series1_22_1_, persistent0_.ip_address as ip_addre2_22_1_, persistent0_.token_date as token_da3_22_1_, persistent0_.token_value as token_va4_22_1_, persistent0_.user_id as user_id6_22_1_, persistent0_.user_agent as user_age5_22_1_ from jhi_persistent_token persistent0_ where persistent0_.user_id=?
+2016-07-06 19:22:21.480 DEBUG 60006 --- [    Test worker] mozhotels.service.UserService            : Deleted User: User{login='john.doe@localhost.com', firstName='John', lastName='Doe', email='john.doe@localhost.com', activated='false', langKey='en-US', activationKey='55022327362396300918'}
+Hibernate: delete from jhi_user_authority where user_id=?
+Hibernate: delete from jhi_user where id=?
+Hibernate: select user0_.id as id1_24_, user0_.created_by as created_2_24_, user0_.created_date as created_3_24_, user0_.last_modified_by as last_mod4_24_, user0_.last_modified_date as last_mod5_24_, user0_.activated as activate6_24_, user0_.activation_key as activati7_24_, user0_.email as email8_24_, user0_.first_name as first_na9_24_, user0_.lang_key as lang_ke10_24_, user0_.last_name as last_na11_24_, user0_.login as login12_24_, user0_.password_hash as passwor13_24_, user0_.reset_date as reset_d14_24_, user0_.reset_key as reset_k15_24_ from jhi_user user0_ where user0_.login=?
+Hibernate: select user0_.id as id1_24_1_, user0_.created_by as created_2_24_1_, user0_.created_date as created_3_24_1_, user0_.last_modified_by as last_mod4_24_1_, user0_.last_modified_date as last_mod5_24_1_, user0_.activated as activate6_24_1_, user0_.activation_key as activati7_24_1_, user0_.email as email8_24_1_, user0_.first_name as first_na9_24_1_, user0_.lang_key as lang_ke10_24_1_, user0_.last_name as last_na11_24_1_, user0_.login as login12_24_1_, user0_.password_hash as passwor13_24_1_, user0_.reset_date as reset_d14_24_1_, user0_.reset_key as reset_k15_24_1_, persistent1_.user_id as user_id6_24_3_, persistent1_.series as series1_22_3_, persistent1_.series as series1_22_0_, persistent1_.ip_address as ip_addre2_22_0_, persistent1_.token_date as token_da3_22_0_, persistent1_.token_value as token_va4_22_0_, persistent1_.user_id as user_id6_22_0_, persistent1_.user_agent as user_age5_22_0_ from jhi_user user0_ left outer join jhi_persistent_token persistent1_ on user0_.id=persistent1_.user_id where user0_.id=?
+Hibernate: insert into jhi_user (id, created_by, created_date, last_modified_by, last_modified_date, activated, activation_key, email, first_name, lang_key, last_name, login, password_hash, reset_date, reset_key) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: select authority0_.name as name1_19_0_ from jhi_authority authority0_ where authority0_.name=?
+Hibernate: delete from jhi_user where id=?
+2016-07-06 19:22:21.548 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.UserResource          : REST request to get User : unknown
+Hibernate: select user0_.id as id1_24_, user0_.created_by as created_2_24_, user0_.created_date as created_3_24_, user0_.last_modified_by as last_mod4_24_, user0_.last_modified_date as last_mod5_24_, user0_.activated as activate6_24_, user0_.activation_key as activati7_24_, user0_.email as email8_24_, user0_.first_name as first_na9_24_, user0_.lang_key as lang_ke10_24_, user0_.last_name as last_na11_24_, user0_.login as login12_24_, user0_.password_hash as passwor13_24_, user0_.reset_date as reset_d14_24_, user0_.reset_key as reset_k15_24_ from jhi_user user0_ where user0_.login=?
+Hibernate: select authority0_.name as name1_19_0_ from jhi_authority authority0_ where authority0_.name=?
+Hibernate: insert into jhi_user (id, created_by, created_date, last_modified_by, last_modified_date, activated, activation_key, email, first_name, lang_key, last_name, login, password_hash, reset_date, reset_key) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2016-07-06 19:22:21.838 DEBUG 60006 --- [    Test worker] mozhotels.service.UserService            : Created Information for User: User{login='john.doe@localhost.com', firstName='John', lastName='Doe', email='john.doe@localhost.com', activated='false', langKey='en-US', activationKey='28487123968334147254'}
+Hibernate: insert into jhi_user_authority (user_id, authority_name) values (?, ?)
+2016-07-06 19:22:21.846 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.UserResource          : REST request to get User : john.doe@localhost.com
+Hibernate: select user0_.id as id1_24_, user0_.created_by as created_2_24_, user0_.created_date as created_3_24_, user0_.last_modified_by as last_mod4_24_, user0_.last_modified_date as last_mod5_24_, user0_.activated as activate6_24_, user0_.activation_key as activati7_24_, user0_.email as email8_24_, user0_.first_name as first_na9_24_, user0_.lang_key as lang_ke10_24_, user0_.last_name as last_na11_24_, user0_.login as login12_24_, user0_.password_hash as passwor13_24_, user0_.reset_date as reset_d14_24_, user0_.reset_key as reset_k15_24_ from jhi_user user0_ where user0_.login=?
+Hibernate: select authoritie0_.user_id as user_id1_24_0_, authoritie0_.authority_name as authorit2_25_0_, authority1_.name as name1_19_1_ from jhi_user_authority authoritie0_ inner join jhi_authority authority1_ on authoritie0_.authority_name=authority1_.name where authoritie0_.user_id=?
+Hibernate: select user0_.id as id1_24_1_, user0_.created_by as created_2_24_1_, user0_.created_date as created_3_24_1_, user0_.last_modified_by as last_mod4_24_1_, user0_.last_modified_date as last_mod5_24_1_, user0_.activated as activate6_24_1_, user0_.activation_key as activati7_24_1_, user0_.email as email8_24_1_, user0_.first_name as first_na9_24_1_, user0_.lang_key as lang_ke10_24_1_, user0_.last_name as last_na11_24_1_, user0_.login as login12_24_1_, user0_.password_hash as passwor13_24_1_, user0_.reset_date as reset_d14_24_1_, user0_.reset_key as reset_k15_24_1_, persistent1_.user_id as user_id6_24_3_, persistent1_.series as series1_22_3_, persistent1_.series as series1_22_0_, persistent1_.ip_address as ip_addre2_22_0_, persistent1_.token_date as token_da3_22_0_, persistent1_.token_value as token_va4_22_0_, persistent1_.user_id as user_id6_22_0_, persistent1_.user_agent as user_age5_22_0_ from jhi_user user0_ left outer join jhi_persistent_token persistent1_ on user0_.id=persistent1_.user_id where user0_.id=?
+Hibernate: select authoritie0_.user_id as user_id1_24_0_, authoritie0_.authority_name as authorit2_25_0_, authority1_.name as name1_19_1_ from jhi_user_authority authoritie0_ inner join jhi_authority authority1_ on authoritie0_.authority_name=authority1_.name where authoritie0_.user_id=?
+Hibernate: delete from jhi_user_authority where user_id=?
+Hibernate: delete from jhi_user where id=?
+2016-07-06 19:22:21.967 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.UserResource          : REST request to get User : admin
+Hibernate: select user0_.id as id1_24_, user0_.created_by as created_2_24_, user0_.created_date as created_3_24_, user0_.last_modified_by as last_mod4_24_, user0_.last_modified_date as last_mod5_24_, user0_.activated as activate6_24_, user0_.activation_key as activati7_24_, user0_.email as email8_24_, user0_.first_name as first_na9_24_, user0_.lang_key as lang_ke10_24_, user0_.last_name as last_na11_24_, user0_.login as login12_24_, user0_.password_hash as passwor13_24_, user0_.reset_date as reset_d14_24_, user0_.reset_key as reset_k15_24_ from jhi_user user0_ where user0_.login=?
+Hibernate: select authoritie0_.user_id as user_id1_24_0_, authoritie0_.authority_name as authorit2_25_0_, authority1_.name as name1_19_1_ from jhi_user_authority authoritie0_ inner join jhi_authority authority1_ on authoritie0_.authority_name=authority1_.name where authoritie0_.user_id=?
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 2.14</a> at 6/jul/2016 19:23:27</p>
+</div>
+</div>
+</body>
+</html>

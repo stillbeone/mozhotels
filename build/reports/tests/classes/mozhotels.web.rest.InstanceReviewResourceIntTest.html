@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class mozhotels.web.rest.InstanceReviewResourceIntTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class mozhotels.web.rest.InstanceReviewResourceIntTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/mozhotels.web.rest.html">mozhotels.web.rest</a> &gt; InstanceReviewResourceIntTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">7</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.325s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">createInstanceReview</td>
+<td>0.050s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">deleteInstanceReview</td>
+<td>0.068s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getAllInstanceReviews</td>
+<td>0.015s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getInstanceReview</td>
+<td>0.018s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getNonExistingInstanceReview</td>
+<td>0.019s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">searchInstanceReview</td>
+<td>0.048s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">updateInstanceReview</td>
+<td>0.107s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>Hibernate: insert into instance_review (id, active, approval, cleanliness, comment, create_date, edit_date, evaluation, instance_tur_id, location, room_confort, service_staff, sleep_quality, title, tourist_id, value_price) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: select instancere0_.id as id1_14_, instancere0_.active as active2_14_, instancere0_.approval as approval3_14_, instancere0_.cleanliness as cleanlin4_14_, instancere0_.comment as comment5_14_, instancere0_.create_date as create_d6_14_, instancere0_.edit_date as edit_dat7_14_, instancere0_.evaluation as evaluati8_14_, instancere0_.instance_tur_id as instanc15_14_, instancere0_.location as location9_14_, instancere0_.room_confort as room_co10_14_, instancere0_.service_staff as service11_14_, instancere0_.sleep_quality as sleep_q12_14_, instancere0_.title as title13_14_, instancere0_.tourist_id as tourist16_14_, instancere0_.value_price as value_p14_14_ from instance_review instancere0_
+2016-07-06 19:22:13.035 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceReviewResource        : REST request to update InstanceReview : InstanceReview{id=1, cleanliness='2.0', roomConfort='2.0', location='2.0', serviceStaff='2.0', sleepQuality='2.0', valuePrice='2.0', evaluation='NICE', title='BBBBB', comment='BBBBB', active='true', approval='true', createDate='2016-07-06T17:22:12Z[UTC]', editDate='2016-07-06T17:22:12Z[UTC]'}
+Hibernate: update instance_review set active=?, approval=?, cleanliness=?, comment=?, create_date=?, edit_date=?, evaluation=?, instance_tur_id=?, location=?, room_confort=?, service_staff=?, sleep_quality=?, title=?, tourist_id=?, value_price=? where id=?
+Hibernate: select instancere0_.id as id1_14_, instancere0_.active as active2_14_, instancere0_.approval as approval3_14_, instancere0_.cleanliness as cleanlin4_14_, instancere0_.comment as comment5_14_, instancere0_.create_date as create_d6_14_, instancere0_.edit_date as edit_dat7_14_, instancere0_.evaluation as evaluati8_14_, instancere0_.instance_tur_id as instanc15_14_, instancere0_.location as location9_14_, instancere0_.room_confort as room_co10_14_, instancere0_.service_staff as service11_14_, instancere0_.sleep_quality as sleep_q12_14_, instancere0_.title as title13_14_, instancere0_.tourist_id as tourist16_14_, instancere0_.value_price as value_p14_14_ from instance_review instancere0_
+Hibernate: select instancere0_.id as id1_14_, instancere0_.active as active2_14_, instancere0_.approval as approval3_14_, instancere0_.cleanliness as cleanlin4_14_, instancere0_.comment as comment5_14_, instancere0_.create_date as create_d6_14_, instancere0_.edit_date as edit_dat7_14_, instancere0_.evaluation as evaluati8_14_, instancere0_.instance_tur_id as instanc15_14_, instancere0_.location as location9_14_, instancere0_.room_confort as room_co10_14_, instancere0_.service_staff as service11_14_, instancere0_.sleep_quality as sleep_q12_14_, instancere0_.title as title13_14_, instancere0_.tourist_id as tourist16_14_, instancere0_.value_price as value_p14_14_ from instance_review instancere0_
+2016-07-06 19:22:13.120 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceReviewResource        : REST request to save InstanceReview : InstanceReview{id=null, cleanliness='1.0', roomConfort='1.0', location='1.0', serviceStaff='1.0', sleepQuality='1.0', valuePrice='1.0', evaluation='WONDERFULL', title='AAAAA', comment='AAAAA', active='false', approval='false', createDate='1970-01-01T00:00Z[UTC]', editDate='1970-01-01T00:00Z[UTC]'}
+Hibernate: insert into instance_review (id, active, approval, cleanliness, comment, create_date, edit_date, evaluation, instance_tur_id, location, room_confort, service_staff, sleep_quality, title, tourist_id, value_price) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: select instancere0_.id as id1_14_, instancere0_.active as active2_14_, instancere0_.approval as approval3_14_, instancere0_.cleanliness as cleanlin4_14_, instancere0_.comment as comment5_14_, instancere0_.create_date as create_d6_14_, instancere0_.edit_date as edit_dat7_14_, instancere0_.evaluation as evaluati8_14_, instancere0_.instance_tur_id as instanc15_14_, instancere0_.location as location9_14_, instancere0_.room_confort as room_co10_14_, instancere0_.service_staff as service11_14_, instancere0_.sleep_quality as sleep_q12_14_, instancere0_.title as title13_14_, instancere0_.tourist_id as tourist16_14_, instancere0_.value_price as value_p14_14_ from instance_review instancere0_
+Hibernate: insert into instance_review (id, active, approval, cleanliness, comment, create_date, edit_date, evaluation, instance_tur_id, location, room_confort, service_staff, sleep_quality, title, tourist_id, value_price) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: select instancere0_.id as id1_14_, instancere0_.active as active2_14_, instancere0_.approval as approval3_14_, instancere0_.cleanliness as cleanlin4_14_, instancere0_.comment as comment5_14_, instancere0_.create_date as create_d6_14_, instancere0_.edit_date as edit_dat7_14_, instancere0_.evaluation as evaluati8_14_, instancere0_.instance_tur_id as instanc15_14_, instancere0_.location as location9_14_, instancere0_.room_confort as room_co10_14_, instancere0_.service_staff as service11_14_, instancere0_.sleep_quality as sleep_q12_14_, instancere0_.title as title13_14_, instancere0_.tourist_id as tourist16_14_, instancere0_.value_price as value_p14_14_ from instance_review instancere0_
+2016-07-06 19:22:13.231 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceReviewResource        : REST request to delete InstanceReview : 3
+Hibernate: delete from instance_review where id=?
+Hibernate: select instancere0_.id as id1_14_, instancere0_.active as active2_14_, instancere0_.approval as approval3_14_, instancere0_.cleanliness as cleanlin4_14_, instancere0_.comment as comment5_14_, instancere0_.create_date as create_d6_14_, instancere0_.edit_date as edit_dat7_14_, instancere0_.evaluation as evaluati8_14_, instancere0_.instance_tur_id as instanc15_14_, instancere0_.location as location9_14_, instancere0_.room_confort as room_co10_14_, instancere0_.service_staff as service11_14_, instancere0_.sleep_quality as sleep_q12_14_, instancere0_.title as title13_14_, instancere0_.tourist_id as tourist16_14_, instancere0_.value_price as value_p14_14_ from instance_review instancere0_
+Hibernate: insert into instance_review (id, active, approval, cleanliness, comment, create_date, edit_date, evaluation, instance_tur_id, location, room_confort, service_staff, sleep_quality, title, tourist_id, value_price) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2016-07-06 19:22:13.269 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceReviewResource        : REST request to get InstanceReview : 4
+Hibernate: insert into instance_review (id, active, approval, cleanliness, comment, create_date, edit_date, evaluation, instance_tur_id, location, room_confort, service_staff, sleep_quality, title, tourist_id, value_price) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2016-07-06 19:22:13.330 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceReviewResource        : REST request to search InstanceReviews for query id:5
+2016-07-06 19:22:13.374 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceReviewResource        : REST request to get InstanceReview : 9223372036854775807
+Hibernate: select instancere0_.id as id1_14_0_, instancere0_.active as active2_14_0_, instancere0_.approval as approval3_14_0_, instancere0_.cleanliness as cleanlin4_14_0_, instancere0_.comment as comment5_14_0_, instancere0_.create_date as create_d6_14_0_, instancere0_.edit_date as edit_dat7_14_0_, instancere0_.evaluation as evaluati8_14_0_, instancere0_.instance_tur_id as instanc15_14_0_, instancere0_.location as location9_14_0_, instancere0_.room_confort as room_co10_14_0_, instancere0_.service_staff as service11_14_0_, instancere0_.sleep_quality as sleep_q12_14_0_, instancere0_.title as title13_14_0_, instancere0_.tourist_id as tourist16_14_0_, instancere0_.value_price as value_p14_14_0_, instancetu1_.id as id1_17_1_, instancetu1_.address as address2_17_1_, instancetu1_.beds as beds3_17_1_, instancetu1_.contact_number_principal as contact_4_17_1_, instancetu1_.currency as currency5_17_1_, instancetu1_.description as descript6_17_1_, instancetu1_.email as email7_17_1_, instancetu1_.floors as floors8_17_1_, instancetu1_.instance_tur_name as instance9_17_1_, instancetu1_.instance_tur_type_id as instanc18_17_1_, instancetu1_.latitude as latitud10_17_1_, instancetu1_.local_tur_id as local_t19_17_1_, instancetu1_.longitude as longitu11_17_1_, instancetu1_.photo_principal as photo_p12_17_1_, instancetu1_.photo_principal_content_type as photo_p13_17_1_, instancetu1_.rating as rating14_17_1_, instancetu1_.rooms as rooms15_17_1_, instancetu1_.website as website16_17_1_, instancetu1_.zip_code as zip_cod17_17_1_, instancetu2_.id as id1_18_2_, instancetu2_.description as descript2_18_2_, instancetu2_.instance_tur_type_name as instance3_18_2_, localtur3_.id as id1_26_3_, localtur3_.description as descript2_26_3_, localtur3_.local_tur_name as local_tu3_26_3_, localtur3_.photo_principal as photo_pr4_26_3_, localtur3_.photo_principal_content_type as photo_pr5_26_3_, localtur3_.province_id as province6_26_3_, province4_.id as id1_28_4_, province4_.description as descript2_28_4_, province4_.photo_principal as photo_pr3_28_4_, province4_.photo_principal_content_type as photo_pr4_28_4_, province4_.province_name as province5_28_4_, province4_.region_id as region_i6_28_4_, region5_.id as id1_29_5_, region5_.country_id as country_4_29_5_, region5_.description as descript2_29_5_, region5_.region_name as region_n3_29_5_, country6_.id as id1_4_6_, country6_.country_name as country_2_4_6_, country6_.description as descript3_4_6_, tourist7_.id as id1_30_7_, tourist7_.country_booking as country_2_30_7_, tourist7_.country_residence as country_3_30_7_, tourist7_.create_date as create_d4_30_7_, tourist7_.currency as currency5_30_7_, tourist7_.edit_date as edit_dat6_30_7_, tourist7_.email as email7_30_7_, tourist7_.first_name as first_na8_30_7_, tourist7_.language as language9_30_7_, tourist7_.last_name as last_na10_30_7_, tourist7_.phone_number as phone_n11_30_7_, tourist7_.photo_principal as photo_p12_30_7_, tourist7_.photo_principal_content_type as photo_p13_30_7_, tourist7_.user_id as user_id14_30_7_, user8_.id as id1_24_8_, user8_.created_by as created_2_24_8_, user8_.created_date as created_3_24_8_, user8_.last_modified_by as last_mod4_24_8_, user8_.last_modified_date as last_mod5_24_8_, user8_.activated as activate6_24_8_, user8_.activation_key as activati7_24_8_, user8_.email as email8_24_8_, user8_.first_name as first_na9_24_8_, user8_.lang_key as lang_ke10_24_8_, user8_.last_name as last_na11_24_8_, user8_.login as login12_24_8_, user8_.password_hash as passwor13_24_8_, user8_.reset_date as reset_d14_24_8_, user8_.reset_key as reset_k15_24_8_ from instance_review instancere0_ left outer join instance_tur instancetu1_ on instancere0_.instance_tur_id=instancetu1_.id left outer join instance_tur_type instancetu2_ on instancetu1_.instance_tur_type_id=instancetu2_.id left outer join local_tur localtur3_ on instancetu1_.local_tur_id=localtur3_.id left outer join province province4_ on localtur3_.province_id=province4_.id left outer join region region5_ on province4_.region_id=region5_.id left outer join country country6_ on region5_.country_id=country6_.id left outer join tourist tourist7_ on instancere0_.tourist_id=tourist7_.id left outer join jhi_user user8_ on tourist7_.user_id=user8_.id where instancere0_.id=?
+Hibernate: insert into instance_review (id, active, approval, cleanliness, comment, create_date, edit_date, evaluation, instance_tur_id, location, room_confort, service_staff, sleep_quality, title, tourist_id, value_price) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2016-07-06 19:22:13.409 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceReviewResource        : REST request to get all InstanceReviews
+Hibernate: select instancere0_.id as id1_14_, instancere0_.active as active2_14_, instancere0_.approval as approval3_14_, instancere0_.cleanliness as cleanlin4_14_, instancere0_.comment as comment5_14_, instancere0_.create_date as create_d6_14_, instancere0_.edit_date as edit_dat7_14_, instancere0_.evaluation as evaluati8_14_, instancere0_.instance_tur_id as instanc15_14_, instancere0_.location as location9_14_, instancere0_.room_confort as room_co10_14_, instancere0_.service_staff as service11_14_, instancere0_.sleep_quality as sleep_q12_14_, instancere0_.title as title13_14_, instancere0_.tourist_id as tourist16_14_, instancere0_.value_price as value_p14_14_ from instance_review instancere0_
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 2.14</a> at 6/jul/2016 19:23:27</p>
+</div>
+</div>
+</body>
+</html>

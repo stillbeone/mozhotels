@@ -1,0 +1,35 @@
+{
+    "mozhotelsbookingApp": {
+        "instanceRoomType" : {
+            "home": {
+                "title": "Instance Room Types",
+                "createLabel": "Create a new Instance Room Type",
+                "createOrEditLabel": "Create or edit a Instance Room Type",
+                "search": "Search for Instance Room Type"
+            },
+            "created": "A new Instance Room Type is created with identifier {{ param }}",
+            "updated": "A Instance Room Type is updated with identifier {{ param }}",
+            "deleted": "A Instance Room Type is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Instance Room Type {{ id }}?"
+            },
+            "detail": {
+                "title": "Instance Room Type"
+            },
+            "instanceRoomTypeName": "Instance Room Type Name",
+            "description": "Description",
+            "quantity": "Quantity",
+            "capacityAdults": "Capacity Adults",
+            "capacityChildren": "Capacity Children",
+            "onlinePrice": "Online Price",
+            "branchPrice": "Branch Price",
+            "taxInclude": "Tax Include",
+            "tax": "Tax",
+            "photoPrincipal": "Photo Principal",
+            "picture": "Picture",
+            "instanceRoomFacility": "Instance Room Facility",
+            "instanceTur": "Instance Tur",
+            "booking": "Booking"
+        }
+    }
+}

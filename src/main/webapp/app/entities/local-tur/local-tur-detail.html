@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span translate="mozhotelsbookingApp.localTur.detail.title">Local Tur</span> {{vm.localTur.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="mozhotelsbookingApp.localTur.localTurName">Local Tur Name</span></dt>
+        <dd>
+            <span>{{vm.localTur.localTurName}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.localTur.description">Description</span></dt>
+        <dd>
+            <span>{{vm.localTur.description}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.localTur.photoPrincipal">Photo Principal</span></dt>
+        <dd>
+            <div ng-if="vm.localTur.photoPrincipal">
+                <a ng-click="vm.openFile(vm.localTur.photoPrincipalContentType, vm.localTur.photoPrincipal)">
+                    <img data-ng-src="{{'data:' + vm.localTur.photoPrincipalContentType + ';base64,' + vm.localTur.photoPrincipal}}" style="max-width: 100%;"/>
+                </a>
+                {{vm.localTur.photoPrincipalContentType}}, {{vm.byteSize(vm.localTur.photoPrincipal)}}
+            </div>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.localTur.province">Province</span></dt>
+        <dd>
+            <a ui-sref="province-detail({id:vm.localTur.province.id})">{{vm.localTur.province.provinceName}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

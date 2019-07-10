@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class mozhotels.service.SocialServiceIntTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class mozhotels.service.SocialServiceIntTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/mozhotels.service.html">mozhotels.service</a> &gt; SocialServiceIntTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">14</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">2.457s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testCreateSocialUserShouldCreateActivatedUserWithRoleUserAndPassword</td>
+<td>0.181s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCreateSocialUserShouldCreateSocialConnection</td>
+<td>0.113s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCreateSocialUserShouldCreateUserIfNotExist</td>
+<td>0.157s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCreateSocialUserShouldCreateUserWithExactLangKey</td>
+<td>0.127s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCreateSocialUserShouldCreateUserWithLoginSameAsEmailIfNotTwitter</td>
+<td>0.121s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCreateSocialUserShouldCreateUserWithSocialInformation</td>
+<td>0.197s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCreateSocialUserShouldCreateUserWithSocialLoginWhenIsTwitter</td>
+<td>0.112s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCreateSocialUserShouldNotChangeUserIfEmailAlreadyExist</td>
+<td>0.119s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCreateSocialUserShouldNotCreateUserIfEmailAlreadyExist</td>
+<td>0.164s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCreateSocialUserShouldSendRegistrationValidationEmail</td>
+<td>0.143s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCreateSocialUserShouldThrowExceptionIfConnectionHasNoEmailAndLoginAlreadyExist</td>
+<td>0.868s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCreateSocialUserShouldThrowExceptionIfConnectionHasNoEmailAndNoLogin</td>
+<td>0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testCreateSocialUserShouldThrowExceptionIfConnectionIsNull</td>
+<td>0.004s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testDeleteUserSocialConnection</td>
+<td>0.147s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>Hibernate: insert into jhi_user (id, created_by, created_date, last_modified_by, last_modified_date, activated, activation_key, email, first_name, lang_key, last_name, login, password_hash, reset_date, reset_key) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: select user0_.id as id1_24_, user0_.created_by as created_2_24_, user0_.created_date as created_3_24_, user0_.last_modified_by as last_mod4_24_, user0_.last_modified_date as last_mod5_24_, user0_.activated as activate6_24_, user0_.activation_key as activati7_24_, user0_.email as email8_24_, user0_.first_name as first_na9_24_, user0_.lang_key as lang_ke10_24_, user0_.last_name as last_na11_24_, user0_.login as login12_24_, user0_.password_hash as passwor13_24_, user0_.reset_date as reset_d14_24_, user0_.reset_key as reset_k15_24_ from jhi_user user0_ where user0_.login=?
+2016-07-06 19:21:54.172 ERROR 60006 --- [    Test worker] mozhotels.service.SocialService          : Cannot create social user because email is null and login already exist, login -&gt; @login
+Hibernate: select user0_.id as id1_24_, user0_.created_by as created_2_24_, user0_.created_date as created_3_24_, user0_.last_modified_by as last_mod4_24_, user0_.last_modified_date as last_mod5_24_, user0_.activated as activate6_24_, user0_.activation_key as activati7_24_, user0_.email as email8_24_, user0_.first_name as first_na9_24_, user0_.lang_key as lang_ke10_24_, user0_.last_name as last_na11_24_, user0_.login as login12_24_, user0_.password_hash as passwor13_24_, user0_.reset_date as reset_d14_24_, user0_.reset_key as reset_k15_24_ from jhi_user user0_ where user0_.email=?
+Hibernate: select authority0_.name as name1_19_0_ from jhi_authority authority0_ where authority0_.name=?
+Hibernate: insert into jhi_user (id, created_by, created_date, last_modified_by, last_modified_date, activated, activation_key, email, first_name, lang_key, last_name, login, password_hash, reset_date, reset_key) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: select user0_.id as id1_24_, user0_.created_by as created_2_24_, user0_.created_date as created_3_24_, user0_.last_modified_by as last_mod4_24_, user0_.last_modified_date as last_mod5_24_, user0_.activated as activate6_24_, user0_.activation_key as activati7_24_, user0_.email as email8_24_, user0_.first_name as first_na9_24_, user0_.lang_key as lang_ke10_24_, user0_.last_name as last_na11_24_, user0_.login as login12_24_, user0_.password_hash as passwor13_24_, user0_.reset_date as reset_d14_24_, user0_.reset_key as reset_k15_24_ from jhi_user user0_ where user0_.email=?
+Hibernate: select user0_.id as id1_24_, user0_.created_by as created_2_24_, user0_.created_date as created_3_24_, user0_.last_modified_by as last_mod4_24_, user0_.last_modified_date as last_mod5_24_, user0_.activated as activate6_24_, user0_.activation_key as activati7_24_, user0_.email as email8_24_, user0_.first_name as first_na9_24_, user0_.lang_key as lang_ke10_24_, user0_.last_name as last_na11_24_, user0_.login as login12_24_, user0_.password_hash as passwor13_24_, user0_.reset_date as reset_d14_24_, user0_.reset_key as reset_k15_24_ from jhi_user user0_ where user0_.email=?
+Hibernate: select authority0_.name as name1_19_0_ from jhi_authority authority0_ where authority0_.name=?
+Hibernate: insert into jhi_user (id, created_by, created_date, last_modified_by, last_modified_date, activated, activation_key, email, first_name, lang_key, last_name, login, password_hash, reset_date, reset_key) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: select user0_.id as id1_24_, user0_.created_by as created_2_24_, user0_.created_date as created_3_24_, user0_.last_modified_by as last_mod4_24_, user0_.last_modified_date as last_mod5_24_, user0_.activated as activate6_24_, user0_.activation_key as activati7_24_, user0_.email as email8_24_, user0_.first_name as first_na9_24_, user0_.lang_key as lang_ke10_24_, user0_.last_name as last_na11_24_, user0_.login as login12_24_, user0_.password_hash as passwor13_24_, user0_.reset_date as reset_d14_24_, user0_.reset_key as reset_k15_24_ from jhi_user user0_ where user0_.email=?
+Hibernate: select user0_.id as id1_24_, user0_.created_by as created_2_24_, user0_.created_date as created_3_24_, user0_.last_modified_by as last_mod4_24_, user0_.last_modified_date as last_mod5_24_, user0_.activated as activate6_24_, user0_.activation_key as activati7_24_, user0_.email as email8_24_, user0_.first_name as first_na9_24_, user0_.lang_key as lang_ke10_24_, user0_.last_name as last_na11_24_, user0_.login as login12_24_, user0_.password_hash as passwor13_24_, user0_.reset_date as reset_d14_24_, user0_.reset_key as reset_k15_24_ from jhi_user user0_ where user0_.email=?
+Hibernate: select authority0_.name as name1_19_0_ from jhi_authority authority0_ where authority0_.name=?
+Hibernate: insert into jhi_user (id, created_by, created_date, last_modified_by, last_modified_date, activated, activation_key, email, first_name, lang_key, last_name, login, password_hash, reset_date, reset_key) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: select user0_.id as id1_24_, user0_.created_by as created_2_24_, user0_.created_date as created_3_24_, user0_.last_modified_by as last_mod4_24_, user0_.last_modified_date as last_mod5_24_, user0_.activated as activate6_24_, user0_.activation_key as activati7_24_, user0_.email as email8_24_, user0_.first_name as first_na9_24_, user0_.lang_key as lang_ke10_24_, user0_.last_name as last_na11_24_, user0_.login as login12_24_, user0_.password_hash as passwor13_24_, user0_.reset_date as reset_d14_24_, user0_.reset_key as reset_k15_24_ from jhi_user user0_ where user0_.email=?
+Hibernate: select user0_.id as id1_24_, user0_.created_by as created_2_24_, user0_.created_date as created_3_24_, user0_.last_modified_by as last_mod4_24_, user0_.last_modified_date as last_mod5_24_, user0_.activated as activate6_24_, user0_.activation_key as activati7_24_, user0_.email as email8_24_, user0_.first_name as first_na9_24_, user0_.lang_key as lang_ke10_24_, user0_.last_name as last_na11_24_, user0_.login as login12_24_, user0_.password_hash as passwor13_24_, user0_.reset_date as reset_d14_24_, user0_.reset_key as reset_k15_24_ from jhi_user user0_ where user0_.email=?
+Hibernate: select authority0_.name as name1_19_0_ from jhi_authority authority0_ where authority0_.name=?
+Hibernate: insert into jhi_user (id, created_by, created_date, last_modified_by, last_modified_date, activated, activation_key, email, first_name, lang_key, last_name, login, password_hash, reset_date, reset_key) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: select user0_.id as id1_24_, user0_.created_by as created_2_24_, user0_.created_date as created_3_24_, user0_.last_modified_by as last_mod4_24_, user0_.last_modified_date as last_mod5_24_, user0_.activated as activate6_24_, user0_.activation_key as activati7_24_, user0_.email as email8_24_, user0_.first_name as first_na9_24_, user0_.lang_key as lang_ke10_24_, user0_.last_name as last_na11_24_, user0_.login as login12_24_, user0_.password_hash as passwor13_24_, user0_.reset_date as reset_d14_24_, user0_.reset_key as reset_k15_24_ from jhi_user user0_ where user0_.email=?
+Hibernate: select user0_.id as id1_24_, user0_.created_by as created_2_24_, user0_.created_date as created_3_24_, user0_.last_modified_by as last_mod4_24_, user0_.last_modified_date as last_mod5_24_, user0_.activated as activate6_24_, user0_.activation_key as activati7_24_, user0_.email as email8_24_, user0_.first_name as first_na9_24_, user0_.lang_key as lang_ke10_24_, user0_.last_name as last_na11_24_, user0_.login as login12_24_, user0_.password_hash as passwor13_24_, user0_.reset_date as reset_d14_24_, user0_.reset_key as reset_k15_24_ from jhi_user user0_ where user0_.email=?
+Hibernate: select authority0_.name as name1_19_0_ from jhi_authority authority0_ where authority0_.name=?
+Hibernate: insert into jhi_user (id, created_by, created_date, last_modified_by, last_modified_date, activated, activation_key, email, first_name, lang_key, last_name, login, password_hash, reset_date, reset_key) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: select user0_.id as id1_24_, user0_.created_by as created_2_24_, user0_.created_date as created_3_24_, user0_.last_modified_by as last_mod4_24_, user0_.last_modified_date as last_mod5_24_, user0_.activated as activate6_24_, user0_.activation_key as activati7_24_, user0_.email as email8_24_, user0_.first_name as first_na9_24_, user0_.lang_key as lang_ke10_24_, user0_.last_name as last_na11_24_, user0_.login as login12_24_, user0_.password_hash as passwor13_24_, user0_.reset_date as reset_d14_24_, user0_.reset_key as reset_k15_24_ from jhi_user user0_ where user0_.email=?
+Hibernate: select user0_.id as id1_24_, user0_.created_by as created_2_24_, user0_.created_date as created_3_24_, user0_.last_modified_by as last_mod4_24_, user0_.last_modified_date as last_mod5_24_, user0_.activated as activate6_24_, user0_.activation_key as activati7_24_, user0_.email as email8_24_, user0_.first_name as first_na9_24_, user0_.lang_key as lang_ke10_24_, user0_.last_name as last_na11_24_, user0_.login as login12_24_, user0_.password_hash as passwor13_24_, user0_.reset_date as reset_d14_24_, user0_.reset_key as reset_k15_24_ from jhi_user user0_ where user0_.email=?
+Hibernate: select authority0_.name as name1_19_0_ from jhi_authority authority0_ where authority0_.name=?
+Hibernate: insert into jhi_user (id, created_by, created_date, last_modified_by, last_modified_date, activated, activation_key, email, first_name, lang_key, last_name, login, password_hash, reset_date, reset_key) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: select user0_.id as id1_24_, user0_.created_by as created_2_24_, user0_.created_date as created_3_24_, user0_.last_modified_by as last_mod4_24_, user0_.last_modified_date as last_mod5_24_, user0_.activated as activate6_24_, user0_.activation_key as activati7_24_, user0_.email as email8_24_, user0_.first_name as first_na9_24_, user0_.lang_key as lang_ke10_24_, user0_.last_name as last_na11_24_, user0_.login as login12_24_, user0_.password_hash as passwor13_24_, user0_.reset_date as reset_d14_24_, user0_.reset_key as reset_k15_24_ from jhi_user user0_ where user0_.email=?
+Hibernate: select user0_.id as id1_24_, user0_.created_by as created_2_24_, user0_.created_date as created_3_24_, user0_.last_modified_by as last_mod4_24_, user0_.last_modified_date as last_mod5_24_, user0_.activated as activate6_24_, user0_.activation_key as activati7_24_, user0_.email as email8_24_, user0_.first_name as first_na9_24_, user0_.lang_key as lang_ke10_24_, user0_.last_name as last_na11_24_, user0_.login as login12_24_, user0_.password_hash as passwor13_24_, user0_.reset_date as reset_d14_24_, user0_.reset_key as reset_k15_24_ from jhi_user user0_ where user0_.email=?
+Hibernate: select authority0_.name as name1_19_0_ from jhi_authority authority0_ where authority0_.name=?
+Hibernate: insert into jhi_user (id, created_by, created_date, last_modified_by, last_modified_date, activated, activation_key, email, first_name, lang_key, last_name, login, password_hash, reset_date, reset_key) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: select user0_.id as id1_24_, user0_.created_by as created_2_24_, user0_.created_date as created_3_24_, user0_.last_modified_by as last_mod4_24_, user0_.last_modified_date as last_mod5_24_, user0_.activated as activate6_24_, user0_.activation_key as activati7_24_, user0_.email as email8_24_, user0_.first_name as first_na9_24_, user0_.lang_key as lang_ke10_24_, user0_.last_name as last_na11_24_, user0_.login as login12_24_, user0_.password_hash as passwor13_24_, user0_.reset_date as reset_d14_24_, user0_.reset_key as reset_k15_24_ from jhi_user user0_ where user0_.email=?
+Hibernate: select user0_.id as id1_24_, user0_.created_by as created_2_24_, user0_.created_date as created_3_24_, user0_.last_modified_by as last_mod4_24_, user0_.last_modified_date as last_mod5_24_, user0_.activated as activate6_24_, user0_.activation_key as activati7_24_, user0_.email as email8_24_, user0_.first_name as first_na9_24_, user0_.lang_key as lang_ke10_24_, user0_.last_name as last_na11_24_, user0_.login as login12_24_, user0_.password_hash as passwor13_24_, user0_.reset_date as reset_d14_24_, user0_.reset_key as reset_k15_24_ from jhi_user user0_ where user0_.email=?
+Hibernate: select authority0_.name as name1_19_0_ from jhi_authority authority0_ where authority0_.name=?
+Hibernate: insert into jhi_user (id, created_by, created_date, last_modified_by, last_modified_date, activated, activation_key, email, first_name, lang_key, last_name, login, password_hash, reset_date, reset_key) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2016-07-06 19:21:55.338 DEBUG 60006 --- [    Test worker] mozhotels.service.SocialService          : Delete user social connection providerId: PROVIDER
+Hibernate: insert into jhi_user (id, created_by, created_date, last_modified_by, last_modified_date, activated, activation_key, email, first_name, lang_key, last_name, login, password_hash, reset_date, reset_key) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: select count(*) as col_0_0_ from jhi_user user0_
+Hibernate: select user0_.id as id1_24_, user0_.created_by as created_2_24_, user0_.created_date as created_3_24_, user0_.last_modified_by as last_mod4_24_, user0_.last_modified_date as last_mod5_24_, user0_.activated as activate6_24_, user0_.activation_key as activati7_24_, user0_.email as email8_24_, user0_.first_name as first_na9_24_, user0_.lang_key as lang_ke10_24_, user0_.last_name as last_na11_24_, user0_.login as login12_24_, user0_.password_hash as passwor13_24_, user0_.reset_date as reset_d14_24_, user0_.reset_key as reset_k15_24_ from jhi_user user0_ where user0_.email=?
+2016-07-06 19:21:55.477  INFO 60006 --- [    Test worker] mozhotels.service.SocialService          : User already exist associate the connection to this account
+Hibernate: select count(*) as col_0_0_ from jhi_user user0_
+Hibernate: select user0_.id as id1_24_, user0_.created_by as created_2_24_, user0_.created_date as created_3_24_, user0_.last_modified_by as last_mod4_24_, user0_.last_modified_date as last_mod5_24_, user0_.activated as activate6_24_, user0_.activation_key as activati7_24_, user0_.email as email8_24_, user0_.first_name as first_na9_24_, user0_.lang_key as lang_ke10_24_, user0_.last_name as last_na11_24_, user0_.login as login12_24_, user0_.password_hash as passwor13_24_, user0_.reset_date as reset_d14_24_, user0_.reset_key as reset_k15_24_ from jhi_user user0_ where user0_.email=?
+2016-07-06 19:21:55.511 ERROR 60006 --- [    Test worker] mozhotels.service.SocialService          : Cannot create social user because connection is null
+2016-07-06 19:21:55.517 ERROR 60006 --- [    Test worker] mozhotels.service.SocialService          : Cannot create social user because email and login are null
+Hibernate: insert into jhi_user (id, created_by, created_date, last_modified_by, last_modified_date, activated, activation_key, email, first_name, lang_key, last_name, login, password_hash, reset_date, reset_key) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: select user0_.id as id1_24_, user0_.created_by as created_2_24_, user0_.created_date as created_3_24_, user0_.last_modified_by as last_mod4_24_, user0_.last_modified_date as last_mod5_24_, user0_.activated as activate6_24_, user0_.activation_key as activati7_24_, user0_.email as email8_24_, user0_.first_name as first_na9_24_, user0_.lang_key as lang_ke10_24_, user0_.last_name as last_na11_24_, user0_.login as login12_24_, user0_.password_hash as passwor13_24_, user0_.reset_date as reset_d14_24_, user0_.reset_key as reset_k15_24_ from jhi_user user0_ where user0_.email=?
+2016-07-06 19:21:55.629  INFO 60006 --- [    Test worker] mozhotels.service.SocialService          : User already exist associate the connection to this account
+Hibernate: select user0_.id as id1_24_, user0_.created_by as created_2_24_, user0_.created_date as created_3_24_, user0_.last_modified_by as last_mod4_24_, user0_.last_modified_date as last_mod5_24_, user0_.activated as activate6_24_, user0_.activation_key as activati7_24_, user0_.email as email8_24_, user0_.first_name as first_na9_24_, user0_.lang_key as lang_ke10_24_, user0_.last_name as last_na11_24_, user0_.login as login12_24_, user0_.password_hash as passwor13_24_, user0_.reset_date as reset_d14_24_, user0_.reset_key as reset_k15_24_ from jhi_user user0_ where user0_.email=?
+Hibernate: select user0_.id as id1_24_, user0_.created_by as created_2_24_, user0_.created_date as created_3_24_, user0_.last_modified_by as last_mod4_24_, user0_.last_modified_date as last_mod5_24_, user0_.activated as activate6_24_, user0_.activation_key as activati7_24_, user0_.email as email8_24_, user0_.first_name as first_na9_24_, user0_.lang_key as lang_ke10_24_, user0_.last_name as last_na11_24_, user0_.login as login12_24_, user0_.password_hash as passwor13_24_, user0_.reset_date as reset_d14_24_, user0_.reset_key as reset_k15_24_ from jhi_user user0_ where user0_.email=?
+Hibernate: select authority0_.name as name1_19_0_ from jhi_authority authority0_ where authority0_.name=?
+Hibernate: insert into jhi_user (id, created_by, created_date, last_modified_by, last_modified_date, activated, activation_key, email, first_name, lang_key, last_name, login, password_hash, reset_date, reset_key) values (null, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate: select user0_.id as id1_24_, user0_.created_by as created_2_24_, user0_.created_date as created_3_24_, user0_.last_modified_by as last_mod4_24_, user0_.last_modified_date as last_mod5_24_, user0_.activated as activate6_24_, user0_.activation_key as activati7_24_, user0_.email as email8_24_, user0_.first_name as first_na9_24_, user0_.lang_key as lang_ke10_24_, user0_.last_name as last_na11_24_, user0_.login as login12_24_, user0_.password_hash as passwor13_24_, user0_.reset_date as reset_d14_24_, user0_.reset_key as reset_k15_24_ from jhi_user user0_ where user0_.email=?
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 2.14</a> at 6/jul/2016 19:23:27</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+
+<div>
+    <h2><span translate="mozhotelsbookingApp.instanceInfoType.detail.title">Instance Info Type</span> {{vm.instanceInfoType.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="mozhotelsbookingApp.instanceInfoType.instanceInfoType">Instance Info Type</span></dt>
+        <dd>
+            <span translate="{{'mozhotelsbookingApp.InfoType.' + vm.instanceInfoType.instanceInfoType}}">{{vm.instanceInfoType.instanceInfoType}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceInfoType.instanceInfoTypeName">Instance Info Type Name</span></dt>
+        <dd>
+            <span>{{vm.instanceInfoType.instanceInfoTypeName}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceInfoType.description">Description</span></dt>
+        <dd>
+            <span>{{vm.instanceInfoType.description}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

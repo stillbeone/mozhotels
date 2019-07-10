@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Picture.
+    -->
+    <changeSet id="20160705045716-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="province_id"
+                                 baseTableName="picture"
+                                 constraintName="fk_picture_province_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="province"/>
+
+        <addForeignKeyConstraint baseColumnNames="local_tur_id"
+                                 baseTableName="picture"
+                                 constraintName="fk_picture_localtur_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="local_tur"/>
+
+        <addForeignKeyConstraint baseColumnNames="instance_tur_id"
+                                 baseTableName="picture"
+                                 constraintName="fk_picture_instancetur_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="instance_tur"/>
+
+        <addForeignKeyConstraint baseColumnNames="instance_room_type_id"
+                                 baseTableName="picture"
+                                 constraintName="fk_picture_instanceroomtype_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="instance_room_type"/>
+
+        <addForeignKeyConstraint baseColumnNames="instance_activity_id"
+                                 baseTableName="picture"
+                                 constraintName="fk_picture_instanceactivity_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="instance_activity"/>
+
+    </changeSet>
+</databaseChangeLog>

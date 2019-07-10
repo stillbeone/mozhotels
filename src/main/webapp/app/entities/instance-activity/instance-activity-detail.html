@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span translate="mozhotelsbookingApp.instanceActivity.detail.title">Instance Activity</span> {{vm.instanceActivity.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="mozhotelsbookingApp.instanceActivity.instanceActivityName">Instance Activity Name</span></dt>
+        <dd>
+            <span>{{vm.instanceActivity.instanceActivityName}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceActivity.area">Area</span></dt>
+        <dd>
+            <span translate="{{'mozhotelsbookingApp.ActivityArea.' + vm.instanceActivity.area}}">{{vm.instanceActivity.area}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceActivity.description">Description</span></dt>
+        <dd>
+            <span>{{vm.instanceActivity.description}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceActivity.photoPrincipal">Photo Principal</span></dt>
+        <dd>
+            <div ng-if="vm.instanceActivity.photoPrincipal">
+                <a ng-click="vm.openFile(vm.instanceActivity.photoPrincipalContentType, vm.instanceActivity.photoPrincipal)">
+                    <img data-ng-src="{{'data:' + vm.instanceActivity.photoPrincipalContentType + ';base64,' + vm.instanceActivity.photoPrincipal}}" style="max-width: 100%;"/>
+                </a>
+                {{vm.instanceActivity.photoPrincipalContentType}}, {{vm.byteSize(vm.instanceActivity.photoPrincipal)}}
+            </div>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceActivity.instanceActivityType">Instance Activity Type</span></dt>
+        <dd>
+            <a ui-sref="instance-activity-type-detail({id:vm.instanceActivity.instanceActivityType.id})">{{vm.instanceActivity.instanceActivityType.instanceActivityTypeName}}</a>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceActivity.instanceTur">Instance Tur</span></dt>
+        <dd>
+            <a ui-sref="instance-tur-detail({id:vm.instanceActivity.instanceTur.id})">{{vm.instanceActivity.instanceTur.instanceTurName}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

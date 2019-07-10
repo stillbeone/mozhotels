@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity InstanceActivityType.
+    -->
+    <changeSet id="20160705045707-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="instance_activity_types_id"
+                                 baseTableName="instance_activity_type_instance_tur"
+                                 constraintName="fk_instance_activity_type_instance_tur_instancetur_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="instance_activity_type"/>
+        <addForeignKeyConstraint baseColumnNames="instance_turs_id"
+                                 baseTableName="instance_activity_type_instance_tur"
+                                 constraintName="fk_instance_activity_type_instance_tur_instanceactivitytype_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="instance_tur"/>
+        
+    </changeSet>
+</databaseChangeLog>

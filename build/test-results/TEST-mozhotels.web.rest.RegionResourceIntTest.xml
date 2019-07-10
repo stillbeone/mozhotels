@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mozhotels.web.rest.RegionResourceIntTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2016-07-06T17:22:19" hostname="Edmilsons-MacBook-Pro.local" time="0.711">
+  <properties/>
+  <testcase name="getAllRegions" classname="mozhotels.web.rest.RegionResourceIntTest" time="0.042"/>
+  <testcase name="updateRegion" classname="mozhotels.web.rest.RegionResourceIntTest" time="0.128"/>
+  <testcase name="deleteRegion" classname="mozhotels.web.rest.RegionResourceIntTest" time="0.143"/>
+  <testcase name="searchRegion" classname="mozhotels.web.rest.RegionResourceIntTest" time="0.065"/>
+  <testcase name="getNonExistingRegion" classname="mozhotels.web.rest.RegionResourceIntTest" time="0.019"/>
+  <testcase name="getRegion" classname="mozhotels.web.rest.RegionResourceIntTest" time="0.01"/>
+  <testcase name="createRegion" classname="mozhotels.web.rest.RegionResourceIntTest" time="0.1"/>
+  <testcase name="checkRegionNameIsRequired" classname="mozhotels.web.rest.RegionResourceIntTest" time="0.07"/>
+  <system-out><![CDATA[Hibernate: insert into region (id, country_id, description, region_name) values (null, ?, ?, ?)
+2016-07-06 19:22:19.028 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.RegionResource        : REST request to get all Regions
+Hibernate: select region0_.id as id1_29_, region0_.country_id as country_4_29_, region0_.description as descript2_29_, region0_.region_name as region_n3_29_ from region region0_
+Hibernate: insert into region (id, country_id, description, region_name) values (null, ?, ?, ?)
+Hibernate: select region0_.id as id1_29_, region0_.country_id as country_4_29_, region0_.description as descript2_29_, region0_.region_name as region_n3_29_ from region region0_
+2016-07-06 19:22:19.148 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.RegionResource        : REST request to update Region : Region{id=2, regionName='BBBBB', description='BBBBB'}
+Hibernate: update region set country_id=?, description=?, region_name=? where id=?
+Hibernate: select region0_.id as id1_29_, region0_.country_id as country_4_29_, region0_.description as descript2_29_, region0_.region_name as region_n3_29_ from region region0_
+Hibernate: insert into region (id, country_id, description, region_name) values (null, ?, ?, ?)
+Hibernate: select region0_.id as id1_29_, region0_.country_id as country_4_29_, region0_.description as descript2_29_, region0_.region_name as region_n3_29_ from region region0_
+2016-07-06 19:22:19.343 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.RegionResource        : REST request to delete Region : 3
+Hibernate: delete from region where id=?
+Hibernate: select region0_.id as id1_29_, region0_.country_id as country_4_29_, region0_.description as descript2_29_, region0_.region_name as region_n3_29_ from region region0_
+Hibernate: insert into region (id, country_id, description, region_name) values (null, ?, ?, ?)
+2016-07-06 19:22:19.442 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.RegionResource        : REST request to search Regions for query id:4
+2016-07-06 19:22:19.477 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.RegionResource        : REST request to get Region : 9223372036854775807
+Hibernate: select region0_.id as id1_29_0_, region0_.country_id as country_4_29_0_, region0_.description as descript2_29_0_, region0_.region_name as region_n3_29_0_, country1_.id as id1_4_1_, country1_.country_name as country_2_4_1_, country1_.description as descript3_4_1_ from region region0_ left outer join country country1_ on region0_.country_id=country1_.id where region0_.id=?
+Hibernate: insert into region (id, country_id, description, region_name) values (null, ?, ?, ?)
+2016-07-06 19:22:19.519 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.RegionResource        : REST request to get Region : 5
+Hibernate: select region0_.id as id1_29_, region0_.country_id as country_4_29_, region0_.description as descript2_29_, region0_.region_name as region_n3_29_ from region region0_
+2016-07-06 19:22:19.547 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.RegionResource        : REST request to save Region : Region{id=null, regionName='AAAAA', description='AAAAA'}
+Hibernate: insert into region (id, country_id, description, region_name) values (null, ?, ?, ?)
+Hibernate: select region0_.id as id1_29_, region0_.country_id as country_4_29_, region0_.description as descript2_29_, region0_.region_name as region_n3_29_ from region region0_
+Hibernate: select region0_.id as id1_29_, region0_.country_id as country_4_29_, region0_.description as descript2_29_, region0_.region_name as region_n3_29_ from region region0_
+Hibernate: select region0_.id as id1_29_, region0_.country_id as country_4_29_, region0_.description as descript2_29_, region0_.region_name as region_n3_29_ from region region0_
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

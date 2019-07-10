@@ -1,0 +1,413 @@
+entity Country{
+    countryName String required,
+    description String
+}
+
+entity Region {
+    regionName String required,
+    description String
+}
+
+entity Province {
+    provinceName String required,
+    description String
+}
+
+entity LocalTur {
+    localTurName String required,
+    description String,
+    photoPrincipal ImageBlob
+}
+
+entity InstanceTurType{
+    instanceTurTypeName String required,
+    description String
+}
+
+enum FacilityType {
+SERVICE, RESOURCE
+}
+
+entity InstanceFacilityType{
+	instanceFacilityTypeName String required,
+	facilityType FacilityType required,
+    description String,
+	instanceFacility Boolean,
+    instanceRoomFacility Boolean,
+    instanceBookingFacility Boolean
+}
+
+entity InstanceActivityType{
+    instanceActivityTypeName String required,
+    description String
+}
+
+enum InfoType {
+POLICY, USEFUL, MANAGEMENT
+}
+
+entity InstanceInfoType{
+ 	instanceInfoType InfoType required,
+	instanceInfoTypeName String required,
+    description String
+}
+
+enum InstanceRating {
+NA, ONE, TWO, THREE, FOUR, FIVE}
+
+enum Currency {
+MZN, USD, EUR, ZAR}
+
+entity InstanceTur{
+    instanceTurName String required,
+    rating InstanceRating,
+    description String required,
+    latitude Double,
+    longitude Double,
+    rooms Integer,
+    beds Integer,
+    floors Integer,
+    currency Currency required,
+    photoPrincipal ImageBlob,
+    agreementNumber String,
+    createDate ZonedDateTime,
+    editDate ZonedDateTime,
+    active Boolean,
+    approval Boolean
+}
+
+entity InstanceContact{
+	contactNumberPrincipal Integer,
+    zipCode String,
+    address String,
+    website String,
+    email String
+}
+
+enum InstanceArea{
+INDOOR, OUTDOOR
+}
+
+entity InstanceFacility{
+    instanceFacilityName String required,
+    area InstanceArea,
+    description String,
+    quantity Integer,
+    price BigDecimal,
+    bookingInclude Boolean
+}
+
+enum ActivityArea{
+INSIDE, OUTSIDE
+}
+
+entity InstanceActivity{
+    instanceActivityName String required,
+    area ActivityArea,
+    description String,
+    photoPrincipal ImageBlob
+}
+
+entity InstanceRoomType{
+    instanceRoomTypeName String required,
+    description String,
+    roomQuantity Integer,
+    capacityAdults Integer,
+    capacityChildren Integer,
+    onlinePrice BigDecimal required,
+    branchPrice BigDecimal,
+    taxInclude Boolean,
+    tax BigDecimal,
+    photoPrincipal ImageBlob,
+    createDate ZonedDateTime,
+    editDate ZonedDateTime,
+    active Boolean,
+    approval Boolean
+}
+
+entity InstanceInfo{
+	instanceInfo InfoType required,
+	instanceInfoName String required,
+    info String required,
+    description String
+}
+
+enum Evaluation{
+WONDERFULL, NICE, NEUTRAL, DONT_RECOMEND
+}
+
+entity InstanceReview{
+	cleanliness Float required,
+    roomConfort Float required,
+    location Float required,
+    serviceStaff Float required,
+    sleepQuality Float required,
+    valuePrice Float required,
+    evaluation Evaluation required,
+    title String required,
+    comment String required,
+    createDate ZonedDateTime,
+    editDate ZonedDateTime,
+    active Boolean,
+    approval Boolean
+}
+
+enum PictureType{
+LOCALTUR, INSTANCETUR, INSTANCEACTIVITY, ROOMTYPE, TOURIST
+}
+
+entity Picture{
+	pictureName String required,
+    type PictureType,
+    picture ImageBlob,
+    description String
+}
+
+enum Language{
+PT, EN, FR, SP
+}
+
+entity Tourist
+{
+    firstName String required,
+    lastName String required,
+    email String required,
+    phoneNumber String required,
+    countryResidence String required,
+    countryBooking String required,
+    language Language,
+    currency Currency,
+    photoPrincipal ImageBlob,
+    createDate ZonedDateTime,
+    editDate ZonedDateTime,
+    active Boolean,
+    approval Boolean
+}
+
+entity GuestTourist{
+    firstName String required,
+    lastName String required,
+    email String required,
+    countryResidence String
+}
+
+enum BookingState{
+SUBMITED, IN_PROGRESS, BOOKING, CHECK_IN, CHECK_OUT, OVERBOOKING, CANCELED, FAILED
+}
+
+entity Booking {
+    checkIn LocalDate  required,
+    checkOut LocalDate  required,
+    peopleAdult Integer required,
+    peopleChild Integer required,
+    rooms Integer required,
+    tax Float required,
+    totalPrice BigDecimal required,
+    state BookingState required,
+    notes String maxlength (1024),
+    createDate ZonedDateTime required,
+    editDate ZonedDateTime,
+}
+
+enum PaymentType{
+	CREDIT_CARD, DEBIT_CARD, PAYPAL
+}
+
+enum PaymentState{
+SUBMITED, IN_PROGRESS, PAID, CANCELED, FAILED
+}
+
+enum CardType{
+VISA, MASTERCARD, MOZHOTELS, OTHER
+}
+
+entity BookingPayment{
+    type PaymentType required,
+    currency String required,
+    amount BigDecimal required,
+    state PaymentState required,
+    cardHolder String required,
+    cardType CardType required,
+    cardNumber Integer required,
+    cardExpiry LocalDate required,
+    cardCCV Integer required,
+    createDate ZonedDateTime required,
+    editDate ZonedDateTime required,
+    approval Boolean
+}
+
+entity Info{
+	infoName String required,
+    description String,
+    value String required
+}
+
+enum FavoriteType {
+INSTANCETUR, TOURIST
+}
+
+entity Favorite{
+	favoriteType FavoriteType
+}
+
+relationship OneToMany {
+Country{region} to Region{country(countryName)}
+}
+
+relationship OneToMany{
+Region{province} to Province{region(regionName)}
+}
+
+relationship OneToMany{
+Province{localTur} to LocalTur{province(provinceName)}
+}
+
+relationship OneToMany{
+LocalTur{instanceTur} to InstanceTur{localTur(localTurName)}
+}
+
+relationship OneToMany{
+InstanceTurType{instanceTur} to InstanceTur{instanceTurType(instanceTurTypeName)}
+}
+
+relationship OneToMany{
+InstanceFacilityType{instanceFacility} to
+InstanceFacility{instanceFacilityType(instanceFacilityTypeName)}
+}
+
+relationship OneToMany{
+InstanceActivityType{instanceActivity} to
+InstanceActivity{instanceActivityType(instanceActivityTypeName)}
+}
+
+relationship OneToMany{
+InstanceInfoType{instanceInfo} to
+InstanceInfo{instanceInfoType(instanceInfoTypeName)}
+}
+
+relationship OneToMany{
+Province{picture} to
+Picture{province(provinceName)}
+}
+
+relationship OneToMany{
+LocalTur{picture} to
+Picture{localTur(localTurName)}
+}
+
+relationship OneToMany{
+InstanceTur{picture} to
+Picture{instanceTur(instanceTurName)}
+}
+
+relationship OneToMany{
+InstanceRoomType{picture} to
+Picture{instanceRoomType(instanceRoomTypeName)}
+}
+
+relationship OneToMany{
+InstanceActivity{picture} to
+Picture{instanceActivity(instanceActivityName)}
+}
+
+relationship ManyToMany{
+InstanceRoomType{instanceRoomFacility(instanceFacilityName)} to
+InstanceFacility{instanceRoomType}
+}
+
+relationship ManyToMany{
+InstanceTur{instanceFacilityType(instanceFacilityTypeName)} to
+InstanceFacilityType{instanceTur}
+
+}
+
+relationship ManyToMany{
+InstanceTur{instanceActivityType(instanceActivityTypeName)} to
+InstanceActivityType{instanceTur}
+
+}
+
+relationship OneToOne{
+InstanceContact{instanceTur(instanceTurName)} to
+InstanceTur{instanceContact}
+}
+
+relationship OneToMany{
+InstanceTur{instanceFacility} to
+InstanceFacility{instanceTur(instanceTurName)}
+}
+
+relationship OneToMany{
+InstanceTur{instanceActivity} to
+InstanceActivity{instanceTur(instanceTurName)}
+}
+
+relationship OneToMany{
+InstanceTur{instanceRoomType} to
+InstanceRoomType{instanceTur(instanceTurName)}
+}
+
+relationship OneToMany{
+InstanceTur{instanceInfo} to
+InstanceInfo{instanceTur(instanceTurName)}
+}
+
+relationship OneToMany{
+InstanceTur{instanceReview} to
+InstanceReview{instanceTur(instanceTurName)}
+}
+
+relationship OneToMany{
+Tourist{booking} to
+Booking{tourist}
+}
+
+relationship OneToMany{
+Tourist{instanceReview} to
+InstanceReview{tourist}
+}
+
+relationship OneToMany{
+Tourist{guestTourist} to
+GuestTourist{tourist}
+}
+
+relationship OneToMany{
+GuestTourist{booking} to
+Booking{guestTourist}
+}
+
+relationship OneToMany{
+InstanceTur{booking} to
+Booking{instanceTur(instanceTurName)}
+}
+
+relationship OneToMany{
+InstanceRoomType{booking} to
+Booking{instanceRoomType(instanceRoomTypeName)}
+}
+
+relationship ManyToMany{
+Booking{instanceFacility(instanceFacilityName)} to
+InstanceFacility{booking}
+}
+
+relationship OneToOne{
+BookingPayment{booking} to
+Booking{bookingPayment}
+}
+
+relationship OneToOne{
+Tourist{user} to
+User{tourist}
+}
+
+relationship OneToMany{
+InstanceTur{favorite} to
+Favorite{instanceTur(instanceTurName)}
+}
+
+relationship OneToMany{
+Tourist{favorite} to
+Favorite {tourist(touristName)}
+}

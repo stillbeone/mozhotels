@@ -1,0 +1,211 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myBookingPaymentLabel" translate="mozhotelsbookingApp.bookingPayment.home.createOrEditLabel">Create or edit a Booking Payment</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.bookingPayment.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.bookingPayment.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.bookingPayment.type" for="field_type">Type</label>
+            <select class="form-control" name="type" ng-model="vm.bookingPayment.type" id="field_type" required>
+                <option value="CREDIT_CARD" translate="mozhotelsbookingApp.PaymentType.CREDIT_CARD">CREDIT_CARD</option>
+                <option value="DEBIT_CARD" translate="mozhotelsbookingApp.PaymentType.DEBIT_CARD">DEBIT_CARD</option>
+                <option value="PAYPAL" translate="mozhotelsbookingApp.PaymentType.PAYPAL">PAYPAL</option>
+            </select>
+            <div ng-show="editForm.type.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.type.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.bookingPayment.currency" for="field_currency">Currency</label>
+            <input type="text" class="form-control" name="currency" id="field_currency"
+                    ng-model="vm.bookingPayment.currency"
+                    required />
+            <div ng-show="editForm.currency.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.currency.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.bookingPayment.amount" for="field_amount">Amount</label>
+            <input type="number" class="form-control" name="amount" id="field_amount"
+                    ng-model="vm.bookingPayment.amount"
+                    required />
+            <div ng-show="editForm.amount.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.amount.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.amount.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.bookingPayment.state" for="field_state">State</label>
+            <select class="form-control" name="state" ng-model="vm.bookingPayment.state" id="field_state" required>
+                <option value="SUBMITED" translate="mozhotelsbookingApp.PaymentState.SUBMITED">SUBMITED</option>
+                <option value="IN_PROGRESS" translate="mozhotelsbookingApp.PaymentState.IN_PROGRESS">IN_PROGRESS</option>
+                <option value="PAID" translate="mozhotelsbookingApp.PaymentState.PAID">PAID</option>
+                <option value="CANCELED" translate="mozhotelsbookingApp.PaymentState.CANCELED">CANCELED</option>
+                <option value="FAILED" translate="mozhotelsbookingApp.PaymentState.FAILED">FAILED</option>
+            </select>
+            <div ng-show="editForm.state.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.state.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.bookingPayment.cardHolder" for="field_cardHolder">Card Holder</label>
+            <input type="text" class="form-control" name="cardHolder" id="field_cardHolder"
+                    ng-model="vm.bookingPayment.cardHolder"
+                    required />
+            <div ng-show="editForm.cardHolder.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.cardHolder.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.bookingPayment.cardType" for="field_cardType">Card Type</label>
+            <select class="form-control" name="cardType" ng-model="vm.bookingPayment.cardType" id="field_cardType" required>
+                <option value="VISA" translate="mozhotelsbookingApp.CardType.VISA">VISA</option>
+                <option value="MASTERCARD" translate="mozhotelsbookingApp.CardType.MASTERCARD">MASTERCARD</option>
+                <option value="MOZHOTELS" translate="mozhotelsbookingApp.CardType.MOZHOTELS">MOZHOTELS</option>
+                <option value="OTHER" translate="mozhotelsbookingApp.CardType.OTHER">OTHER</option>
+            </select>
+            <div ng-show="editForm.cardType.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.cardType.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.bookingPayment.cardNumber" for="field_cardNumber">Card Number</label>
+            <input type="number" class="form-control" name="cardNumber" id="field_cardNumber"
+                    ng-model="vm.bookingPayment.cardNumber"
+                    required />
+            <div ng-show="editForm.cardNumber.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.cardNumber.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.cardNumber.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.bookingPayment.cardExpiry" for="field_cardExpiry">Card Expiry</label>
+                <div class="input-group">
+                    <input id="field_cardExpiry" type="text" class="form-control" name="cardExpiry" uib-datepicker-popup="{{dateformat}}" ng-model="vm.bookingPayment.cardExpiry" is-open="vm.datePickerOpenStatus.cardExpiry"
+                    required/>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('cardExpiry')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            <div ng-show="editForm.cardExpiry.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.cardExpiry.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.bookingPayment.cardCcv" for="field_cardCcv">Card Ccv</label>
+            <input type="number" class="form-control" name="cardCcv" id="field_cardCcv"
+                    ng-model="vm.bookingPayment.cardCcv"
+                    required />
+            <div ng-show="editForm.cardCcv.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.cardCcv.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.cardCcv.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.bookingPayment.createDate" for="field_createDate">Create Date</label>
+                <div class="input-group">
+                    <input id="field_createDate" type="text" class="form-control" name="createDate" datetime-picker="{{dateformat}}" ng-model="vm.bookingPayment.createDate" is-open="vm.datePickerOpenStatus.createDate"
+                    required  />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('createDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            <div ng-show="editForm.createDate.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.createDate.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.createDate.$error.ZonedDateTimelocal" translate="entity.validation.ZonedDateTimelocal">
+                    This field should be a date and time.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.bookingPayment.editDate" for="field_editDate">Edit Date</label>
+                <div class="input-group">
+                    <input id="field_editDate" type="text" class="form-control" name="editDate" datetime-picker="{{dateformat}}" ng-model="vm.bookingPayment.editDate" is-open="vm.datePickerOpenStatus.editDate"
+                    required  />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('editDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            <div ng-show="editForm.editDate.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.editDate.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.editDate.$error.ZonedDateTimelocal" translate="entity.validation.ZonedDateTimelocal">
+                    This field should be a date and time.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.bookingPayment.approval" for="field_approval">Approval</label>
+            <input type="checkbox" class="form-control" name="approval" id="field_approval"
+                    ng-model="vm.bookingPayment.approval"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="mozhotelsbookingApp.bookingPayment.booking" for="field_booking">Booking</label>
+            <select class="form-control" id="field_booking" name="booking" ng-model="vm.bookingPayment.booking" ng-options="booking as booking.id for booking in vm.bookings | orderBy:'id' track by booking.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

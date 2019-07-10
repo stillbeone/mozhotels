@@ -1,0 +1,99 @@
+<div>
+    <h2 translate="mozhotelsbookingApp.bookingPayment.home.title">Booking Payments</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="booking-payment.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  translate="mozhotelsbookingApp.bookingPayment.home.createLabel">
+                        Create new Booking Payment
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'mozhotelsbookingApp.bookingPayment.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="mozhotelsbookingApp.bookingPayment.type">Type</span></th>
+                    <th><span translate="mozhotelsbookingApp.bookingPayment.currency">Currency</span></th>
+                    <th><span translate="mozhotelsbookingApp.bookingPayment.amount">Amount</span></th>
+                    <th><span translate="mozhotelsbookingApp.bookingPayment.state">State</span></th>
+                    <th><span translate="mozhotelsbookingApp.bookingPayment.cardHolder">Card Holder</span></th>
+                    <th><span translate="mozhotelsbookingApp.bookingPayment.cardType">Card Type</span></th>
+                    <th><span translate="mozhotelsbookingApp.bookingPayment.cardNumber">Card Number</span></th>
+                    <th><span translate="mozhotelsbookingApp.bookingPayment.cardExpiry">Card Expiry</span></th>
+                    <th><span translate="mozhotelsbookingApp.bookingPayment.cardCcv">Card Ccv</span></th>
+                    <th><span translate="mozhotelsbookingApp.bookingPayment.createDate">Create Date</span></th>
+                    <th><span translate="mozhotelsbookingApp.bookingPayment.editDate">Edit Date</span></th>
+                    <th><span translate="mozhotelsbookingApp.bookingPayment.approval">Approval</span></th>
+                    <th><span translate="mozhotelsbookingApp.bookingPayment.booking">Booking</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="bookingPayment in vm.bookingPayments track by bookingPayment.id">
+                    <td><a ui-sref="booking-payment-detail({id:bookingPayment.id})">{{bookingPayment.id}}</a></td>
+                    <td translate="{{'mozhotelsbookingApp.PaymentType.' + bookingPayment.type}}">{{bookingPayment.type}}</td>
+                    <td>{{bookingPayment.currency}}</td>
+                    <td>{{bookingPayment.amount}}</td>
+                    <td translate="{{'mozhotelsbookingApp.PaymentState.' + bookingPayment.state}}">{{bookingPayment.state}}</td>
+                    <td>{{bookingPayment.cardHolder}}</td>
+                    <td translate="{{'mozhotelsbookingApp.CardType.' + bookingPayment.cardType}}">{{bookingPayment.cardType}}</td>
+                    <td>{{bookingPayment.cardNumber}}</td>
+                        <td>{{bookingPayment.cardExpiry | date:'mediumDate'}}</td>
+                    <td>{{bookingPayment.cardCcv}}</td>
+                    <td>{{bookingPayment.createDate | date:'medium'}}</td>
+                    <td>{{bookingPayment.editDate | date:'medium'}}</td>
+                    <td>{{bookingPayment.approval}}</td>
+                    <td>
+                        <a ui-sref="booking-detail({id:bookingPayment.booking.id})">{{bookingPayment.booking.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="booking-payment-detail({id:bookingPayment.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="booking-payment.edit({id:bookingPayment.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="booking-payment.delete({id:bookingPayment.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

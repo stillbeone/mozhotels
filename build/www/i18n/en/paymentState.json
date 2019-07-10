@@ -1,0 +1,12 @@
+{
+    "mozhotelsbookingApp": {
+        "PaymentState" : {
+            "null": "",
+            "SUBMITED": "SUBMITED",
+            "IN_PROGRESS": "IN_PROGRESS",
+            "PAID": "PAID",
+            "CANCELED": "CANCELED",
+            "FAILED": "FAILED"
+        }
+    }
+}

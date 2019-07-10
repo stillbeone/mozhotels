@@ -1,0 +1,9 @@
+{
+    "mozhotelsbookingApp": {
+        "ActivityArea" : {
+            "null": "",
+            "INSIDE": "INSIDE",
+            "OUTSIDE": "OUTSIDE"
+        }
+    }
+}

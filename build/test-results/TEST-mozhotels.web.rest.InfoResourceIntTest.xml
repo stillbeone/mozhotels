@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mozhotels.web.rest.InfoResourceIntTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2016-07-06T17:22:06" hostname="Edmilsons-MacBook-Pro.local" time="0.551">
+  <properties/>
+  <testcase name="checkInfoNameIsRequired" classname="mozhotels.web.rest.InfoResourceIntTest" time="0.042"/>
+  <testcase name="searchInfo" classname="mozhotels.web.rest.InfoResourceIntTest" time="0.076"/>
+  <testcase name="getAllInfos" classname="mozhotels.web.rest.InfoResourceIntTest" time="0.026"/>
+  <testcase name="updateInfo" classname="mozhotels.web.rest.InfoResourceIntTest" time="0.077"/>
+  <testcase name="getInfo" classname="mozhotels.web.rest.InfoResourceIntTest" time="0.019"/>
+  <testcase name="checkValueIsRequired" classname="mozhotels.web.rest.InfoResourceIntTest" time="0.02"/>
+  <testcase name="getNonExistingInfo" classname="mozhotels.web.rest.InfoResourceIntTest" time="0.013"/>
+  <testcase name="createInfo" classname="mozhotels.web.rest.InfoResourceIntTest" time="0.057"/>
+  <testcase name="deleteInfo" classname="mozhotels.web.rest.InfoResourceIntTest" time="0.051"/>
+  <system-out><![CDATA[Hibernate: select info0_.id as id1_6_, info0_.description as descript2_6_, info0_.info_name as info_nam3_6_, info0_.value as value4_6_ from info info0_
+Hibernate: select info0_.id as id1_6_, info0_.description as descript2_6_, info0_.info_name as info_nam3_6_, info0_.value as value4_6_ from info info0_
+Hibernate: insert into info (id, description, info_name, value) values (null, ?, ?, ?)
+2016-07-06 19:22:07.113 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.InfoResource          : REST request to search Infos for query id:1
+Hibernate: insert into info (id, description, info_name, value) values (null, ?, ?, ?)
+2016-07-06 19:22:07.178 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.InfoResource          : REST request to get all Infos
+Hibernate: select info0_.id as id1_6_, info0_.description as descript2_6_, info0_.info_name as info_nam3_6_, info0_.value as value4_6_ from info info0_
+Hibernate: insert into info (id, description, info_name, value) values (null, ?, ?, ?)
+Hibernate: select info0_.id as id1_6_, info0_.description as descript2_6_, info0_.info_name as info_nam3_6_, info0_.value as value4_6_ from info info0_
+2016-07-06 19:22:07.242 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.InfoResource          : REST request to update Info : Info{id=3, infoName='BBBBB', description='BBBBB', value='BBBBB'}
+Hibernate: update info set description=?, info_name=?, value=? where id=?
+Hibernate: select info0_.id as id1_6_, info0_.description as descript2_6_, info0_.info_name as info_nam3_6_, info0_.value as value4_6_ from info info0_
+Hibernate: insert into info (id, description, info_name, value) values (null, ?, ?, ?)
+2016-07-06 19:22:07.316 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.InfoResource          : REST request to get Info : 4
+Hibernate: select info0_.id as id1_6_, info0_.description as descript2_6_, info0_.info_name as info_nam3_6_, info0_.value as value4_6_ from info info0_
+Hibernate: select info0_.id as id1_6_, info0_.description as descript2_6_, info0_.info_name as info_nam3_6_, info0_.value as value4_6_ from info info0_
+2016-07-06 19:22:07.393 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.InfoResource          : REST request to get Info : 9223372036854775807
+Hibernate: select info0_.id as id1_6_0_, info0_.description as descript2_6_0_, info0_.info_name as info_nam3_6_0_, info0_.value as value4_6_0_ from info info0_ where info0_.id=?
+Hibernate: select info0_.id as id1_6_, info0_.description as descript2_6_, info0_.info_name as info_nam3_6_, info0_.value as value4_6_ from info info0_
+2016-07-06 19:22:07.437 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.InfoResource          : REST request to save Info : Info{id=null, infoName='AAAAA', description='AAAAA', value='AAAAA'}
+Hibernate: insert into info (id, description, info_name, value) values (null, ?, ?, ?)
+Hibernate: select info0_.id as id1_6_, info0_.description as descript2_6_, info0_.info_name as info_nam3_6_, info0_.value as value4_6_ from info info0_
+Hibernate: insert into info (id, description, info_name, value) values (null, ?, ?, ?)
+Hibernate: select info0_.id as id1_6_, info0_.description as descript2_6_, info0_.info_name as info_nam3_6_, info0_.value as value4_6_ from info info0_
+2016-07-06 19:22:07.529 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.InfoResource          : REST request to delete Info : 6
+Hibernate: delete from info where id=?
+Hibernate: select info0_.id as id1_6_, info0_.description as descript2_6_, info0_.info_name as info_nam3_6_, info0_.value as value4_6_ from info info0_
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

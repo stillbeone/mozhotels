@@ -1,0 +1,24 @@
+{
+    "mozhotelsbookingApp": {
+        "country" : {
+            "home": {
+                "title": "Countries",
+                "createLabel": "Criar um(a) novo(a) Country",
+                "createOrEditLabel": "Criar ou editar um(a) Country",
+                "search": "Search for Country"
+            },
+            "created": "A new Country is created with identifier {{ param }}",
+            "updated": "A Country is updated with identifier {{ param }}",
+            "deleted": "A Country is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Tem a certeza que pretende eliminar o(a) Country {{ id }}?"
+            },
+            "detail": {
+                "title": "Country"
+            },
+            "countryName": "Country Name",
+            "description": "Description",
+            "region": "Region"
+        }
+    }
+}

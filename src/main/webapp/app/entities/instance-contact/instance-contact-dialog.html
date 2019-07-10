@@ -1,0 +1,62 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myInstanceContactLabel" translate="mozhotelsbookingApp.instanceContact.home.createOrEditLabel">Create or edit a Instance Contact</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.instanceContact.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.instanceContact.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceContact.contactNumberPrincipal" for="field_contactNumberPrincipal">Contact Number Principal</label>
+            <input type="number" class="form-control" name="contactNumberPrincipal" id="field_contactNumberPrincipal"
+                    ng-model="vm.instanceContact.contactNumberPrincipal"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceContact.zipCode" for="field_zipCode">Zip Code</label>
+            <input type="text" class="form-control" name="zipCode" id="field_zipCode"
+                    ng-model="vm.instanceContact.zipCode"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceContact.address" for="field_address">Address</label>
+            <input type="text" class="form-control" name="address" id="field_address"
+                    ng-model="vm.instanceContact.address"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceContact.website" for="field_website">Website</label>
+            <input type="text" class="form-control" name="website" id="field_website"
+                    ng-model="vm.instanceContact.website"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceContact.email" for="field_email">Email</label>
+            <input type="text" class="form-control" name="email" id="field_email"
+                    ng-model="vm.instanceContact.email"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="mozhotelsbookingApp.instanceContact.instanceTur" for="field_instanceTur">Instance Tur</label>
+            <select class="form-control" id="field_instanceTur" name="instanceTur" ng-model="vm.instanceContact.instanceTur" ng-options="instanceTur as instanceTur.instanceTurName for instanceTur in vm.instanceturs | orderBy:'id' track by instanceTur.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

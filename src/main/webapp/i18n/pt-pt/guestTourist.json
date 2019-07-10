@@ -1,0 +1,27 @@
+{
+    "mozhotelsbookingApp": {
+        "guestTourist" : {
+            "home": {
+                "title": "Guest Tourists",
+                "createLabel": "Criar um(a) novo(a) Guest Tourist",
+                "createOrEditLabel": "Criar ou editar um(a) Guest Tourist",
+                "search": "Search for Guest Tourist"
+            },
+            "created": "A new Guest Tourist is created with identifier {{ param }}",
+            "updated": "A Guest Tourist is updated with identifier {{ param }}",
+            "deleted": "A Guest Tourist is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Tem a certeza que pretende eliminar o(a) Guest Tourist {{ id }}?"
+            },
+            "detail": {
+                "title": "Guest Tourist"
+            },
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "email": "Email",
+            "countryResidence": "Country Residence",
+            "booking": "Booking",
+            "tourist": "Tourist"
+        }
+    }
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class mozhotels.web.rest.InstanceInfoTypeResourceIntTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class mozhotels.web.rest.InstanceInfoTypeResourceIntTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/mozhotels.web.rest.html">mozhotels.web.rest</a> &gt; InstanceInfoTypeResourceIntTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">9</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.383s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">checkInstanceInfoTypeIsRequired</td>
+<td>0.027s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">checkInstanceInfoTypeNameIsRequired</td>
+<td>0.019s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">createInstanceInfoType</td>
+<td>0.037s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">deleteInstanceInfoType</td>
+<td>0.084s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getAllInstanceInfoTypes</td>
+<td>0.026s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getInstanceInfoType</td>
+<td>0.016s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getNonExistingInstanceInfoType</td>
+<td>0.018s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">searchInstanceInfoType</td>
+<td>0.058s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">updateInstanceInfoType</td>
+<td>0.098s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>Hibernate: insert into instance_info_type (id, description, instance_info_type, instance_info_type_name) values (null, ?, ?, ?)
+Hibernate: select instancein0_.id as id1_13_, instancein0_.description as descript2_13_, instancein0_.instance_info_type as instance3_13_, instancein0_.instance_info_type_name as instance4_13_ from instance_info_type instancein0_
+2016-07-06 19:22:12.352 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceInfoTypeResource      : REST request to delete InstanceInfoType : 1
+Hibernate: delete from instance_info_type where id=?
+Hibernate: select instancein0_.id as id1_13_, instancein0_.description as descript2_13_, instancein0_.instance_info_type as instance3_13_, instancein0_.instance_info_type_name as instance4_13_ from instance_info_type instancein0_
+Hibernate: insert into instance_info_type (id, description, instance_info_type, instance_info_type_name) values (null, ?, ?, ?)
+Hibernate: select instancein0_.id as id1_13_, instancein0_.description as descript2_13_, instancein0_.instance_info_type as instance3_13_, instancein0_.instance_info_type_name as instance4_13_ from instance_info_type instancein0_
+2016-07-06 19:22:12.458 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceInfoTypeResource      : REST request to update InstanceInfoType : InstanceInfoType{id=2, instanceInfoType='USEFUL', instanceInfoTypeName='BBBBB', description='BBBBB'}
+Hibernate: update instance_info_type set description=?, instance_info_type=?, instance_info_type_name=? where id=?
+Hibernate: select instancein0_.id as id1_13_, instancein0_.description as descript2_13_, instancein0_.instance_info_type as instance3_13_, instancein0_.instance_info_type_name as instance4_13_ from instance_info_type instancein0_
+Hibernate: select instancein0_.id as id1_13_, instancein0_.description as descript2_13_, instancein0_.instance_info_type as instance3_13_, instancein0_.instance_info_type_name as instance4_13_ from instance_info_type instancein0_
+Hibernate: select instancein0_.id as id1_13_, instancein0_.description as descript2_13_, instancein0_.instance_info_type as instance3_13_, instancein0_.instance_info_type_name as instance4_13_ from instance_info_type instancein0_
+2016-07-06 19:22:12.577 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceInfoTypeResource      : REST request to get InstanceInfoType : 9223372036854775807
+Hibernate: select instancein0_.id as id1_13_0_, instancein0_.description as descript2_13_0_, instancein0_.instance_info_type as instance3_13_0_, instancein0_.instance_info_type_name as instance4_13_0_ from instance_info_type instancein0_ where instancein0_.id=?
+Hibernate: insert into instance_info_type (id, description, instance_info_type, instance_info_type_name) values (null, ?, ?, ?)
+2016-07-06 19:22:12.644 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceInfoTypeResource      : REST request to search InstanceInfoTypes for query id:3
+Hibernate: insert into instance_info_type (id, description, instance_info_type, instance_info_type_name) values (null, ?, ?, ?)
+2016-07-06 19:22:12.698 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceInfoTypeResource      : REST request to get all InstanceInfoTypes
+Hibernate: select instancein0_.id as id1_13_, instancein0_.description as descript2_13_, instancein0_.instance_info_type as instance3_13_, instancein0_.instance_info_type_name as instance4_13_ from instance_info_type instancein0_
+Hibernate: select instancein0_.id as id1_13_, instancein0_.description as descript2_13_, instancein0_.instance_info_type as instance3_13_, instancein0_.instance_info_type_name as instance4_13_ from instance_info_type instancein0_
+2016-07-06 19:22:12.742 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceInfoTypeResource      : REST request to save InstanceInfoType : InstanceInfoType{id=null, instanceInfoType='POLICY', instanceInfoTypeName='AAAAA', description='AAAAA'}
+Hibernate: insert into instance_info_type (id, description, instance_info_type, instance_info_type_name) values (null, ?, ?, ?)
+Hibernate: select instancein0_.id as id1_13_, instancein0_.description as descript2_13_, instancein0_.instance_info_type as instance3_13_, instancein0_.instance_info_type_name as instance4_13_ from instance_info_type instancein0_
+Hibernate: insert into instance_info_type (id, description, instance_info_type, instance_info_type_name) values (null, ?, ?, ?)
+2016-07-06 19:22:12.858 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceInfoTypeResource      : REST request to get InstanceInfoType : 6
+Hibernate: select instancein0_.id as id1_13_, instancein0_.description as descript2_13_, instancein0_.instance_info_type as instance3_13_, instancein0_.instance_info_type_name as instance4_13_ from instance_info_type instancein0_
+Hibernate: select instancein0_.id as id1_13_, instancein0_.description as descript2_13_, instancein0_.instance_info_type as instance3_13_, instancein0_.instance_info_type_name as instance4_13_ from instance_info_type instancein0_
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 2.14</a> at 6/jul/2016 19:23:27</p>
+</div>
+</div>
+</body>
+</html>

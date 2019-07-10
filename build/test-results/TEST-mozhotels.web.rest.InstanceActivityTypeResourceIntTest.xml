@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mozhotels.web.rest.InstanceActivityTypeResourceIntTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2016-07-06T17:22:08" hostname="Edmilsons-MacBook-Pro.local" time="0.523">
+  <properties/>
+  <testcase name="checkInstanceActivityTypeNameIsRequired" classname="mozhotels.web.rest.InstanceActivityTypeResourceIntTest" time="0.037"/>
+  <testcase name="getAllInstanceActivityTypes" classname="mozhotels.web.rest.InstanceActivityTypeResourceIntTest" time="0.021"/>
+  <testcase name="deleteInstanceActivityType" classname="mozhotels.web.rest.InstanceActivityTypeResourceIntTest" time="0.068"/>
+  <testcase name="getInstanceActivityType" classname="mozhotels.web.rest.InstanceActivityTypeResourceIntTest" time="0.017"/>
+  <testcase name="searchInstanceActivityType" classname="mozhotels.web.rest.InstanceActivityTypeResourceIntTest" time="0.075"/>
+  <testcase name="getNonExistingInstanceActivityType" classname="mozhotels.web.rest.InstanceActivityTypeResourceIntTest" time="0.015"/>
+  <testcase name="createInstanceActivityType" classname="mozhotels.web.rest.InstanceActivityTypeResourceIntTest" time="0.062"/>
+  <testcase name="updateInstanceActivityType" classname="mozhotels.web.rest.InstanceActivityTypeResourceIntTest" time="0.078"/>
+  <system-out><![CDATA[Hibernate: select instanceac0_.id as id1_8_, instanceac0_.description as descript2_8_, instanceac0_.instance_activity_type_name as instance3_8_ from instance_activity_type instanceac0_
+Hibernate: select instanceac0_.id as id1_8_, instanceac0_.description as descript2_8_, instanceac0_.instance_activity_type_name as instance3_8_ from instance_activity_type instanceac0_
+Hibernate: insert into instance_activity_type (id, description, instance_activity_type_name) values (null, ?, ?)
+2016-07-06 19:22:08.431 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceActivityTypeResource  : REST request to get all InstanceActivityTypes
+Hibernate: select instanceac0_.id as id1_8_, instanceac0_.description as descript2_8_, instanceac0_.instance_activity_type_name as instance3_8_ from instance_activity_type instanceac0_
+Hibernate: insert into instance_activity_type (id, description, instance_activity_type_name) values (null, ?, ?)
+Hibernate: select instanceac0_.id as id1_8_, instanceac0_.description as descript2_8_, instanceac0_.instance_activity_type_name as instance3_8_ from instance_activity_type instanceac0_
+2016-07-06 19:22:08.516 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceActivityTypeResource  : REST request to delete InstanceActivityType : 2
+Hibernate: delete from instance_activity_type where id=?
+Hibernate: select instanceac0_.id as id1_8_, instanceac0_.description as descript2_8_, instanceac0_.instance_activity_type_name as instance3_8_ from instance_activity_type instanceac0_
+Hibernate: insert into instance_activity_type (id, description, instance_activity_type_name) values (null, ?, ?)
+2016-07-06 19:22:08.559 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceActivityTypeResource  : REST request to get InstanceActivityType : 3
+Hibernate: insert into instance_activity_type (id, description, instance_activity_type_name) values (null, ?, ?)
+2016-07-06 19:22:08.631 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceActivityTypeResource  : REST request to search InstanceActivityTypes for query id:4
+2016-07-06 19:22:08.692 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceActivityTypeResource  : REST request to get InstanceActivityType : 9223372036854775807
+Hibernate: select instanceac0_.id as id1_8_0_, instanceac0_.description as descript2_8_0_, instanceac0_.instance_activity_type_name as instance3_8_0_ from instance_activity_type instanceac0_ where instanceac0_.id=?
+Hibernate: select instanceac0_.id as id1_8_, instanceac0_.description as descript2_8_, instanceac0_.instance_activity_type_name as instance3_8_ from instance_activity_type instanceac0_
+2016-07-06 19:22:08.751 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceActivityTypeResource  : REST request to save InstanceActivityType : InstanceActivityType{id=null, instanceActivityTypeName='AAAAA', description='AAAAA'}
+Hibernate: insert into instance_activity_type (id, description, instance_activity_type_name) values (null, ?, ?)
+Hibernate: select instanceac0_.id as id1_8_, instanceac0_.description as descript2_8_, instanceac0_.instance_activity_type_name as instance3_8_ from instance_activity_type instanceac0_
+Hibernate: insert into instance_activity_type (id, description, instance_activity_type_name) values (null, ?, ?)
+Hibernate: select instanceac0_.id as id1_8_, instanceac0_.description as descript2_8_, instanceac0_.instance_activity_type_name as instance3_8_ from instance_activity_type instanceac0_
+2016-07-06 19:22:08.849 DEBUG 60006 --- [    Test worker] m.web.rest.InstanceActivityTypeResource  : REST request to update InstanceActivityType : InstanceActivityType{id=6, instanceActivityTypeName='BBBBB', description='BBBBB'}
+Hibernate: update instance_activity_type set description=?, instance_activity_type_name=? where id=?
+Hibernate: select instanceac0_.id as id1_8_, instanceac0_.description as descript2_8_, instanceac0_.instance_activity_type_name as instance3_8_ from instance_activity_type instanceac0_
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

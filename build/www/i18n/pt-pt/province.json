@@ -1,0 +1,27 @@
+{
+    "mozhotelsbookingApp": {
+        "province" : {
+            "home": {
+                "title": "Provinces",
+                "createLabel": "Criar um(a) novo(a) Province",
+                "createOrEditLabel": "Criar ou editar um(a) Province",
+                "search": "Search for Province"
+            },
+            "created": "A new Province is created with identifier {{ param }}",
+            "updated": "A Province is updated with identifier {{ param }}",
+            "deleted": "A Province is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Tem a certeza que pretende eliminar o(a) Province {{ id }}?"
+            },
+            "detail": {
+                "title": "Province"
+            },
+            "provinceName": "Province Name",
+            "description": "Description",
+            "photoPrincipal": "Photo Principal",
+            "localTur": "Local Tur",
+            "picture": "Picture",
+            "region": "Region"
+        }
+    }
+}

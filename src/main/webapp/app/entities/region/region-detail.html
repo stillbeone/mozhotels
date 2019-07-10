@@ -1,0 +1,26 @@
+
+<div>
+    <h2><span translate="mozhotelsbookingApp.region.detail.title">Region</span> {{vm.region.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="mozhotelsbookingApp.region.regionName">Region Name</span></dt>
+        <dd>
+            <span>{{vm.region.regionName}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.region.description">Description</span></dt>
+        <dd>
+            <span>{{vm.region.description}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.region.country">Country</span></dt>
+        <dd>
+            <a ui-sref="country-detail({id:vm.region.country.id})">{{vm.region.country.countryName}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

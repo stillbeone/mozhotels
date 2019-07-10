@@ -1,0 +1,11 @@
+{
+    "mozhotelsbookingApp": {
+        "Language" : {
+            "null": "",
+            "PT": "PT",
+            "EN": "EN",
+            "FR": "FR",
+            "SP": "SP"
+        }
+    }
+}

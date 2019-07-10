@@ -1,0 +1,30 @@
+{
+    "mozhotelsbookingApp": {
+        "picture" : {
+            "home": {
+                "title": "Pictures",
+                "createLabel": "Crear nuevo Picture",
+                "createOrEditLabel": "Crear o editar Picture",
+                "search": "Search for Picture"
+            },
+            "created": "Un nuevo Picture ha sido creado con el identificador {{ param }}",
+            "updated": "Un Picture ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Picture ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Picture {{ id }}?"
+            },
+            "detail": {
+                "title": "Picture"
+            },
+            "pictureName": "Picture Name",
+            "description": "Description",
+            "picture": "Picture",
+            "type": "Type",
+            "province": "Province",
+            "localTur": "Local Tur",
+            "instanceTur": "Instance Tur",
+            "instanceRoomType": "Instance Room Type",
+            "instanceActivity": "Instance Activity"
+        }
+    }
+}

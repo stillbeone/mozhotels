@@ -1,0 +1,58 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myInstanceInfoTypeLabel" translate="mozhotelsbookingApp.instanceInfoType.home.createOrEditLabel">Create or edit a Instance Info Type</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.instanceInfoType.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.instanceInfoType.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceInfoType.instanceInfoType" for="field_instanceInfoType">Instance Info Type</label>
+            <select class="form-control" name="instanceInfoType" ng-model="vm.instanceInfoType.instanceInfoType" id="field_instanceInfoType" required>
+                <option value="POLICY" translate="mozhotelsbookingApp.InfoType.POLICY">POLICY</option>
+                <option value="USEFUL" translate="mozhotelsbookingApp.InfoType.USEFUL">USEFUL</option>
+                <option value="MANAGEMENT" translate="mozhotelsbookingApp.InfoType.MANAGEMENT">MANAGEMENT</option>
+            </select>
+            <div ng-show="editForm.instanceInfoType.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.instanceInfoType.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceInfoType.instanceInfoTypeName" for="field_instanceInfoTypeName">Instance Info Type Name</label>
+            <input type="text" class="form-control" name="instanceInfoTypeName" id="field_instanceInfoTypeName"
+                    ng-model="vm.instanceInfoType.instanceInfoTypeName"
+                    required />
+            <div ng-show="editForm.instanceInfoTypeName.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.instanceInfoTypeName.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="mozhotelsbookingApp.instanceInfoType.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="vm.instanceInfoType.description"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

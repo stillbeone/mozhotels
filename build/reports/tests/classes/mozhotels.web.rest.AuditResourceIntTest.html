@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class mozhotels.web.rest.AuditResourceIntTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class mozhotels.web.rest.AuditResourceIntTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/mozhotels.web.rest.html">mozhotels.web.rest</a> &gt; AuditResourceIntTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">5</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.396s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">getAllAudits</td>
+<td>0.113s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getAudit</td>
+<td>0.037s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getAuditsByDate</td>
+<td>0.043s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getNonExistingAudit</td>
+<td>0.066s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">getNonExistingAuditsByDate</td>
+<td>0.137s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>Hibernate: select persistent0_.event_id as event_id1_20_, persistent0_.event_date as event_da2_20_, persistent0_.event_type as event_ty3_20_, persistent0_.principal as principa4_20_ from jhi_persistent_audit_event persistent0_
+Hibernate: select persistent0_.event_id as event_id1_20_0_, persistent0_.event_date as event_da2_20_0_, persistent0_.event_type as event_ty3_20_0_, persistent0_.principal as principa4_20_0_ from jhi_persistent_audit_event persistent0_ where persistent0_.event_id=?
+Hibernate: select persistent0_.event_id as event_id1_20_, persistent0_.event_date as event_da2_20_, persistent0_.event_type as event_ty3_20_, persistent0_.principal as principa4_20_ from jhi_persistent_audit_event persistent0_
+Hibernate: insert into jhi_persistent_audit_event (event_id, event_date, event_type, principal) values (null, ?, ?, ?)
+Hibernate: select count(persistent0_.event_id) as col_0_0_ from jhi_persistent_audit_event persistent0_ where persistent0_.event_date between ? and ?
+Hibernate: select persistent0_.event_id as event_id1_20_, persistent0_.event_date as event_da2_20_, persistent0_.event_type as event_ty3_20_, persistent0_.principal as principa4_20_ from jhi_persistent_audit_event persistent0_
+Hibernate: insert into jhi_persistent_audit_event (event_id, event_date, event_type, principal) values (null, ?, ?, ?)
+Hibernate: select count(persistent0_.event_id) as col_0_0_ from jhi_persistent_audit_event persistent0_
+Hibernate: select persistent0_.event_id as event_id1_20_, persistent0_.event_date as event_da2_20_, persistent0_.event_type as event_ty3_20_, persistent0_.principal as principa4_20_ from jhi_persistent_audit_event persistent0_ limit ?
+Hibernate: select persistent0_.event_id as event_id1_20_, persistent0_.event_date as event_da2_20_, persistent0_.event_type as event_ty3_20_, persistent0_.principal as principa4_20_ from jhi_persistent_audit_event persistent0_
+Hibernate: insert into jhi_persistent_audit_event (event_id, event_date, event_type, principal) values (null, ?, ?, ?)
+Hibernate: select count(persistent0_.event_id) as col_0_0_ from jhi_persistent_audit_event persistent0_ where persistent0_.event_date between ? and ?
+Hibernate: select persistent0_.event_id as event_id1_20_, persistent0_.event_date as event_da2_20_, persistent0_.event_type as event_ty3_20_, persistent0_.principal as principa4_20_ from jhi_persistent_audit_event persistent0_ where persistent0_.event_date between ? and ? limit ?
+Hibernate: select persistent0_.event_id as event_id1_20_, persistent0_.event_date as event_da2_20_, persistent0_.event_type as event_ty3_20_, persistent0_.principal as principa4_20_ from jhi_persistent_audit_event persistent0_
+Hibernate: insert into jhi_persistent_audit_event (event_id, event_date, event_type, principal) values (null, ?, ?, ?)
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 2.14</a> at 6/jul/2016 19:23:27</p>
+</div>
+</div>
+</body>
+</html>

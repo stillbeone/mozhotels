@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Scenario: Retrieve administrator user" tests="4" skipped="0" failures="0" errors="0" timestamp="2016-07-06T17:23:25" hostname="Edmilsons-MacBook-Pro.local" time="0.173">
+  <properties/>
+  <testcase name="When I search user 'admin'" classname="Scenario: Retrieve administrator user" time="0.001"/>
+  <testcase name="Then the user is found" classname="Scenario: Retrieve administrator user" time="0.0"/>
+  <testcase name="And his last name is 'Administrator'" classname="Scenario: Retrieve administrator user" time="0.0"/>
+  <testcase name="classMethod" classname="Scenario: Retrieve administrator user" time="55.6"/>
+  <system-out><![CDATA[
+        ██  ██    ██  ████████  ███████    ██████  ████████  ████████  ███████
+        ██  ██    ██     ██     ██    ██  ██          ██     ██        ██    ██
+        ██  ████████     ██     ███████    █████      ██     ██████    ███████
+  ██    ██  ██    ██     ██     ██             ██     ██     ██        ██   ██
+   ██████   ██    ██  ████████  ██        ██████      ██     ████████  ██    ██
+
+:: JHipster ??  :: Running Spring Boot 1.3.5.RELEASE ::
+:: http://jhipster.github.io ::
+
+2016-07-06 19:22:34.760  INFO 60074 --- [    Test worker] m.cucumber.stepdefs.UserStepDefs         : Starting UserStepDefs on Edmilsons-MacBook-Pro.local with PID 60074 (/Users/siquice/jhipster/mozhotelsbooking/target/test-classes started by siquice in /Users/siquice/jhipster/mozhotelsbooking)
+2016-07-06 19:22:34.785 DEBUG 60074 --- [    Test worker] m.cucumber.stepdefs.UserStepDefs         : Running with Spring Boot v1.3.5.RELEASE, Spring v4.2.6.RELEASE
+2016-07-06 19:22:34.786  INFO 60074 --- [    Test worker] m.cucumber.stepdefs.UserStepDefs         : No active profile set, falling back to default profiles: default
+2016-07-06 19:22:43.565 DEBUG 60074 --- [    Test worker] mozhotels.config.AsyncConfiguration      : Creating Async Task Executor
+2016-07-06 19:22:44.340 DEBUG 60074 --- [    Test worker] mozhotels.config.MetricsConfiguration    : Registering JVM gauges
+2016-07-06 19:22:44.367 DEBUG 60074 --- [    Test worker] mozhotels.config.MetricsConfiguration    : Initializing Metrics JMX reporting
+2016-07-06 19:22:44.981 DEBUG 60074 --- [    Test worker] mozhotels.config.DatabaseConfiguration   : Configuring Datasource
+2016-07-06 19:22:45.779 DEBUG 60074 --- [    Test worker] mozhotels.config.DatabaseConfiguration   : Configuring Liquibase
+2016-07-06 19:22:45.815 DEBUG 60074 --- [    Test worker] m.config.liquibase.AsyncSpringLiquibase  : Starting Liquibase synchronously
+2016-07-06 19:22:51.324 DEBUG 60074 --- [    Test worker] m.config.liquibase.AsyncSpringLiquibase  : Started Liquibase in 5506 ms
+2016-07-06 19:22:57.470  INFO 60074 --- [    Test worker] mozhotels.MozhotelsbookingApp            : Running with Spring profile(s) : []
+2016-07-06 19:23:05.835 DEBUG 60074 --- [    Test worker] m.c.elasticsearch.IndexReinitializer     : ElasticSearch indexes reset in 2620 ms
+2016-07-06 19:23:09.677 ERROR 60074 --- [    Test worker] m.config.social.SocialConfiguration      : Cannot configure GoogleConnectionFactory id or secret null
+2016-07-06 19:23:09.678 ERROR 60074 --- [    Test worker] m.config.social.SocialConfiguration      : Cannot configure FacebookConnectionFactory id or secret null
+2016-07-06 19:23:09.678 ERROR 60074 --- [    Test worker] m.config.social.SocialConfiguration      : Cannot configure TwitterConnectionFactory id or secret null
+2016-07-06 19:23:17.513 DEBUG 60074 --- [    Test worker] mozhotels.config.CacheConfiguration      : Starting Ehcache
+2016-07-06 19:23:18.738 DEBUG 60074 --- [    Test worker] mozhotels.config.CacheConfiguration      : Registering Ehcache Metrics gauges
+2016-07-06 19:23:23.775  INFO 60074 --- [    Test worker] m.cucumber.stepdefs.UserStepDefs         : Started UserStepDefs in 52.157 seconds (JVM running for 57.733)
+2016-07-06 19:23:25.130 DEBUG 60074 --- [    Test worker] mozhotels.web.rest.UserResource          : REST request to get User : admin
+Hibernate: select user0_.id as id1_24_, user0_.created_by as created_2_24_, user0_.created_date as created_3_24_, user0_.last_modified_by as last_mod4_24_, user0_.last_modified_date as last_mod5_24_, user0_.activated as activate6_24_, user0_.activation_key as activati7_24_, user0_.email as email8_24_, user0_.first_name as first_na9_24_, user0_.lang_key as lang_ke10_24_, user0_.last_name as last_na11_24_, user0_.login as login12_24_, user0_.password_hash as passwor13_24_, user0_.reset_date as reset_d14_24_, user0_.reset_key as reset_k15_24_ from jhi_user user0_ where user0_.login=?
+Hibernate: select authoritie0_.user_id as user_id1_24_0_, authoritie0_.authority_name as authorit2_25_0_, authority1_.name as name1_19_1_ from jhi_user_authority authoritie0_ inner join jhi_authority authority1_ on authoritie0_.authority_name=authority1_.name where authoritie0_.user_id=?
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

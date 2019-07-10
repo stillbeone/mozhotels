@@ -1,0 +1,12 @@
+{
+    "mozhotelsbookingApp": {
+        "PictureType" : {
+            "null": "",
+            "LOCALTUR": "LOCALTUR",
+            "INSTANCETUR": "INSTANCETUR",
+            "INSTANCEACTIVITY": "INSTANCEACTIVITY",
+            "ROOMTYPE": "ROOMTYPE",
+            "TOURIST": "TOURIST"
+        }
+    }
+}

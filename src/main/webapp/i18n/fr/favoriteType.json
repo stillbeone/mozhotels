@@ -1,0 +1,9 @@
+{
+    "mozhotelsbookingApp": {
+        "FavoriteType" : {
+            "null": "",
+            "INSTANCETUR": "INSTANCETUR",
+            "TOURIST": "TOURIST"
+        }
+    }
+}

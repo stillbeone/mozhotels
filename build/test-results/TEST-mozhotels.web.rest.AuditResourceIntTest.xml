@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mozhotels.web.rest.AuditResourceIntTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2016-07-06T17:22:01" hostname="Edmilsons-MacBook-Pro.local" time="0.403">
+  <properties/>
+  <testcase name="getNonExistingAudit" classname="mozhotels.web.rest.AuditResourceIntTest" time="0.066"/>
+  <testcase name="getNonExistingAuditsByDate" classname="mozhotels.web.rest.AuditResourceIntTest" time="0.137"/>
+  <testcase name="getAllAudits" classname="mozhotels.web.rest.AuditResourceIntTest" time="0.113"/>
+  <testcase name="getAuditsByDate" classname="mozhotels.web.rest.AuditResourceIntTest" time="0.043"/>
+  <testcase name="getAudit" classname="mozhotels.web.rest.AuditResourceIntTest" time="0.037"/>
+  <system-out><![CDATA[Hibernate: select persistent0_.event_id as event_id1_20_, persistent0_.event_date as event_da2_20_, persistent0_.event_type as event_ty3_20_, persistent0_.principal as principa4_20_ from jhi_persistent_audit_event persistent0_
+Hibernate: select persistent0_.event_id as event_id1_20_0_, persistent0_.event_date as event_da2_20_0_, persistent0_.event_type as event_ty3_20_0_, persistent0_.principal as principa4_20_0_ from jhi_persistent_audit_event persistent0_ where persistent0_.event_id=?
+Hibernate: select persistent0_.event_id as event_id1_20_, persistent0_.event_date as event_da2_20_, persistent0_.event_type as event_ty3_20_, persistent0_.principal as principa4_20_ from jhi_persistent_audit_event persistent0_
+Hibernate: insert into jhi_persistent_audit_event (event_id, event_date, event_type, principal) values (null, ?, ?, ?)
+Hibernate: select count(persistent0_.event_id) as col_0_0_ from jhi_persistent_audit_event persistent0_ where persistent0_.event_date between ? and ?
+Hibernate: select persistent0_.event_id as event_id1_20_, persistent0_.event_date as event_da2_20_, persistent0_.event_type as event_ty3_20_, persistent0_.principal as principa4_20_ from jhi_persistent_audit_event persistent0_
+Hibernate: insert into jhi_persistent_audit_event (event_id, event_date, event_type, principal) values (null, ?, ?, ?)
+Hibernate: select count(persistent0_.event_id) as col_0_0_ from jhi_persistent_audit_event persistent0_
+Hibernate: select persistent0_.event_id as event_id1_20_, persistent0_.event_date as event_da2_20_, persistent0_.event_type as event_ty3_20_, persistent0_.principal as principa4_20_ from jhi_persistent_audit_event persistent0_ limit ?
+Hibernate: select persistent0_.event_id as event_id1_20_, persistent0_.event_date as event_da2_20_, persistent0_.event_type as event_ty3_20_, persistent0_.principal as principa4_20_ from jhi_persistent_audit_event persistent0_
+Hibernate: insert into jhi_persistent_audit_event (event_id, event_date, event_type, principal) values (null, ?, ?, ?)
+Hibernate: select count(persistent0_.event_id) as col_0_0_ from jhi_persistent_audit_event persistent0_ where persistent0_.event_date between ? and ?
+Hibernate: select persistent0_.event_id as event_id1_20_, persistent0_.event_date as event_da2_20_, persistent0_.event_type as event_ty3_20_, persistent0_.principal as principa4_20_ from jhi_persistent_audit_event persistent0_ where persistent0_.event_date between ? and ? limit ?
+Hibernate: select persistent0_.event_id as event_id1_20_, persistent0_.event_date as event_da2_20_, persistent0_.event_type as event_ty3_20_, persistent0_.principal as principa4_20_ from jhi_persistent_audit_event persistent0_
+Hibernate: insert into jhi_persistent_audit_event (event_id, event_date, event_type, principal) values (null, ?, ?, ?)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

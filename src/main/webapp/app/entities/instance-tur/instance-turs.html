@@ -1,0 +1,126 @@
+<div>
+    <h2 translate="mozhotelsbookingApp.instanceTur.home.title">Instance Turs</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="instance-tur.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  translate="mozhotelsbookingApp.instanceTur.home.createLabel">
+                        Create new Instance Tur
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'mozhotelsbookingApp.instanceTur.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceTur.instanceTurName">Instance Tur Name</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceTur.rating">Rating</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceTur.description">Description</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceTur.latitude">Latitude</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceTur.longitude">Longitude</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceTur.rooms">Rooms</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceTur.beds">Beds</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceTur.floors">Floors</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceTur.currency">Currency</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceTur.photoPrincipal">Photo Principal</span></th>
+                    <!-- <th><span translate="mozhotelsbookingApp.instanceTur.agreementNumber">Agreement Number</span></th> -->
+                    <!-- <th><span translate="mozhotelsbookingApp.instanceTur.createDate">Create Date</span></th> -->
+                    <!-- <th><span translate="mozhotelsbookingApp.instanceTur.editDate">Edit Date</span></th> -->
+                    <th><span translate="mozhotelsbookingApp.instanceTur.active">Active</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceTur.approval">Approval</span></th>
+                    <!-- <th><span translate="mozhotelsbookingApp.instanceTur.instanceFacilityType">Instance Facility Type</span></th> -->
+                    <!-- <th><span translate="mozhotelsbookingApp.instanceTur.instanceActivityType">Instance Activity Type</span></th> -->
+                    <th><span translate="mozhotelsbookingApp.instanceTur.localTur">Local Tur</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceTur.instanceTurType">Instance Tur Type</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="instanceTur in vm.instanceTurs track by instanceTur.id">
+                    <td><a ui-sref="instance-tur-detail({id:instanceTur.id})">{{instanceTur.id}}</a></td>
+                    <td>{{instanceTur.instanceTurName}}</td>
+                    <td translate="{{'mozhotelsbookingApp.InstanceRating.' + instanceTur.rating}}">{{instanceTur.rating}}</td>
+                    <td>{{instanceTur.description}}</td>
+                    <td>{{instanceTur.latitude}}</td>
+                    <td>{{instanceTur.longitude}}</td>
+                    <td>{{instanceTur.rooms}}</td>
+                    <td>{{instanceTur.beds}}</td>
+                    <td>{{instanceTur.floors}}</td>
+                    <td translate="{{'mozhotelsbookingApp.Currency.' + instanceTur.currency}}">{{instanceTur.currency}}</td>
+                    <td>
+                        <a ng-if="instanceTur.photoPrincipal" ng-click="vm.openFile(instanceTur.photoPrincipalContentType, instanceTur.photoPrincipal)">
+                            <img data-ng-src="{{'data:' + instanceTur.photoPrincipalContentType + ';base64,' + instanceTur.photoPrincipal}}" style="max-height: 30px;"/>
+                        </a>
+                        <span ng-if="instanceTur.photoPrincipal">{{instanceTur.photoPrincipalContentType}}, {{vm.byteSize(instanceTur.photoPrincipal)}}</span>
+                    </td>
+                    <!-- <td>{{instanceTur.agreementNumber}}</td> -->
+                    <!-- <td>{{instanceTur.createDate | date:'medium'}}</td> -->
+                    <!-- <td>{{instanceTur.editDate | date:'medium'}}</td> -->
+                    <td>{{instanceTur.active}}</td>
+                    <td>{{instanceTur.approval}}</td>
+                    <!-- <td>
+                        <span ng-repeat="instanceFacilityType in instanceTur.instanceFacilityTypes">
+                            <a class="form-control-static" ui-sref="instance-facility-type-detail({id: {{instanceFacilityType.id}}})">{{instanceFacilityType.instanceFacilityTypeName}}</a>{{$last ? '' : ', '}}
+                        </span>
+                    </td> -->
+                    <!-- <td>
+                        <span ng-repeat="instanceActivityType in instanceTur.instanceActivityTypes">
+                            <a class="form-control-static" ui-sref="instance-activity-type-detail({id: {{instanceActivityType.id}}})">{{instanceActivityType.instanceActivityTypeName}}</a>{{$last ? '' : ', '}}
+                        </span>
+                    </td> -->
+                    <td>
+                        <a ui-sref="local-tur-detail({id:instanceTur.localTur.id})">{{instanceTur.localTur.localTurName}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="instance-tur-type-detail({id:instanceTur.instanceTurType.id})">{{instanceTur.instanceTurType.instanceTurTypeName}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="instance-tur-detail({id:instanceTur.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="instance-tur.edit({id:instanceTur.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="instance-tur.delete({id:instanceTur.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

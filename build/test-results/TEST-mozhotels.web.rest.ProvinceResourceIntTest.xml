@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mozhotels.web.rest.ProvinceResourceIntTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2016-07-06T17:22:18" hostname="Edmilsons-MacBook-Pro.local" time="0.775">
+  <properties/>
+  <testcase name="getAllProvinces" classname="mozhotels.web.rest.ProvinceResourceIntTest" time="0.024"/>
+  <testcase name="checkProvinceNameIsRequired" classname="mozhotels.web.rest.ProvinceResourceIntTest" time="0.062"/>
+  <testcase name="updateProvince" classname="mozhotels.web.rest.ProvinceResourceIntTest" time="0.226"/>
+  <testcase name="createProvince" classname="mozhotels.web.rest.ProvinceResourceIntTest" time="0.038"/>
+  <testcase name="getProvince" classname="mozhotels.web.rest.ProvinceResourceIntTest" time="0.068"/>
+  <testcase name="searchProvince" classname="mozhotels.web.rest.ProvinceResourceIntTest" time="0.057"/>
+  <testcase name="getNonExistingProvince" classname="mozhotels.web.rest.ProvinceResourceIntTest" time="0.013"/>
+  <testcase name="deleteProvince" classname="mozhotels.web.rest.ProvinceResourceIntTest" time="0.14"/>
+  <system-out><![CDATA[Hibernate: insert into province (id, description, photo_principal, photo_principal_content_type, province_name, region_id) values (null, ?, ?, ?, ?, ?)
+2016-07-06 19:22:18.191 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.ProvinceResource      : REST request to get all Provinces
+Hibernate: select province0_.id as id1_28_, province0_.description as descript2_28_, province0_.photo_principal as photo_pr3_28_, province0_.photo_principal_content_type as photo_pr4_28_, province0_.province_name as province5_28_, province0_.region_id as region_i6_28_ from province province0_
+Hibernate: select province0_.id as id1_28_, province0_.description as descript2_28_, province0_.photo_principal as photo_pr3_28_, province0_.photo_principal_content_type as photo_pr4_28_, province0_.province_name as province5_28_, province0_.region_id as region_i6_28_ from province province0_
+Hibernate: select province0_.id as id1_28_, province0_.description as descript2_28_, province0_.photo_principal as photo_pr3_28_, province0_.photo_principal_content_type as photo_pr4_28_, province0_.province_name as province5_28_, province0_.region_id as region_i6_28_ from province province0_
+Hibernate: insert into province (id, description, photo_principal, photo_principal_content_type, province_name, region_id) values (null, ?, ?, ?, ?, ?)
+Hibernate: select province0_.id as id1_28_, province0_.description as descript2_28_, province0_.photo_principal as photo_pr3_28_, province0_.photo_principal_content_type as photo_pr4_28_, province0_.province_name as province5_28_, province0_.region_id as region_i6_28_ from province province0_
+2016-07-06 19:22:18.406 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.ProvinceResource      : REST request to update Province : Province{id=2, provinceName='BBBBB', description='BBBBB', photoPrincipal='[B@2d9a696', photoPrincipalContentType='image/png'}
+Hibernate: update province set description=?, photo_principal=?, photo_principal_content_type=?, province_name=?, region_id=? where id=?
+Hibernate: select province0_.id as id1_28_, province0_.description as descript2_28_, province0_.photo_principal as photo_pr3_28_, province0_.photo_principal_content_type as photo_pr4_28_, province0_.province_name as province5_28_, province0_.region_id as region_i6_28_ from province province0_
+Hibernate: select province0_.id as id1_28_, province0_.description as descript2_28_, province0_.photo_principal as photo_pr3_28_, province0_.photo_principal_content_type as photo_pr4_28_, province0_.province_name as province5_28_, province0_.region_id as region_i6_28_ from province province0_
+2016-07-06 19:22:18.570 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.ProvinceResource      : REST request to save Province : Province{id=null, provinceName='AAAAA', description='AAAAA', photoPrincipal='[B@4bd98c2', photoPrincipalContentType='image/jpg'}
+Hibernate: insert into province (id, description, photo_principal, photo_principal_content_type, province_name, region_id) values (null, ?, ?, ?, ?, ?)
+Hibernate: select province0_.id as id1_28_, province0_.description as descript2_28_, province0_.photo_principal as photo_pr3_28_, province0_.photo_principal_content_type as photo_pr4_28_, province0_.province_name as province5_28_, province0_.region_id as region_i6_28_ from province province0_
+Hibernate: insert into province (id, description, photo_principal, photo_principal_content_type, province_name, region_id) values (null, ?, ?, ?, ?, ?)
+2016-07-06 19:22:18.687 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.ProvinceResource      : REST request to get Province : 4
+Hibernate: insert into province (id, description, photo_principal, photo_principal_content_type, province_name, region_id) values (null, ?, ?, ?, ?, ?)
+2016-07-06 19:22:18.755 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.ProvinceResource      : REST request to search Provinces for query id:5
+2016-07-06 19:22:18.792 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.ProvinceResource      : REST request to get Province : 9223372036854775807
+Hibernate: select province0_.id as id1_28_0_, province0_.description as descript2_28_0_, province0_.photo_principal as photo_pr3_28_0_, province0_.photo_principal_content_type as photo_pr4_28_0_, province0_.province_name as province5_28_0_, province0_.region_id as region_i6_28_0_, region1_.id as id1_29_1_, region1_.country_id as country_4_29_1_, region1_.description as descript2_29_1_, region1_.region_name as region_n3_29_1_, country2_.id as id1_4_2_, country2_.country_name as country_2_4_2_, country2_.description as descript3_4_2_ from province province0_ left outer join region region1_ on province0_.region_id=region1_.id left outer join country country2_ on region1_.country_id=country2_.id where province0_.id=?
+Hibernate: insert into province (id, description, photo_principal, photo_principal_content_type, province_name, region_id) values (null, ?, ?, ?, ?, ?)
+Hibernate: select province0_.id as id1_28_, province0_.description as descript2_28_, province0_.photo_principal as photo_pr3_28_, province0_.photo_principal_content_type as photo_pr4_28_, province0_.province_name as province5_28_, province0_.region_id as region_i6_28_ from province province0_
+2016-07-06 19:22:18.943 DEBUG 60006 --- [    Test worker] mozhotels.web.rest.ProvinceResource      : REST request to delete Province : 6
+Hibernate: delete from province where id=?
+Hibernate: select province0_.id as id1_28_, province0_.description as descript2_28_, province0_.photo_principal as photo_pr3_28_, province0_.photo_principal_content_type as photo_pr4_28_, province0_.province_name as province5_28_, province0_.region_id as region_i6_28_ from province province0_
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

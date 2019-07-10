@@ -1,0 +1,26 @@
+{
+    "mozhotelsbookingApp": {
+        "instanceInfo" : {
+            "home": {
+                "title": "Instance Infos",
+                "createLabel": "Crear nuevo Instance Info",
+                "createOrEditLabel": "Crear o editar Instance Info",
+                "search": "Search for Instance Info"
+            },
+            "created": "Un nuevo Instance Info ha sido creado con el identificador {{ param }}",
+            "updated": "Un Instance Info ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Instance Info ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Instance Info {{ id }}?"
+            },
+            "detail": {
+                "title": "Instance Info"
+            },
+            "instanceInfo": "Instance Info",
+            "instanceInfoName": "Instance Info Name",
+            "description": "Description",
+            "instanceInfoType": "Instance Info Type",
+            "instanceTur": "Instance Tur"
+        }
+    }
+}

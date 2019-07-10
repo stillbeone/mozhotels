@@ -1,0 +1,11 @@
+{
+    "mozhotelsbookingApp": {
+        "CardType" : {
+            "null": "",
+            "VISA": "VISA",
+            "MASTERCARD": "MASTERCARD",
+            "MOZHOTELS": "MOZHOTELS",
+            "OTHER": "OTHER"
+        }
+    }
+}

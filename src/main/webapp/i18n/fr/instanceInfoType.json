@@ -1,0 +1,25 @@
+{
+    "mozhotelsbookingApp": {
+        "instanceInfoType" : {
+            "home": {
+                "title": "InstanceInfoTypes",
+                "createLabel": "Créer un nouveau Instance Info Type",
+                "createOrEditLabel": "Créer ou éditer un Instance Info Type",
+                "search": "Recherche pour Instance Info Type"
+            },
+            "created": "Un nouveau Instance Info Type a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Instance Info Type avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Instance Info Type avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Instance Info Type {{ id }} ?"
+            },
+            "detail": {
+                "title": "Instance Info Type"
+            },
+            "instanceInfoType": "Instance Info Type",
+            "instanceInfoTypeName": "Instance Info Type Name",
+            "description": "Description",
+            "instanceInfo": "Instance Info"
+        }
+    }
+}

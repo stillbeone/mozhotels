@@ -1,0 +1,9 @@
+{
+    "mozhotelsbookingApp": {
+        "FacilityType" : {
+            "null": "",
+            "SERVICE": "SERVICE",
+            "RESOURCE": "RESOURCE"
+        }
+    }
+}

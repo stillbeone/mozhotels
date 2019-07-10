@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<testsuite name="Chrome 51.0.2704 (Mac OS X 10.11.5)" package="" timestamp="2016-07-07T04:51:44" id="0" hostname="Edmilsons-MacBook-Pro.local" tests="61" errors="0" failures="0" time="10.883">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36"/>
+  </properties>
+  <testcase name="Controller Tests ActivationController calls Auth.activateAccount with the key from stateParams" time="0.455" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests ActivationController should set set success to OK upon successful activation" time="0.208" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests ActivationController should set set error to ERROR upon activation failure" time="0.205" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Directive Tests Password strength Should display the password strength bar" time="0.187" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Directive Tests"/>
+  <testcase name="Directive Tests Password strength Should change the first 2 points of the strength bar" time="0.2" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Directive Tests"/>
+  <testcase name="Directive Tests Password strength Should change the first 4 points of the strength bar" time="0.203" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Directive Tests"/>
+  <testcase name="Controller Tests PasswordController should show error if passwords do not match" time="0.179" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests PasswordController should call Auth.changePassword when passwords match" time="0.164" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests PasswordController should set success to OK upon success" time="0.178" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests PasswordController should notify of error if change password fails" time="0.168" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests RegisterController should ensure the two passwords entered match" time="0.147" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests RegisterController should update success to OK after creating an account" time="0.172" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests RegisterController should notify of user existence upon 400/login already in use" time="0.178" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests RegisterController should notify of email existence upon 400/e-mail address already in use" time="0.172" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests RegisterController should notify of generic error" time="0.176" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests ResetFinishController should define its initial state" time="0.181" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests ResetFinishController registers a timeout handler set set focus" time="0.153" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests RequestResetController should define its initial state" time="0.16" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests RequestResetController registers a timeout handler set set focus" time="0.191" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests RequestResetController notifies of success upon successful requestReset" time="0.163" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests RequestResetController notifies of unknown email upon e-mail address not registered/400" time="0.159" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests RequestResetController notifies of error upon error response" time="0.167" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests SessionsController should define its initial state" time="0.198" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests SessionsController should call delete on Sessions to invalidate a session" time="0.181" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests SessionsController should call delete on Sessions and notify of error" time="0.176" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests SessionsController should call notify of success upon session invalidation" time="0.218" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests SettingsController should send the current identity upon save" time="0.181" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests SettingsController should notify of success upon successful save" time="0.187" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests SettingsController should notify of error upon failed save" time="0.198" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests JhiHealthCheckController baseName and subSystemName should return the basename when it has no sub system" time="0.172" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests JhiHealthCheckController baseName and subSystemName should return the basename when it has sub systems" time="0.219" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests JhiHealthCheckController baseName and subSystemName should return the sub system name" time="0.172" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests JhiHealthCheckController baseName and subSystemName should return the subsystem when it has multiple keys" time="0.184" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests JhiHealthCheckController transformHealthData should flatten empty health data" time="0.169" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests JhiHealthCheckController transformHealthData should flatten health data with no subsystems" time="0.173" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests JhiHealthCheckController transformHealthData should flatten health data with subsystems at level 1, main system has no additional information" time="0.195" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests JhiHealthCheckController transformHealthData should flatten health data with subsystems at level 1, main system has additional information" time="0.161" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests JhiHealthCheckController transformHealthData should flatten health data with subsystems at level 1, main system has additional error" time="0.198" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests LoginController should set remember Me" time="0.172" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests BookingPayment Management Detail Controller Root Scope Listening Unregisters root scope listener upon scope destruction" time="0.202" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests Booking Management Detail Controller Root Scope Listening Unregisters root scope listener upon scope destruction" time="0.179" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests Country Management Detail Controller Root Scope Listening Unregisters root scope listener upon scope destruction" time="0.194" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests GuestTourist Management Detail Controller Root Scope Listening Unregisters root scope listener upon scope destruction" time="0.169" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests Info Management Detail Controller Root Scope Listening Unregisters root scope listener upon scope destruction" time="0.148" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests InstanceActivityType Management Detail Controller Root Scope Listening Unregisters root scope listener upon scope destruction" time="0.152" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests InstanceActivity Management Detail Controller Root Scope Listening Unregisters root scope listener upon scope destruction" time="0.162" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests InstanceContact Management Detail Controller Root Scope Listening Unregisters root scope listener upon scope destruction" time="0.144" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests InstanceFacilityType Management Detail Controller Root Scope Listening Unregisters root scope listener upon scope destruction" time="0.165" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests InstanceFacility Management Detail Controller Root Scope Listening Unregisters root scope listener upon scope destruction" time="0.179" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests InstanceInfoType Management Detail Controller Root Scope Listening Unregisters root scope listener upon scope destruction" time="0.156" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests InstanceInfo Management Detail Controller Root Scope Listening Unregisters root scope listener upon scope destruction" time="0.143" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests InstanceReview Management Detail Controller Root Scope Listening Unregisters root scope listener upon scope destruction" time="0.134" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests InstanceRoomType Management Detail Controller Root Scope Listening Unregisters root scope listener upon scope destruction" time="0.182" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests InstanceTurType Management Detail Controller Root Scope Listening Unregisters root scope listener upon scope destruction" time="0.145" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests InstanceTur Management Detail Controller Root Scope Listening Unregisters root scope listener upon scope destruction" time="0.144" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests LocalTur Management Detail Controller Root Scope Listening Unregisters root scope listener upon scope destruction" time="0.167" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests Picture Management Detail Controller Root Scope Listening Unregisters root scope listener upon scope destruction" time="0.14" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests Province Management Detail Controller Root Scope Listening Unregisters root scope listener upon scope destruction" time="0.144" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests Region Management Detail Controller Root Scope Listening Unregisters root scope listener upon scope destruction" time="0.148" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Controller Tests Tourist Management Detail Controller Root Scope Listening Unregisters root scope listener upon scope destruction" time="0.181" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Controller Tests"/>
+  <testcase name="Service Tests Auth should call backend on logout then call authServerProvider.logout" time="0.185" classname="Chrome_51_0_2704_(Mac_OS_X_10_11_5).Service Tests"/>
+  <system-out>
+    <![CDATA[Chrome 51.0.2704 (Mac OS X 10.11.5) DUMP: 'background-color: rgb(153, 255, 0);'
+
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

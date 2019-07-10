@@ -1,0 +1,83 @@
+<div>
+    <h2 translate="mozhotelsbookingApp.instanceFacilityType.home.title">Instance Facility Types</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="instance-facility-type.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  translate="mozhotelsbookingApp.instanceFacilityType.home.createLabel">
+                        Create new Instance Facility Type
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'mozhotelsbookingApp.instanceFacilityType.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceFacilityType.instanceFacilityTypeName">Instance Facility Type Name</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceFacilityType.facilityType">Facility Type</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceFacilityType.description">Description</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceFacilityType.instanceFacility">Instance Facility</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceFacilityType.instanceRoomFacility">Instance Room Facility</span></th>
+                    <th><span translate="mozhotelsbookingApp.instanceFacilityType.instanceBookingFacility">Instance Booking Facility</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="instanceFacilityType in vm.instanceFacilityTypes track by instanceFacilityType.id">
+                    <td><a ui-sref="instance-facility-type-detail({id:instanceFacilityType.id})">{{instanceFacilityType.id}}</a></td>
+                    <td>{{instanceFacilityType.instanceFacilityTypeName}}</td>
+                    <td translate="{{'mozhotelsbookingApp.FacilityType.' + instanceFacilityType.facilityType}}">{{instanceFacilityType.facilityType}}</td>
+                    <td>{{instanceFacilityType.description}}</td>
+                    <td>{{instanceFacilityType.instanceFacility}}</td>
+                    <td>{{instanceFacilityType.instanceRoomFacility}}</td>
+                    <td>{{instanceFacilityType.instanceBookingFacility}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="instance-facility-type-detail({id:instanceFacilityType.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="instance-facility-type.edit({id:instanceFacilityType.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="instance-facility-type.delete({id:instanceFacilityType.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

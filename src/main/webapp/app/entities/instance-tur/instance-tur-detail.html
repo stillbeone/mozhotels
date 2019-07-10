@@ -1,0 +1,99 @@
+
+<div>
+    <h2><span translate="mozhotelsbookingApp.instanceTur.detail.title">Instance Tur</span> {{vm.instanceTur.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="mozhotelsbookingApp.instanceTur.instanceTurName">Instance Tur Name</span></dt>
+        <dd>
+            <span>{{vm.instanceTur.instanceTurName}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceTur.rating">Rating</span></dt>
+        <dd>
+            <span translate="{{'mozhotelsbookingApp.InstanceRating.' + vm.instanceTur.rating}}">{{vm.instanceTur.rating}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceTur.description">Description</span></dt>
+        <dd>
+            <span>{{vm.instanceTur.description}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceTur.latitude">Latitude</span></dt>
+        <dd>
+            <span>{{vm.instanceTur.latitude}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceTur.longitude">Longitude</span></dt>
+        <dd>
+            <span>{{vm.instanceTur.longitude}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceTur.rooms">Rooms</span></dt>
+        <dd>
+            <span>{{vm.instanceTur.rooms}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceTur.beds">Beds</span></dt>
+        <dd>
+            <span>{{vm.instanceTur.beds}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceTur.floors">Floors</span></dt>
+        <dd>
+            <span>{{vm.instanceTur.floors}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceTur.currency">Currency</span></dt>
+        <dd>
+            <span translate="{{'mozhotelsbookingApp.Currency.' + vm.instanceTur.currency}}">{{vm.instanceTur.currency}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceTur.photoPrincipal">Photo Principal</span></dt>
+        <dd>
+            <div ng-if="vm.instanceTur.photoPrincipal">
+                <a ng-click="vm.openFile(vm.instanceTur.photoPrincipalContentType, vm.instanceTur.photoPrincipal)">
+                    <img data-ng-src="{{'data:' + vm.instanceTur.photoPrincipalContentType + ';base64,' + vm.instanceTur.photoPrincipal}}" style="max-width: 100%;"/>
+                </a>
+                {{vm.instanceTur.photoPrincipalContentType}}, {{vm.byteSize(vm.instanceTur.photoPrincipal)}}
+            </div>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceTur.agreementNumber">Agreement Number</span></dt>
+        <dd>
+            <span>{{vm.instanceTur.agreementNumber}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceTur.createDate">Create Date</span></dt>
+        <dd>
+            <span>{{vm.instanceTur.createDate | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceTur.editDate">Edit Date</span></dt>
+        <dd>
+            <span>{{vm.instanceTur.editDate | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceTur.active">Active</span></dt>
+        <dd>
+            <span>{{vm.instanceTur.active}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceTur.approval">Approval</span></dt>
+        <dd>
+            <span>{{vm.instanceTur.approval}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceTur.instanceFacilityType">Instance Facility Type</span></dt>
+        <dd>
+            <span ng-repeat="instanceFacilityType in vm.instanceTur.instanceFacilityTypes">
+                <a ui-sref="instance-facility-type-detail({id: {{instanceFacilityType.id}}})">{{instanceFacilityType.instanceFacilityTypeName}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceTur.instanceActivityType">Instance Activity Type</span></dt>
+        <dd>
+            <span ng-repeat="instanceActivityType in vm.instanceTur.instanceActivityTypes">
+                <a ui-sref="instance-activity-type-detail({id: {{instanceActivityType.id}}})">{{instanceActivityType.instanceActivityTypeName}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceTur.localTur">Local Tur</span></dt>
+        <dd>
+            <a ui-sref="local-tur-detail({id:vm.instanceTur.localTur.id})">{{vm.instanceTur.localTur.localTurName}}</a>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceTur.instanceTurType">Instance Tur Type</span></dt>
+        <dd>
+            <a ui-sref="instance-tur-type-detail({id:vm.instanceTur.instanceTurType.id})">{{vm.instanceTur.instanceTurType.instanceTurTypeName}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

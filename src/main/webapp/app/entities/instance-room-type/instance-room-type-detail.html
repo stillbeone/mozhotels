@@ -1,0 +1,85 @@
+
+<div>
+    <h2><span translate="mozhotelsbookingApp.instanceRoomType.detail.title">Instance Room Type</span> {{vm.instanceRoomType.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="mozhotelsbookingApp.instanceRoomType.instanceRoomTypeName">Instance Room Type Name</span></dt>
+        <dd>
+            <span>{{vm.instanceRoomType.instanceRoomTypeName}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceRoomType.description">Description</span></dt>
+        <dd>
+            <span>{{vm.instanceRoomType.description}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceRoomType.roomQuantity">Room Quantity</span></dt>
+        <dd>
+            <span>{{vm.instanceRoomType.roomQuantity}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceRoomType.capacityAdults">Capacity Adults</span></dt>
+        <dd>
+            <span>{{vm.instanceRoomType.capacityAdults}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceRoomType.capacityChildren">Capacity Children</span></dt>
+        <dd>
+            <span>{{vm.instanceRoomType.capacityChildren}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceRoomType.onlinePrice">Online Price</span></dt>
+        <dd>
+            <span>{{vm.instanceRoomType.onlinePrice}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceRoomType.branchPrice">Branch Price</span></dt>
+        <dd>
+            <span>{{vm.instanceRoomType.branchPrice}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceRoomType.taxInclude">Tax Include</span></dt>
+        <dd>
+            <span>{{vm.instanceRoomType.taxInclude}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceRoomType.tax">Tax</span></dt>
+        <dd>
+            <span>{{vm.instanceRoomType.tax}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceRoomType.photoPrincipal">Photo Principal</span></dt>
+        <dd>
+            <div ng-if="vm.instanceRoomType.photoPrincipal">
+                <a ng-click="vm.openFile(vm.instanceRoomType.photoPrincipalContentType, vm.instanceRoomType.photoPrincipal)">
+                    <img data-ng-src="{{'data:' + vm.instanceRoomType.photoPrincipalContentType + ';base64,' + vm.instanceRoomType.photoPrincipal}}" style="max-width: 100%;"/>
+                </a>
+                {{vm.instanceRoomType.photoPrincipalContentType}}, {{vm.byteSize(vm.instanceRoomType.photoPrincipal)}}
+            </div>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceRoomType.createDate">Create Date</span></dt>
+        <dd>
+            <span>{{vm.instanceRoomType.createDate | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceRoomType.editDate">Edit Date</span></dt>
+        <dd>
+            <span>{{vm.instanceRoomType.editDate | date:'medium'}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceRoomType.active">Active</span></dt>
+        <dd>
+            <span>{{vm.instanceRoomType.active}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceRoomType.approval">Approval</span></dt>
+        <dd>
+            <span>{{vm.instanceRoomType.approval}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceRoomType.instanceRoomFacility">Instance Room Facility</span></dt>
+        <dd>
+            <span ng-repeat="instanceRoomFacility in vm.instanceRoomType.instanceRoomFacilities">
+                <a ui-sref="instance-facility-detail({id: {{instanceRoomFacility.id}}})">{{instanceRoomFacility.instanceFacilityName}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceRoomType.instanceTur">Instance Tur</span></dt>
+        <dd>
+            <a ui-sref="instance-tur-detail({id:vm.instanceRoomType.instanceTur.id})">{{vm.instanceRoomType.instanceTur.instanceTurName}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

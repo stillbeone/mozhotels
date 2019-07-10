@@ -1,0 +1,9 @@
+{
+    "mozhotelsbookingApp": {
+        "InstanceArea" : {
+            "null": "",
+            "INDOOR": "INDOOR",
+            "OUTDOOR": "OUTDOOR"
+        }
+    }
+}

@@ -1,0 +1,38 @@
+
+<div>
+    <h2><span translate="mozhotelsbookingApp.instanceInfo.detail.title">Instance Info</span> {{vm.instanceInfo.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="mozhotelsbookingApp.instanceInfo.instanceInfo">Instance Info</span></dt>
+        <dd>
+            <span translate="{{'mozhotelsbookingApp.InfoType.' + vm.instanceInfo.instanceInfo}}">{{vm.instanceInfo.instanceInfo}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceInfo.instanceInfoName">Instance Info Name</span></dt>
+        <dd>
+            <span>{{vm.instanceInfo.instanceInfoName}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceInfo.info">Info</span></dt>
+        <dd>
+            <span>{{vm.instanceInfo.info}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceInfo.description">Description</span></dt>
+        <dd>
+            <span>{{vm.instanceInfo.description}}</span>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceInfo.instanceInfoType">Instance Info Type</span></dt>
+        <dd>
+            <a ui-sref="instance-info-type-detail({id:vm.instanceInfo.instanceInfoType.id})">{{vm.instanceInfo.instanceInfoType.instanceInfoTypeName}}</a>
+        </dd>
+        <dt><span translate="mozhotelsbookingApp.instanceInfo.instanceTur">Instance Tur</span></dt>
+        <dd>
+            <a ui-sref="instance-tur-detail({id:vm.instanceInfo.instanceTur.id})">{{vm.instanceInfo.instanceTur.instanceTurName}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>
